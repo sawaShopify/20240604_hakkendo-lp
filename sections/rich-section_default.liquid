@@ -1,0 +1,482 @@
+{{ 'section-rich-section.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  #shopify-section-{{ section.id }} {
+    {% if section.settings.background_image != blank %}
+      background-image: url({{ section.settings.background_image | img_url: 'master' }});
+      background-size: {% if section.settings.backgorund_image_repeat %}contain{% else %}cover{% endif %};
+      background-position: center;
+      background-repeat: {% if section.settings.backgorund_image_repeat %}repeat-x{% else %}no-repeat{% endif %};
+    {% endif %}
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div
+  id="{{ section.settings.anchor }}"
+  class="isolate{% unless section.settings.full_width %} page-width{% endunless %}"
+>
+  <div class="rich-section content-container {% if section.settings.full_width %} rich-section--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+    <div class="rich-section__wrapper {% if section.settings.full_width %} page-width{% endif %}">
+      {%- case section.settings.content_pattern -%}
+        {%- when 'pattern-1' -%}
+          <div class="rich-section__blocks--between" style="width:100%">
+            {% comment %} <div class="rich-section__pattern-1_line_background" style="display:block;"></div> {% endcomment %}
+            <h2 class="{{ section.settings.title_size }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}" style="color:white; margin:0 20px;">
+              {{ section.settings.title }}
+            </h2>
+            {% comment %} <div class="rich-section__pattern-1_line_background" style="display:block;"></div> {% endcomment %}
+          </div>
+          <div class="rich-section__blocks center" style="margin: 0 auto;">
+            <div class="rich-section__flex_even direction_column_on_mobile">
+              {%- if section.settings.featured_image != blank -%}
+                <img
+                  style="max-width:120px; padding: 10px;"
+                  src="{{ section.settings.featured_image | img_url: 'master' }}"
+                  alt="{{ section.settings.title }}"
+                >
+              {%- endif -%}
+              <div style="padding: 10px; color:white; text-align:left; disply:flex; flex-direction: column; font-size: 12pt;">
+                <p>{{ section.settings.caption1 | newline_to_br }}</p>
+                <a
+                  href="{{ section.settings.caption_link1 }}"
+                  style="width:min-content; text-wrap:nowrap; display: block; color:white; border:1px white solid; padding: 5px 20px; text-align:center; margin: 20px 0 20px auto; text-decoration:none;"
+                  >詳しく見る<span class="icon-wrap">{% render 'icon-arrow' %}</span></a
+                >
+              </div>
+            </div>
+            {%- if section.settings.caption_image1 != blank -%}
+              <img
+                width="100%"
+                src="{{ section.settings.caption_image1 | img_url: 'master' }}"
+                class="scroll-trigger animate--slide-in"
+              >
+            {%- endif -%}
+          </div>
+        {%- when 'pattern-2' -%}
+          <div
+            class="rich-section__blocks--space-around direction_column_on_mobile reverse_direction_on_mobile"
+            style="width:100%"
+          >
+            <div style="display:block" class="take-20_100_on_mobile"></div>
+            <div style="display:flex; flex-direction:column;">
+              <h3 class="{{ section.settings.subtitle_size }}" style="text-align: center; margin:0 auto">
+                {{ section.settings.subtitle }}
+              </h3>
+              <h2 class="{{ section.settings.title_size }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}" style="margin:0 20px;">
+                {{ section.settings.title }}
+              </h2>
+              <h3
+                class="{{ section.settings.subtitle2_size }}"
+                style="color:white; display: block; background-color:red; padding:5px 8px; text-align:center; width:min-content; margin: 0px auto; text-wrap:nowrap;"
+              >
+                {{ section.settings.subtitle2 }}
+              </h3>
+            </div>
+            <div style="display:block" class="take-20_100_on_mobile">
+              <img src="{{ section.settings.featured_image | img_url: 'master' }}" style="max-width: 120px;">
+            </div>
+          </div>
+          <div class="rich-section__blocks center" style="margin: 0 auto;">
+            <div class="rich-section__flex_even" style="padding: 10px 0">
+              <div style="display:flex; align-items:center">
+                <div style="text-align:left;flex:1;">
+                  <img src="{{ section.settings.caption_title_image1 | img_url: 'master' }}" style="width:100%">
+                  <p class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}" style="font-size: 8pt; margin: 0;">{{ section.settings.caption1 | newline_to_br }}</p>
+                </div>
+                <img
+                  src="{{ section.settings.caption_image1 | img_url: 'master' }}"
+                  width="100px"
+                  height="100px"
+                  style="max-width:120px; margin: 0 20px;"
+                >
+              </div>
+              <div style="display:flex; align-items:center">
+                <img
+                  src="{{ section.settings.caption_image2 | img_url: 'master' }}"
+                  width="100px"
+                  height="100px"
+                  style="max-width:120px; margin: 0 20px;"
+                >
+                <div style="text-align:left;flex:1">
+                  <img
+                    src="{{ section.settings.caption_title_image2 | img_url: 'master' }}"
+                    style="width:100%;"
+                  >
+                  <p class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}" style="font-size: 8pt; margin: 0">{{ section.settings.caption2 | newline_to_br }}</p>
+                </div>
+              </div>
+            </div>
+            <a
+              href="{{ section.settings.caption_link1 }}"
+              style="text-decoration:none; display:block; padding:4px 15px; border: 1px black solid; border-radius: 9999px; width:min-content; text-wrap:nowrap; margin: 20px auto 0 auto; text-align:center; color:black;"
+              >もっと見る<span class="icon-wrap">{% render 'icon-arrow' %}</span></a
+            >
+          </div>
+        {%- when 'pattern-3' -%}
+          <div class="rich-section__blocks center" style="margin: 0 auto;">
+            <div
+              class="direction_column_on_mobile"
+              style="padding: 10rem 0; color: white; display:flex; justify-content: space-around; align-items: start;"
+            >
+              <img
+                src="{{ section.settings.featured_image | img_url: 'master' }}"
+                style="max-width: 120px; margin:20px auto;"
+              >
+              <div style="display:flex; flex-direction:column;">
+                <div style="display:flex">
+                  <div style="padding-top:5px;">
+                    <img src="{{ section.settings.caption_image1 | img_url: 'master' }}" width="100px">
+                  </div>
+                  <div style="display:flex flex-direction: column">
+                    <h3 style="color: white;margin:5px; font-size: 14pt;">{{ section.settings.caption_title1 }}</h3>
+                    <p style="font-size: 8pt; margin:0">{{ section.settings.caption1 | newline_to_br }}</p>
+                    <a
+                      href="{{ section.settings.caption_link1 }}"
+                      style="width:min-content; text-wrap:nowrap; border-radius:9999px; display: block; color:white; border:1px white solid; padding: 2px 20px; text-align:center; margin: 5px 0 0 auto; text-decoration:none; font-size:9pt;"
+                      >もっと見る<span class="icon-wrap">{% render 'icon-arrow' %}</span></a
+                    >
+                  </div>
+                </div>
+                <div style="display:flex; margin-top: 10rem;">
+                  <div style="padding-top:5px;">
+                    <img src="{{ section.settings.caption_image2 | img_url: 'master' }}" width="100px">
+                  </div>
+                  <div style="display:flex flex-direction: column">
+                    <h3 style="color: white;margin:5px; font-size: 14pt;">{{ section.settings.caption_title2 }}</h3>
+                    <p style="font-size: 8pt; margin:0">{{ section.settings.caption2 | newline_to_br }}</p>
+                    <a
+                      href="{{ section.settings.caption_link2 }}"
+                      style="width:min-content; text-wrap:nowrap; border-radius:9999px; display: block; color:white; border:1px white solid; padding: 2px 20px; text-align:center; margin: 5px 0 0 auto; text-decoration:none; font-size:9pt;"
+                      >もっと見る<span class="icon-wrap">{% render 'icon-arrow' %}</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 style="text-align: center; color: white; margin-top: 16rem;" class="{% if section.blocks.first.settings.image == blank %} slideshow--placeholder{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">{{ section.settings.title }}</h2>
+          </div>
+        {%- when 'pattern-4' -%}
+          <div class="rich-section__blocks center" style="margin: 0 auto;">
+            <div class="rich-section__flex_between direction_column_on_mobile">
+              <div
+                class="take-40"
+                style="display: flex; flex-direction: column; justify-content: flex-end; margin:20px 0"
+              >
+                <img src="{{ section.settings.featured_image | img_url: 'master' }}" width="100%">
+                <h2 style="font-size: 12pt; width:min-contents; text-wrap:nowrap;margin:5px 0 5px auto; color: white;" class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+                  {{ section.settings.title }}
+                </h2>
+                <p style="font-size: 8pt; margin:0; color:white; margin: 5px 0 5px auto; padding-left: 30px;">
+                  {{ section.settings.caption1 | newline_to_br }}
+                </p>
+                <a
+                  href="{{ section.settings.caption_link1 }}"
+                  style="font-size: 9pt; display:block; width:min-content; margin: 0 0 0 auto; text-wrap:nowrap; border: 1px white solid; border-radius: 9999px; padding: 3px 16px; color: white; text-decoration: none"
+                  >レシピを探す<span>{% render 'icon-arrow' %}</span></a
+                >
+              </div>
+              <div class="take-40" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));gap:1rem">
+                <img src="{{ section.settings.images1 | img_url: 'master' }}" style="width: 100%">
+                <img src="{{ section.settings.images2 | img_url: 'master' }}" style="width: 100%">
+                <img src="{{ section.settings.images3 | img_url: 'master' }}" style="width: 100%">
+                <img src="{{ section.settings.images4 | img_url: 'master' }}" style="width: 100%">
+                <img src="{{ section.settings.images5 | img_url: 'master' }}" style="width: 100%">
+                <img src="{{ section.settings.images6 | img_url: 'master' }}" style="width: 100%">
+              </div>
+            </div>
+          </div>
+      {%- endcase -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "(C)リッチセクション",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "content_pattern",
+      "options": [
+        {
+          "value": "pattern-1",
+          "label": "パターン１"
+        },
+        {
+          "value": "pattern-2",
+          "label": "パターン２"
+        },
+        {
+          "value": "pattern-3",
+          "label": "パターン３"
+        },
+        {
+          "value": "pattern-4",
+          "label": "パターン４"
+        }
+      ],
+      "default": "pattern-1",
+      "label": "コンテンツパターン",
+      "info": "コンテンツパターンを選択してください。"
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "アンカーID",
+      "default": "news"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "背景画像"
+    },
+    {
+      "type": "checkbox",
+      "id": "backgorund_image_repeat",
+      "label": "背景画像を繰り返す",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.rich-section.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.rich-section.settings.desktop_content_position.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.rich-section.settings.desktop_content_position.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.rich-section.settings.desktop_content_position.label",
+      "info": "t:sections.rich-section.settings.desktop_content_position.info"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "タイトル",
+      "label": "タイトル"
+    },
+    {
+      "type": "select",
+      "id": "title_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "文字サイズ"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subtitle",
+      "default": "サブタイトル",
+      "label": "サブタイトル"
+    },
+    {
+      "type": "select",
+      "id": "subtitle_size",
+      "options": [
+        {
+          "value": "h3",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "文字サイズ"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subtitle2",
+      "default": "サブタイトル2",
+      "label": "サブタイトル2 パターン２のみ"
+    },
+    {
+      "type": "select",
+      "id": "caption_size",
+      "options": [
+        {
+          "value": "h3",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "文字サイズ"
+    },
+    {
+      "type": "header",
+      "content": "コンテンツ"
+    },
+    {
+      "type": "image_picker",
+      "id": "featured_image",
+      "label": "メイン画像"
+    },
+    {
+      "type": "image_picker",
+      "id": "caption_image1",
+      "label": "キャプション画像1"
+    },
+    {
+      "type": "image_picker",
+      "id": "caption_title_image1",
+      "label": "キャプションタイトル画像1"
+    },
+    {
+      "type": "url",
+      "id": "caption_link1",
+      "label": "キャプションリンク1"
+    },
+    {
+      "type": "text",
+      "id": "caption_title1",
+      "default": "キャプションタイトル1",
+      "label": "キャプションタイトル1"
+    },
+    {
+      "type": "textarea",
+      "id": "caption1",
+      "default": "キャプション1",
+      "label": "キャプション1"
+    },
+    {
+      "type": "image_picker",
+      "id": "caption_image2",
+      "label": "キャプション画像2"
+    },
+    {
+      "type": "image_picker",
+      "id": "caption_title_image2",
+      "label": "キャプションタイトル画像2"
+    },
+    {
+      "type": "url",
+      "id": "caption_link2",
+      "label": "キャプションリンク2"
+    },
+    {
+      "type": "text",
+      "id": "caption_title2",
+      "default": "キャプションタイトル2",
+      "label": "キャプションタイトル2"
+    },
+    {
+      "type": "textarea",
+      "id": "caption2",
+      "default": "キャプション2",
+      "label": "キャプション2"
+    },
+    {
+      "type": "image_picker",
+      "id": "images1",
+      "label": "画像1"
+    },
+    {
+      "type": "image_picker",
+      "id": "images2",
+      "label": "画像2"
+    },
+    {
+      "type": "image_picker",
+      "id": "images3",
+      "label": "画像3"
+    },
+    {
+      "type": "image_picker",
+      "id": "images4",
+      "label": "画像4"
+    },
+    {
+      "type": "image_picker",
+      "id": "images5",
+      "label": "画像5"
+    },
+    {
+      "type": "image_picker",
+      "id": "images6",
+      "label": "画像6"
+    },
+
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "t:sections.rich-section.settings.full_width.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "presets": [
+    {
+      "name": "(C)リッチセクション"
+    }
+  ]
+}
+{% endschema %}

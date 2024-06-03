@@ -1,0 +1,207 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "float_top_btn_LfFqCR": {
+      "type": "float-top-btn",
+      "settings": {
+      }
+    },
+    "custom_liquid_PtwgCc": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div id=\"page-top\">\n  <a href=\"#top\"><span class=\"dli-chevron-up\"><\/span><br>Page Top<\/a>\n<\/div>\n<style>\n.dli-chevron-up {\n  display: inline-block;\n  vertical-align: middle;\n  color: #333;\n  line-height: 1;\n  width: 0.8em;\n  height: 0.8em;\n  border: 0.1em solid currentColor;\n  border-left: 0;\n  border-bottom: 0;\n  box-sizing: border-box;\n  transform: translateY(25%) rotate(-45deg);\n}\n\/* ボタンのスタイル設定 *\/\n#page-top {\n  position: fixed;\n  right: 0;\n  bottom: 0;\n  background-color: #fff;\n  color: #000;\n  text-align: center;\n  border-radius: 50%;\n  width: 70px;\n  height: 70px;\n  font-size: 13px;\n  line-height: 1;\n  text-decoration: none;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 10px;\n  margin: 10px;\n  opacity: 0;\n  transition: opacity 0.5s ease;\n  pointer-events: none;\n  z-index: 1;\n}\n\n#page-top a {\n  text-decoration: none;\n  color: inherit;\n}\n<\/style>\n<script>\n\/\/ スクロールイベントの処理\nwindow.addEventListener('scroll', function() {\n  var button = document.getElementById('page-top');\n\n  if (window.pageYOffset > 700) {\n    button.style.opacity = '1';\n    button.style.pointerEvents = 'auto'; \/\/ クリック可能にする\n  } else {\n    \/\/ それ以外の場合は徐々に非表示\n    button.style.opacity = '0';\n    button.style.pointerEvents = 'none'; \/\/ クリックを無効化\n  }\n});\n\n\/\/ ボタンをクリックしたときのスムーススクロール\ndocument.getElementById('page-top').addEventListener('click', function(e) {\n  e.preventDefault();\n  window.scrollTo({ top: 0, behavior: 'smooth' });\n});\n<\/script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_rmjqij": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div id=\"page-top\">\n  <a href=\"#top\"><span class=\"dli-chevron-up\"><\/span><br>Page Top<\/a>\n<\/div>\n<style>\n.dli-chevron-up {\n  display: inline-block;\n  vertical-align: middle;\n  color: #333;\n  line-height: 1;\n  width: 0.8em;\n  height: 0.8em;\n  border: 0.1em solid currentColor;\n  border-left: 0;\n  border-bottom: 0;\n  box-sizing: border-box;\n  transform: translateY(25%) rotate(-45deg);\n}\n\n#page-top {\n  position: fixed;\n  right: 10px; \/* 初期値 *\/\n  bottom: 10px; \/* 初期値 *\/\n  background-color: #fff;\n  color: #000;\n  text-align: center;\n  border-radius: 50%;\n  width: 70px;\n  height: 70px;\n  font-size: 13px;\n  line-height: 1;\n  text-decoration: none;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 10px;\n  margin: 10px;\n  opacity: 0;\n  transition: opacity 0.5s ease, right 0.5s ease, bottom 0.5s ease; \/* 位置の変更にも遷移を適用 *\/\n  pointer-events: none;\n  z-index: 1000; \/* 必要に応じてz-indexを調整 *\/\n}\n\n#page-top a {\n  text-decoration: none;\n  color: inherit;\n}\n<\/style>\n<script>\n  \/\/ ページトップボタンの初期位置を設定\n  var button = document.getElementById('page-top');\n  var initialRight = 10; \/\/ 右端からの距離\n  var initialBottom = 10; \/\/ 下端からの距離\n\n  window.addEventListener('scroll', function() {\n    \/\/ 現在のスクロール位置を取得\n    var scrolled = window.pageYOffset || document.documentElement.scrollTop;\n\n    \/\/ スクロール位置に基づいてボタンの位置を動的に更新\n    \/\/ スクロールに遅れて追従するようにする\n    var dynamicRight = Math.max(initialRight, initialRight + (700 - scrolled) * 0.2);\n    var dynamicBottom = Math.max(initialBottom, initialBottom + (700 - scrolled) * 0.2);\n    \n    \/\/ スムーズなアニメーションのために requestAnimationFrame を使用\n    requestAnimationFrame(function() {\n      button.style.right = dynamicRight + 'px';\n      button.style.bottom = dynamicBottom + 'px';\n    });\n\n    \/\/ スクロール位置が特定のポイントを超えたらボタンを表示\n    if (scrolled > 700) {\n      button.style.opacity = '1';\n      button.style.pointerEvents = 'auto';\n    } else {\n      button.style.opacity = '0';\n      button.style.pointerEvents = 'none';\n    }\n  });\n\n  \/\/ ボタンをクリックしたときのスムーススクロール\n  button.addEventListener('click', function(e) {\n    e.preventDefault();\n    window.scrollTo({ top: 0, behavior: 'smooth' });\n  });\n<\/script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "f483f1fa-8926-4738-8b2b-7bed1bce2c29": {
+      "type": "multicolumn",
+      "blocks": {
+        "sections--21521884119337__f483f1fa-8926-4738-8b2b-7bed1bce2c29-column-1": {
+          "type": "column",
+          "settings": {
+            "background_color": "rgba(0,0,0,0)",
+            "title": "お支払方法",
+            "title_size": "h3",
+            "title_color": "#ffffff",
+            "text": "<p>クレジットカード決済、代金引換、からお選びいただけます。<\/p><p>　<\/p><p>ご購入時に決済が完了します。<\/p><p>　<\/p><p>※定期購入商品のご注文は、与信の関係で「クレジットカード決済」のみとなります。<\/p><p><\/p>",
+            "text_size": "10pt",
+            "text_color": "#ffffff",
+            "link_label": "詳細を見る",
+            "btn_margin": 40,
+            "link_color": "#ffffff",
+            "link_size": "h4",
+            "link": "\/pages\/faq#about-payment",
+            "show_secondary": false,
+            "title2": "Column",
+            "title_size2": "h3",
+            "text2": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_size2": "12pt",
+            "link_label2": "",
+            "btn_margin2": 0,
+            "link_size2": "h4",
+            "link2": ""
+          }
+        },
+        "sections--21521884119337__f483f1fa-8926-4738-8b2b-7bed1bce2c29-column-2": {
+          "type": "column",
+          "settings": {
+            "background_color": "rgba(0,0,0,0)",
+            "title": "配送・送料",
+            "title_size": "h3",
+            "title_color": "#ffffff",
+            "text": "<p>10,800円（税込）以上ご購入で送料無料。<\/p><p>　<\/p><p>※定期会員様は5,400円（税込）以上で送料無料。但し、定期便は除く。<\/p><p>　<\/p><p>佐川急便（冷凍便）<\/p><p>※送料一律　880円（税込）<\/p>",
+            "text_size": "10pt",
+            "text_color": "#ffffff",
+            "link_label": "詳細を見る",
+            "btn_margin": 40,
+            "link_color": "#ffffff",
+            "link_size": "h4",
+            "link": "shopify:\/\/policies\/legal-notice",
+            "show_secondary": false,
+            "title2": "Column",
+            "title_size2": "h3",
+            "text2": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_size2": "12pt",
+            "link_label2": "",
+            "btn_margin2": 0,
+            "link_size2": "h4",
+            "link2": ""
+          }
+        },
+        "sections--21521884119337__f483f1fa-8926-4738-8b2b-7bed1bce2c29-column-3": {
+          "type": "column",
+          "settings": {
+            "background_color": "rgba(0,0,0,0)",
+            "title": "お問い合わせ",
+            "title_size": "h3",
+            "title_color": "#ffffff",
+            "text": "<p>※お問い合わせフォームは２４時間受付中です。<\/p><p>確認後、担当よりご連絡させていただきます。<\/p>",
+            "text_size": "10pt",
+            "text_color": "#ffffff",
+            "link_label": "お問い合わせ",
+            "btn_margin": 10,
+            "link_color": "#ffffff",
+            "link_size": "h4",
+            "link": "shopify:\/\/pages\/contact",
+            "show_secondary": true,
+            "title2": "会社概要",
+            "title_size2": "h3",
+            "text2": "<p>株式会社　八恵堂<\/p><p>福岡市博多区上川端町11-287 　<\/p>",
+            "text_size2": "10pt",
+            "link_label2": "詳細を見る",
+            "btn_margin2": 10,
+            "link_size2": "h4",
+            "link2": "shopify:\/\/pages\/about-us"
+          }
+        }
+      },
+      "block_order": [
+        "sections--21521884119337__f483f1fa-8926-4738-8b2b-7bed1bce2c29-column-1",
+        "sections--21521884119337__f483f1fa-8926-4738-8b2b-7bed1bce2c29-column-2",
+        "sections--21521884119337__f483f1fa-8926-4738-8b2b-7bed1bce2c29-column-3"
+      ],
+      "settings": {
+        "background_color": "#343434",
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-0": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "subtext": ""
+          }
+        },
+        "link_list_txKFdV": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "footer"
+          }
+        },
+        "75175e7f-8d4d-449e-8929-df1f9c6baf8d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Asset_31.png",
+            "image_width": 100,
+            "alignment": "center",
+            "url1": "shopify:\/\/policies\/legal-notice",
+            "url_text1": "特定商取引法に基づく表記",
+            "url2": "shopify:\/\/policies\/privacy-policy",
+            "url_text2": "プライバシーポリシー",
+            "url3": "shopify:\/\/policies\/terms-of-service",
+            "url_text3": "利用規約"
+          }
+        },
+        "5bbf2db7-1c05-46e0-adb7-ca9dfbfc6612": {
+          "type": "social_list",
+          "settings": {
+            "social1": "shopify:\/\/shop_images\/Facebook.png",
+            "social2": "shopify:\/\/shop_images\/Instagram.png",
+            "social3": "shopify:\/\/shop_images\/LINE.png",
+            "social_caption": "各種SNSにてお得な情報発信中"
+          }
+        }
+      },
+      "block_order": [
+        "footer-0",
+        "link_list_txKFdV",
+        "75175e7f-8d4d-449e-8929-df1f9c6baf8d",
+        "5bbf2db7-1c05-46e0-adb7-ca9dfbfc6612"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "background_image": "shopify:\/\/shop_images\/Asset_30.jpg",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": true,
+        "margin_top": 48,
+        "padding_top": 36,
+        "padding_bottom": 56
+      }
+    }
+  },
+  "order": [
+    "float_top_btn_LfFqCR",
+    "custom_liquid_PtwgCc",
+    "custom_liquid_rmjqij",
+    "f483f1fa-8926-4738-8b2b-7bed1bce2c29",
+    "footer"
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "fbd55c35-7ac8-45c1-90c0-593091d17b38": {
+          "type": "shipment_type",
+          "settings": {
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "metafileds_g_UnXwjF": {
+          "type": "metafileds-g",
+          "settings": {
+          }
+        },
+        "custom_liquid_w6NJMc": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"review-summary-container\" data-pid=\"{{ product.id }}\" data-group=\"true\" data-action=\"summary\"><\/div>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "e329d95d-e312-4579-ac9f-428fe604d2ec": {
+          "type": "subscription_button",
+          "disabled": true,
+          "settings": {
+            "subscription_price": "{{ product.metafields.custom.subscription_price.value }}",
+            "subscription_url": "shopify:\/\/products\/beginners-set"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "発送方法",
+            "icon": "truck",
+            "content": "<p>{{ product.metafields.custom.shipping | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "消費期限",
+            "icon": "chat_bubble",
+            "content": "<p>{{ product.metafields.custom.expiration_date | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "fbd55c35-7ac8-45c1-90c0-593091d17b38",
+        "title",
+        "caption",
+        "metafileds_g_UnXwjF",
+        "custom_liquid_w6NJMc",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "e329d95d-e312-4579-ac9f-428fe604d2ec",
+        "description",
+        "collapsible-row-1",
+        "collapsible-row-3"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 100,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_fxa36m": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"gallery-pictures-container\" data-gallery-id=\"1033\" data-product-id=\"{{ product.id }}\" data-group=\"true\"><\/div>\n<div class=\"review-container\" data-pid=\"{{ product.id }}\" data-group=\"true\" data-action=\"widget\"><\/div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1702220999c3604ee7": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_fxa36m",
+    "related-products",
+    "1702220999c3604ee7"
+  ]
+}

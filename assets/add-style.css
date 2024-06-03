@@ -1,0 +1,831 @@
+* {
+    font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif!important;
+}
+* {
+    font-family: "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", serif!important;
+}
+h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 ,.u-h6{
+    font-weight: bold;
+}
+.header__menu-item, .announcement-bar a span,.product__description p, a.button {
+    font-weight: bold;
+}
+.pc-br {
+    display: block;
+}
+.mp-br {
+    display: none;
+}
+@media screen and (max-width: 749px) {
+    .pc-br {
+        display: none;
+    }
+    .mp-br {
+        display: block;
+    }
+}
+.pc-display-none {
+    display: none;
+}
+.mp-display-none {
+    display: block;
+}
+@media screen and (max-width: 749px) {
+    .pc-display-none {
+        display: block;
+    }
+    .mp-display-none {
+        display: none;
+    }
+}
+#MainContent {
+    margin-top: -83px;
+}
+@media screen and (max-width: 749px) {
+    #MainContent {
+        margin-top: -62px;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    body .header {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+.announcement-bar-section{
+    position:sticky!important;
+    left:0!important;
+    right:0!important;
+    top: 0px!important;
+}
+@media screen and (min-width: 990px) {
+    .header__heading-link {
+        padding: 0;
+    }
+    .header__heading .header__heading-link {
+        padding: 0px;
+    }
+}
+
+.shopify-section-header-sticky {
+    position:sticky!important;
+}
+.shopify-section-header-sticky .header__heading-logo {
+    transition: all 0.2s;
+}
+@media screen and (min-width: 750px) {
+    .shopify-section-header-sticky.scrolled-past-header .header__heading-logo {
+        /* height: auto;
+        max-width: 100%;
+        width: 83px;
+        position: absolute;
+        top: 0px;
+        z-index: 9999;
+        transition: all 0.3s; */
+        opacity: 0;
+        height: 0;
+        width: 0;
+        transition: all 0.2s;
+    }
+    .shopify-section-header-sticky .logo-slide-change {
+        opacity: 0!important;
+        height: 0;
+        width: 0;
+        transition: all 0.5s;
+    }
+    .shopify-section-header-sticky.scrolled-past-header .logo-slide-change {
+        opacity: 1!important;
+        height: auto;
+        width: auto;
+        transition: all 0.5s;
+    }
+}
+@media screen and (max-width: 989px) {
+    .header__heading-logo {
+        opacity: 0!important;
+        height: 0!important;
+        width: 0!important;
+    }
+    .header__heading .header__heading-link {
+        padding: 0.7em;
+    }
+    .header-wrapper .logo-slide-change {
+        opacity: 1!important;
+        height: auto;
+        width: auto;
+    }
+    .shopify-section-header-sticky .logo-slide-change {
+        opacity: 1!important;
+        height: auto;
+        width: auto;
+    }
+}
+/* @media screen and (max-width: 749px) {
+    .shopify-section-header-sticky .logo-slide-change {
+        display: none!important;
+    }
+} */
+.menu-drawer-container .icon-hamburger path, .menu-drawer-container .icon-close path {
+    fill: #fff;
+}
+#menu-drawer {
+    background: #3B3837!important;
+}
+#menu-drawer .menu-drawer__inner-submenu {
+    background: #3B3837!important;
+}
+#menu-drawer .menu-drawer__inner-submenu .has-submenu {
+    background: #3B3837!important;
+}
+#menu-drawer .menu-drawer__menu-item , #menu-drawer .link--text{
+    color: #fff;
+}
+#menu-drawer .menu-drawer__account {
+    color: #fff;
+}
+#menu-drawer .list-social__link.link .icon path {
+    fill: #fff;
+}
+#menu-drawer .menu-drawer__account {
+    display: none;
+}
+
+.cart-notification-wrapper #cart-notification {
+    background-image: url(https://cdn.shopify.com/s/files/1/0840/8770/1801/files/1_0e54f05a-98da-4134-9936-618e4f961702.png?v=1707109929&width=100);
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+
+@media screen and (max-width: 749px) {
+    body .footer {
+        margin-top: 160px;
+    }
+    body .footer .footer-block.grid__item {
+        margin: 2.5rem 0;
+    }
+    body .footer .footer-block__details-content {
+        margin-bottom: 6rem;
+    }
+    body .footer .footer__blocks-wrapper {
+        padding-bottom: 60px;
+    }
+}
+
+
+.footer-block:first-child .footer-block__details-content {
+    max-width: 322px;
+    width: 100%;
+    margin-left: auto;
+}
+.footer-block__details-content li a{
+    color: #fff!important;
+    text-decoration: none;
+    font-size: 13.3px!important;
+}
+@media screen and (max-width: 749px) {
+    .footer .footer-block__details-content .list-menu__item {
+        justify-content: center;
+    }
+}
+.policy-links {
+    display: none!important;
+}
+
+
+.multicolumn-card__info:last-child {
+    padding-top: 0px;
+}
+
+  .cart-count-bubble {
+    position: absolute;
+    background-color: rgb(var(--color-button));
+    color: rgb(var(--color-button-text));
+    height: 1.7rem;
+    width: 1.7rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    top: 1.0rem;
+    left: -1rem;
+    line-height: calc(1 + 0.1 / var(--font-body-scale));
+  }
+
+/* utility-bar */
+.utility-bar {
+    height: 100%;
+    background-color: #3C3837;
+  }
+  
+.announcement-bar {
+    padding-right: 0.8rem;
+}
+.announcement-bar,
+.announcement-bar__announcement {
+  color: rgb(var(--color-foreground));
+  background-color: #3C3837;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  align-content: center;
+  grid-area: announcements;
+}
+
+.announcement-bar a{
+    color: white;
+    text-decoration: none;
+    padding:18px 6px 10px;
+    font-size: 14px;
+}
+@media screen and (max-width: 989px) {
+    .announcement-bar a{
+        padding:10px 6px 10px;
+    }
+}
+
+.announcement-bar a:hover{
+    color: white;
+    text-decoration: underline;
+    padding:18px 6px 10px;
+}
+
+
+
+/* section-header */
+.section-header.shopify-section-group-header-group {
+    z-index: 4;
+    position:absolute;
+    left: 0;
+    right: 0;
+    top:53px;
+}
+@media screen and (max-width: 989px) {
+    .section-header.shopify-section-group-header-group {
+        top: 45px;
+    }
+}
+.shopify-section-group-header-group {
+    z-index: 4;
+}
+
+
+  /* .header {
+    display: grid;
+    position:relative;
+    grid-template-areas: 'left-icons heading icons';
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+  }
+   */
+  .color-nav {
+    background-color: rgba(60,56,55,0.4)
+  }
+  
+  .header__heading-logo {
+    height: auto;
+    max-width: 100%;
+    position:absolute;
+    top:-20px;
+    z-index: 9999;
+  }
+
+  @media screen and (max-width: 989px) {
+    .header__heading-logo {
+      height: auto;
+      max-width: 100%;
+      width:50px;
+      position:relative;
+      top:0;
+      z-index: 9999;
+    }
+  }
+
+  .header__menu-item {
+    padding: 1.2rem;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+  }
+
+  .header__active-menu-item {
+    transition: text-decoration-thickness var(--duration-short) ease;
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+  }
+  
+
+
+
+/*コレクション*/
+.template-collection main {
+    padding-top: 150px;
+}
+.template-collection {
+    background-image: url(https://cdn.shopify.com/s/files/1/0840/8770/1801/files/1_0e54f05a-98da-4134-9936-618e4f961702.png?v=1707109929&width=500);
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
+}
+.template-collection .gradient {
+    background: transparent;
+}
+@media screen and (max-width: 749px) {
+    .template-collection main {
+        padding-top: 80px;
+    }
+}
+
+/*商品ページ*/
+.template-product main {
+    padding-top: 100px;
+}
+.template-product {
+    /* background-image: url(https://cdn.shopify.com/s/files/1/0840/8770/1801/files/2_2x_e4357ffb-f73e-4a97-9865-9410a78ba070.png?v=1706268564&width=500); */
+    background-image: url(https://cdn.shopify.com/s/files/1/0840/8770/1801/files/1_0e54f05a-98da-4134-9936-618e4f961702.png?v=1707109929&width=500);
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
+}
+.template-product .gradient {
+    background: transparent;
+}
+@media screen and (max-width: 749px) {
+    .template-product main {
+        padding-top: 30px;
+    }
+}
+.template-product .product-form {
+    margin-bottom: 0px!important;
+}
+.product-form__submit {
+    background: #faae00;
+    border-radius: 0px;
+}
+.product-form__submit span {
+    font-size: 20px;
+}
+.product-form__submit.button:after {
+    box-shadow: 0 0 0!important;
+}
+.template-product .thumbnail img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+.template-product .thumbnail {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+.template-product .product-form__buttons {
+    max-width: 100%;
+}
+.template-product #appstle_subscription_widget0 {
+    width: 100%;
+    max-width: 100%;
+}
+.template-product .price__badge-sale {
+    display: none!important;
+}
+.template-product .thumbnail[aria-current] {
+    box-shadow: 0 0 0 0rem transparent;
+    border-color: transparent;
+}
+.template-product .thumbnail[aria-current]:focus:not(:focus-visible) {
+    outline: 0;
+    box-shadow: 0 0 0 0rem transparent;
+}
+@media screen and (min-width: 750px) {
+    .template-product .thumbnail-slider .thumbnail-list.slider--tablet-up {
+        padding-top: 0px;
+    }
+}
+/* @media screen and (min-width: 990px) {
+    .product--large:not(.product--no-media) .product__media-wrapper {
+        max-width: 60%;
+        width: calc(60% - var(--grid-desktop-horizontal-spacing) / 2);
+    }
+}
+@media screen and (min-width: 990px) {
+    .product--large:not(.product--no-media) .product__info-wrapper {
+        padding: 0 0 0 4rem;
+        max-width: 40%;
+        width: calc(40% - var(--grid-desktop-horizontal-spacing) / 2);
+    }
+} */
+
+/*カートページ*/
+.template-cart main {
+    padding-top: 150px;
+}
+.template-cart {
+    background-image: url(https://cdn.shopify.com/s/files/1/0840/8770/1801/files/1_0e54f05a-98da-4134-9936-618e4f961702.png?v=1707109929&width=500);
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
+}
+.template-cart .gradient {
+    background: transparent;
+}
+@media screen and (max-width: 749px) {
+    .template-cart main {
+        padding-top: 80px;
+    }
+}
+.template-cart .caption-with-letter-spacing {
+    font-size: 18px;
+    color: #333;
+}
+.template-cart .cart-item__name {
+    font-size: 24px;
+    color: #333;
+}
+.template-cart .totals .totals__total {
+    font-size: 22px;
+    color: #333;
+}
+.template-cart .totals span {
+    font-size: 22px;
+    color: #333;
+}
+.template-cart .product-option {
+    font-size: 18px;
+    color: #333;
+}
+.template-cart .tax-note {
+    font-size: 16px;
+    color: #333;
+}
+
+/*アカウントページ*/
+.template-customers main {
+    padding-top: 100px;
+}
+@media screen and (max-width: 749px) {
+    .template-customers main {
+        padding-top: 100px;
+    }
+}
+.template-customers {
+    background-image: url(https://cdn.shopify.com/s/files/1/0840/8770/1801/files/1_0e54f05a-98da-4134-9936-618e4f961702.png?v=1707109929&width=500);
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
+}
+.template-customers .gradient {
+    background: transparent;
+}
+
+/*固定ページ*/
+.template-page main {
+    padding-top: 100px;
+}
+@media screen and (max-width: 749px) {
+    .template-page main {
+        padding-top: 100px;
+    }
+}
+.template-page {
+    background-image: url(https://cdn.shopify.com/s/files/1/0840/8770/1801/files/1_0e54f05a-98da-4134-9936-618e4f961702.png?v=1707109929&width=500);
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
+}
+.template-page.template-page-product-list {
+    background-image: none;
+}
+.template-page .gradient {
+    background: transparent;
+}
+.template-page-kodawari.template-page main,.template-page-kodawari-manufacturing main,.template-page-kodawari-preservation main,.template-page-kodawari-materials main,.template-page-q-a main,.template-page-about_us main {
+    padding-top: 0px;
+}
+
+/*ブログページ*/
+.template-blog main {
+    padding-top: 150px;
+}
+@media screen and (max-width: 749px) {
+    .template-blog main {
+        padding-top: 100px;
+    }
+}
+.template-blog {
+    background-image: url(https://cdn.shopify.com/s/files/1/0840/8770/1801/files/1_0e54f05a-98da-4134-9936-618e4f961702.png?v=1707109929&width=500);
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
+}
+.template-blog .gradient {
+    background: transparent;
+}
+
+/*記事ページ*/
+.template-article main {
+    padding-top: 150px;
+}
+@media screen and (max-width: 749px) {
+    .template-article main {
+        padding-top: 100px;
+    }
+}
+.template-article {
+    background-image: url(https://cdn.shopify.com/s/files/1/0840/8770/1801/files/1_0e54f05a-98da-4134-9936-618e4f961702.png?v=1707109929&width=500);
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
+}
+.template-article .gradient {
+    background: transparent;
+}
+
+/*その他*/
+.template- {
+    background-image: url(https://cdn.shopify.com/s/files/1/0840/8770/1801/files/1_0e54f05a-98da-4134-9936-618e4f961702.png?v=1707109929&width=500);
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+/*全体調整*/
+/* #MainContent {
+    background-image: url(//hakkeido.myshopify.com/cdn/shop/files/1_f6430df3-5ba5-423a-84b1-cc9764d43fff.png?v=1705976418&width=500);
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+} */
+.custom-button-layout {
+    margin-top: 20px;
+}
+.custom-button-layout a.button--secondary {
+    transition: all 0.3s;
+    color: #4b4c4d;
+    background: transparent;
+    min-height: 40px;
+}
+a.button--secondary {
+    transition: all 0.3s;
+    color: #4b4c4d;
+    background: transparent;
+    min-height: 40px;
+}
+.custom-button-layout a.button--secondary .arrow-icons {
+    transition: all 0.3s;
+    padding-top: 3px;
+    color: #4b4c4d;
+    margin-left: 5px;
+    padding-bottom: 0px;
+}
+.custom-button-layout a.button--secondary:hover .arrow-icons {
+    transform: scale(1.3);
+    transition: all 0.3s;
+    color: #4b4c4d;
+}
+.custom-button-layout a.button--secondary:hover {
+    transform: rotate(0deg);
+}
+@media screen and (max-width: 749px) {
+    .custom-button-layout a.button--secondary .arrow-icons {
+        margin-right: 10px;
+        padding-bottom: 15px;
+    }
+}
+
+.icon-arrow {
+    margin-left: 10px;
+}
+/* <svg style="width: 15px; height: auto;" class="arrow-icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.2 23.4"><defs><style>.cls-1{font-size:19.2px;fill:#3c3736;font-family:HiraginoMin-W6-90msp, HiraginoMin W6-90msp-RKSJ-H;}</style></defs><g id="レイヤー_2" data-name="レイヤー 2"><g id="レイヤー_1-2" data-name="レイヤー 1"><text class="cls-1" transform="translate(0 16.9)">→</text></g></g></svg> */
+
+
+
+/*ポリシー*/
+.shopify-policy__body p ,.shopify-policy__body td,.shopify-policy__body th {
+    font-size: 14px;
+    line-height: 1.6!important;
+}
+@media screen and (max-width: 749px) {
+    .shopify-policy__body p ,.shopify-policy__body td,.shopify-policy__body th {
+        font-size: 14px;
+    }
+}
+.shopify-policy__title h1, .shopify-policy__title .h1 {
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.shopify-policy__container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 150px;
+    margin-bottom: 80px;
+}
+@media screen and (max-width: 749px) {
+    .shopify-policy__container {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+}
+.shopify-policy__container ul {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0px;
+}
+.shopify-policy__container ul > li:not(:last-child) {
+    margin-bottom: 30px;
+}
+.shopify-policy__container ul > li {
+    counter-increment: number;
+}
+.shopify-policy__container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.shopify-policy__container li {
+    list-style-type: none;
+}
+
+
+.shopify-policy__container .c-table {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+.shopify-policy__container .c-table tbody tr:first-child {
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+.shopify-policy__container .c-table tbody tr {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+.shopify-policy__container .u-color__border--border {
+    border-color: #D8DDDF !important;
+    border-left: none;
+    border-right: none;
+}
+.shopify-policy__container .c-table tbody tr th {
+    text-align: left;
+    padding: 16px 10px;
+    width: 150px;
+}
+.shopify-policy__container .u-text--strong {
+}
+.shopify-policy__container .c-table tbody tr td {
+    padding: 16px 10px;
+}
+.shopify-policy__container .u-text--body {
+    line-height: 1.4;
+}
+
+
+/*定期購買アプリ*/
+.appstleLoyaltyTable {
+    margin-bottom: 20px;
+    display: none;
+}
+.appstle_subscription_wrapper {
+    margin-bottom: 20px!important;
+}
+
+
+/*商品ページ*/
+.template-product main .product__title h1 {
+    /*text-shadow: 0.5px 0 currentColor, -0.5px 0 currentColor;*/
+}
+.template-product main .price-item {
+    font-size: 30px;
+    /*text-shadow: 0.2px 0 currentColor, -0.2px 0 currentColor;*/
+    color: #b82a1f;
+}
+.template-product main .price-item span {
+    font-size: 17px;
+    color: #b82a1f;
+}
+.template-product main .tax-label {
+    font-size: 17px;
+    color: #b82a1f;
+}
+.template-product main .product__tax.caption {
+    display: none;
+}
+.template-product main .product-form__quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.template-product main .quantity__label {
+    margin: 0px;
+    font-size: 18px;
+    /*text-shadow: 0.2px 0 currentColor, -0.2px 0 currentColor;*/
+}
+.template-product main .appstle_widget_title {
+    /*text-shadow: 0.2px 0 currentColor, -0.2px 0 currentColor;*/
+    font-size: 18px;
+}
+.template-product main .appstle_subscription_wrapper_option input {
+    /*text-shadow: 0.2px 0 currentColor, -0.2px 0 currentColor;*/
+    font-size: 18px;
+}
+.template-product main .product__description, .template-product main .accordion__title ,.template-product main .accordion__content {
+    /*text-shadow: 0.2px 0 currentColor, -0.2px 0 currentColor;*/
+}
+/* .template-product .dynamic-link-custom {
+    pointer-events: none;
+} */
+
+/*ブログ一覧ページ*/
+.template-blog .main-blog.page-width{
+    max-width: 782px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.template-blog .main-blog .title--primary {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.template-blog .blog-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+.template-blog .blog-articles .article-card .card__information, .template-blog .blog__posts .article-card .card__information {
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+.template-blog .article-card__excerpt {
+    display: none;
+}
+.template-blog .blog-articles .card__information {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    align-items: center;
+    justify-content: left;
+}
+.template-blog .blog-articles .article-card__info {
+    padding-top: 0px;
+}
+.template-blog .blog-articles .article-card__info time {
+    font-size: 14px;
+}
+@media screen and (max-width: 749px) {
+    .template-blog .blog-articles .card__heading {
+        font-size: 16px;
+    }
+    .template-blog .blog-articles .article-card__info {
+        white-space: nowrap;
+    }
+    .template-blog .blog-articles .article-card__info time {
+        font-size: 10px;
+    }
+}
+.template-blog .blog-articles .article-card .card__heading {
+    margin-bottom: 0px;
+}
+.template-blog .article-card .card__content {
+    display: block;
+}
+.template-blog .article-card .ratio {
+    display: block;
+}
+
+
+/*ブログ記事ページ*/
+.template-article .article-template__content p {
+    font-weight: bold;
+}
+@media screen and (min-width: 990px) {
+    .template-article .article-template__hero-container.page-width--narrow {
+        max-width: 72.6rem;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .template-article .article-template__hero-container.page-width--narrow {
+            padding: 0rem;
+        }
+}
+
+
+
+/*商品一覧固定ページ*/
+.template-page.template-page-product-list #page-top {
+    background-color: #dc5d5f;
+    color: #fff;
+}
+.template-page.template-page-product-list #page-top .dli-chevron-up {
+    color: #fff;
+}

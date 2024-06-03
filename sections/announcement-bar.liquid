@@ -1,0 +1,158 @@
+<div
+  id="section-{{ section.id }}"
+  class="utility-bar"
+  {{ block.shopify_attributes }}
+>
+  <div class="page-width utility-bar__grid{% if announcement_bar and language_country_selector or section.settings.show_social and social_icons %} utility-bar__grid--3-col{% elsif language_country_selector or section.settings.show_social and social_icons %} utility-bar__grid--2-col{% endif %}">
+    <div
+      class="announcement-bar"
+      role="region"
+      aria-label="{{ 'sections.header.announcement' | t }}"
+      {{ block.shopify_attributes }}
+    >
+      {% comment %} <a
+        href="{{ routes.cart_url }}"
+        style="position: relative; display: flex; align-items:center;"
+        >
+        <span> {{ 'sections.cart.title' | t }}</span>
+        {%- if cart != empty -%}
+          <div class="cart-count-bubble">
+            {%- if cart.item_count < 100 -%}
+              <span aria-hidden="true">{{ cart.item_count }}</span>
+            {%- endif -%}
+          </div>
+          <span style="font-size: 8pt; color: #222; display:block; border: 1px solid white; border-radius: 9999px; padding:0 5px; background-color:#CCC; margin:0 5px;">
+            {{- cart.total_price | money -}}
+          </span>
+        {%- endif -%}
+      </a> {% endcomment %}
+      <a href="{{ routes.cart_url }}" class="{%  if cart != empty %}cart-fill {% else %}cart-empty {% endif %}header__icon header__icon--cart link focus-inset" id="">
+        {% render 'icon-cart-custom' %}
+        {%- if cart != empty -%}
+          <div class="cart-count-bubble">
+            {%- if cart.item_count < 100 -%}
+              <span aria-hidden="true">{{ cart.item_count }}</span>
+            {%- endif -%}
+            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+          </div>
+        {%- endif -%}
+        <span class="header-menu-icon-text">{{ settings.cart_text }}</span>
+      </a>
+      {% comment %} <a
+        href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+        class=""
+      >
+        <span class="header-menu-icon-text">
+          {%- liquid
+            if customer
+              echo 'customer.account_fallback' | t
+            else
+              echo 'customer.log_in' | t
+            endif
+          -%}
+        </span>
+      </a> {% endcomment %}
+      {%- unless customer -%}
+        <a class="header__icon header__icon--cart link focus-inset" href="{{ routes.account_register_url }}">
+          {% render 'icon-register-custom' %}
+          <span class="header-menu-icon-text">{{ settings.register_text }}</span>
+        </a>
+      {%- endunless -%}
+
+      {%- if shop.customer_accounts_enabled -%}
+        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
+          {%- if customer -%}
+            {% render 'icon-account-custom' %}
+          {% else %}
+            {% render 'icon-login-custom' %}
+          {% endif %}
+          <span class="header-menu-icon-text">
+            {%- if customer -%}
+              {{settings.account_text}}
+            {% else %}
+              {{settings.login_text}}
+            {% endif %}
+          </span>
+        </a>
+        {% if customer %}
+          <a href="{{ routes.account_logout_url }}" class="header__icon header__icon--account link focus-inset">
+            {% render 'icon-logout-custom' %}
+            <span class="header-menu-icon-text">
+              {{settings.logout_text}}
+            </span>
+          </a>
+        {%  endif %}
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+<style>
+#section-{{ section.id }}.utility-bar {
+    height: 53px;
+    background-color: #3c3837;
+}
+#section-{{ section.id }} .header__icon {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+#section-{{ section.id }} .small-header-icon {
+  width: auto;
+  height: 20px;
+}
+#section-{{ section.id }} .header-menu-icon-text {
+  font-size: 10px;
+}
+
+@media screen and (max-width: 749px) {
+  #section-{{ section.id }}.utility-bar {
+    height: 44px;
+  }
+  #section-{{ section.id }} .header__icon {
+    gap: 5px;
+  }
+  #section-{{ section.id }} .header-menu-icon-text {
+    font-size: 10px;
+    height: 10px;
+    line-height: 1;
+  }
+  #section-{{ section.id }} .announcement-bar {
+    justify-content: center;
+  }
+  #section-{{ section.id }} .announcement-bar a {
+    font-size: 12px;
+    padding: 0px;
+  }
+}
+
+.cart-count-bubble {
+  position: absolute;
+  background-color: #C5241A;
+  color: #fff;
+  font-size: .9rem;
+  top: 4px;
+  left: 25px;
+}
+</style>
+
+{% schema %}
+{
+  "name": "t:sections.announcement-bar.name",
+  "max_blocks": 12,
+  "class": "announcement-bar-section",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "t:sections.announcement-bar.presets.name"
+    }
+  ]
+}
+{% endschema %}

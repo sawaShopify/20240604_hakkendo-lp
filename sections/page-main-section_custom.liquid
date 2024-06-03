@@ -1,0 +1,423 @@
+{{ 'page-main-section.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  #shopify-section-{{ section.id }} {
+    {% if section.settings.background_image != blank %}
+      background-image: url({{ section.settings.background_image | img_url: 'master' }});
+      background-size: {% if section.settings.backgorund_image_repeat %}contain{% else %}cover{% endif %};
+      background-position: center;
+      background-repeat: {% if section.settings.backgorund_image_repeat %}repeat{% else %}no-repeat{% endif %};
+    {% endif %}
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div
+  id="{{ section.settings.anchor }}"
+  class="isolate{% unless section.settings.full_width %} page-width{% endunless %}"
+>
+  <div class="page-main-section content-container {% if section.settings.full_width %} page-main-section--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+    <div class="page-main-section__wrapper {% if section.settings.full_width %} page-width{% endif %}">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'hr' -%}
+            <div
+              style="width:100%; margin-top:{{ block.settings.margin_top }}px; margin-bottom:{{ block.settings.margin_bottom }}px"
+              class="page-main-section__hr_background"
+            >
+              <span></span>
+            </div>
+          {%- when 'content' -%}
+            <div
+              id="{{ block.settings.anchor_link }}"
+              class="page-main-section__blocks page-main-section__blocks--space-around {% if block.settings.image_position == 'right' %}page-main-section__blocks--reverse_flex{% endif %}"
+              style="margin:0 auto;"
+            >
+              {%- if block.settings.image != blank -%}
+                <img
+                  src="{{ block.settings.image | image_url: width: 800 }}"
+                  class="take-40"
+                  style="margin: 20px; {% if block.settings.with_border == true %}border:{{ block.settings.border_width }}px {{ block.settings.border_color }} solid;{% endif %}"
+                >
+              {%- endif -%}
+              <div style="padding: 20px; flex:1;color: {{ block.settings.content_color }};">
+                {%- if block.settings.title_image != blank -%}
+                  <div class="page-main-section__title_wrapper">
+                    {%- assign image_alt = block.settings.image.alt | default: block.settings.title | escape -%}
+                    {%- assign image_height = block.settings.title_image_width
+                      | divided_by: block.settings.image.aspect_ratio
+                    -%}
+                    {% capture sizes %}(max-width: {{ block.settings.title_image_width | times: 2 }}px) 50vw, {{ block.settings.title_image_width }}px{% endcapture %}
+                    {% capture widths %}{{ block.settings.title_image_width }}, {{ block.settings.title_image_width | times: 1.5 | round }}, {{ block.settings.title_image_width | times: 2 }}{% endcapture %}
+                    {{
+                      block.settings.title_image
+                      | image_url: width: 600
+                      | image_tag:
+                        class: 'page-main-section__title-image motion-reduce',
+                        widths: widths,
+                        height: image_height,
+                        width: block.settings.title_image_width,
+                        alt: image_alt,
+                        sizes: sizes
+                    }}
+                  </div>
+                {%- else -%}
+                  <h2
+                    class="{{ block.settings.title_size }}"
+                    style="margin: 5px; color:{{ block.settings.title_color }}; text-align:{{ block.settings.title_align }}"
+                  >
+                    {{ block.settings.title }}
+                  </h2>
+                {%- endif -%}
+                {%- if block.settings.have_title_underline -%}
+                  <hr style="margin: 0; background-color: #EEE; height:2px;">
+                {%- endif -%}
+                <h3
+                  class="{{ block.settings.subtitle_size }}"
+                  style="margin: 5px; text-align:{{ block.settings.subtitle_align }}; color:{{ block.settings.subtitle_color }};"
+                >
+                  {{- block.settings.subtitle | newline_to_br -}}
+                </h3>
+                <div
+                  class="{{ block.settings.content_size }}"
+                  style="color:{{ block.settings.content_color }}; text-align{{ block.settings.content_align }}"
+                >
+                  {{ block.settings.content }}
+                </div>
+              </div>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "(C)ページメインコンテンツ",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "背景画像"
+    },
+    {
+      "type": "checkbox",
+      "id": "backgorund_image_repeat",
+      "label": "背景画像を繰り返す",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "全幅"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding トップ",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding ボトム",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hr",
+      "name": "横線",
+      "settings": [
+        {
+          "type": "header",
+          "content": "マージン"
+        },
+        {
+          "type": "range",
+          "id": "margin_top",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "マージン トップ",
+          "default": 40
+        },
+        {
+          "type": "range",
+          "id": "margin_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "マージン ボトム",
+          "default": 40
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "name": "画像付きコンテンツ",
+      "settings": [
+        {
+          "type": "header",
+          "content": "メイン画像"
+        },
+        {
+          "type": "text",
+          "id": "anchor_link",
+          "label": "anchor"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "画像"
+        },
+        {
+          "type": "checkbox",
+          "id": "with_border",
+          "label": "ボーダーを表示",
+          "default": true
+        },
+        {
+          "type": "number",
+          "id": "border_width",
+          "label": "ボーダーの幅",
+          "default": 1
+        },
+        {
+          "type": "color",
+          "id": "border_color",
+          "label": "ボーダーの色",
+          "default": "#FFF"
+        },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "画像の位置",
+          "options": [
+            {
+              "value": "left",
+              "label": "左"
+            },
+            {
+              "value": "right",
+              "label": "右"
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "title_image",
+          "label": "タイトル画像"
+        },
+        {
+          "type": "range",
+          "id": "title_image_width",
+          "min": 10,
+          "max": 1000,
+          "step": 10,
+          "unit": "px",
+          "label": "タイトル画像の幅",
+          "default": 200
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "タイトル",
+          "default": "タイトル"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "タイトルの色",
+          "default": "#FFF"
+        },
+        {
+          "type": "select",
+          "id": "title_align",
+          "label": "タイトルの位置",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": "左"
+            },
+            {
+              "value": "center",
+              "label": "中央"
+            },
+            {
+              "value": "right",
+              "label": "右"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "title_size",
+          "label": "タイトルのサイズ",
+          "default": "h2",
+          "options": [
+            {
+              "value": "h3",
+              "label": "小"
+            },
+            {
+              "value": "h2",
+              "label": "中"
+            },
+            {
+              "value": "h1",
+              "label": "大"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "have_title_underline",
+          "label": "タイトルに下線を表示",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "subtitle",
+          "label": "サブタイトル",
+          "default": "サブタイトル"
+        },
+        {
+          "type": "color",
+          "id": "subtitle_color",
+          "label": "サブタイトルの色",
+          "default": "#FFFCDF"
+        },
+        {
+          "type": "select",
+          "id": "subtitle_align",
+          "label": "サブタイトルの位置",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": "左"
+            },
+            {
+              "value": "center",
+              "label": "中央"
+            },
+            {
+              "value": "right",
+              "label": "右"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "subtitle_size",
+          "label": "サブタイトルのサイズ",
+          "default": "h4",
+          "options": [
+            {
+              "value": "h4",
+              "label": "小"
+            },
+            {
+              "value": "h3",
+              "label": "中"
+            },
+            {
+              "value": "h2",
+              "label": "大"
+            },
+            {
+              "value": "h1",
+              "label": "特大"
+            }
+          ]
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "コンテンツ"
+        },
+        {
+          "type": "color",
+          "id": "content_color",
+          "label": "コンテンツの色",
+          "default": "#FFF"
+        },
+        {
+          "type": "select",
+          "id": "content_align",
+          "label": "テキストの位置",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "左"
+            },
+            {
+              "value": "center",
+              "label": "中央"
+            },
+            {
+              "value": "right",
+              "label": "右"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "content_size",
+          "label": "テキストのサイズ",
+          "options": [
+            {
+              "value": "h5",
+              "label": "小"
+            },
+            {
+              "value": "h4",
+              "label": "中"
+            },
+            {
+              "value": "h3",
+              "label": "大"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page Main Section"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,140 @@
+<div id="page-top">
+  <a href="#top"><span class="dli-chevron-up"></span><br>Page Top</a>
+</div>
+<style>
+.dli-chevron-up {
+  display: inline-block;
+  vertical-align: middle;
+  color: #333;
+  line-height: 1;
+  width: 0.8em;
+  height: 0.8em;
+  border: 0.1em solid currentColor;
+  border-left: 0;
+  border-bottom: 0;
+  box-sizing: border-box;
+  transform: translateY(25%) rotate(-45deg);
+}
+
+#page-top {
+  overflow: hidden;
+  position: fixed;
+  right: 10px; /* 初期値 */
+  bottom: 10px; /* 初期値 */
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-size: 13px;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease, right 0.5s ease, bottom 0.5s ease ,top 0.1s ease ; /* 位置の変更にも遷移を適用 */
+  pointer-events: none;
+  z-index: 3; /* 必要に応じてz-indexを調整 */
+}
+@media screen and (max-width: 749px) {
+  #page-top {
+    width: 60px;
+    height: 60px;
+    font-size: 12px;
+    line-height: 1;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+  }
+}
+
+#page-top a {
+  text-decoration: none;
+  color: inherit;
+}
+</style>
+<script>
+  // ページトップボタンの初期位置を設定
+  var button = document.getElementById('page-top');
+  var initialRight = 10; // 右端からの距離
+  var initialBottom = 10; // 下端からの距離
+
+  window.addEventListener('scroll', function() {
+    // 現在のスクロール位置を取得
+    var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+
+    // スクロール位置に基づいてボタンの位置を動的に更新
+    // スクロールに遅れて追従するようにする
+    var dynamicRight = Math.max(initialRight, initialRight + (700 - scrolled) * 0.2);
+    var dynamicBottom = Math.max(initialBottom, initialBottom + (700 - scrolled) * 0.2);
+    
+    // スムーズなアニメーションのために requestAnimationFrame を使用
+    requestAnimationFrame(function() {
+      button.style.right = dynamicRight + 'px';
+      button.style.bottom = dynamicBottom + 'px';
+    });
+
+    // スクロール位置が特定のポイントを超えたらボタンを表示
+    if (scrolled > 700) {
+      button.style.opacity = '1';
+      button.style.pointerEvents = 'auto';
+    } else {
+      button.style.opacity = '0';
+      button.style.pointerEvents = 'none';
+    }
+  });
+
+  // ボタンをクリックしたときのスムーススクロール
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+<script>
+{% comment %} document.addEventListener('DOMContentLoaded', function() {
+  window.addEventListener('scroll', function() {
+    var y = window.scrollY;
+    var topBtn = document.querySelector('#page-top');
+    if (topBtn) {
+      topBtn.style.position = 'absolute';
+      topBtn.style.top = y + 'px';
+    }
+  });
+}); {% endcomment %}
+
+document.addEventListener('DOMContentLoaded', function() {
+  window.addEventListener('scroll', function() {
+    var y = window.scrollY + window.innerHeight - 90;
+    var x = window.scrollX;
+    var topBtn = document.querySelector('#page-top');
+    if (topBtn) {
+      topBtn.style.top = y + 'px';
+      topBtn.style.position = 'absolute'; // `fixed`を使用して、ボタンをビューポートに対して固定
+      topBtn.style.bottom = '20px'; // 画面下からの距離
+      topBtn.style.right = '20px'; // 画面右からの距離
+    }
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "フロートTOPボタン",
+  "settings": [],
+  "presets": [
+    {
+      "name": "フロートTOPボタン"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,278 @@
+{{ 'section-rich-section.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  #shopify-section-{{ section.id }} {
+    {% if section.settings.background_image != blank %}
+      background-image: url({{ section.settings.background_image | img_url: 'master' }});
+      background-size: {% if section.settings.backgorund_image_repeat %}contain{% else %}cover{% endif %};
+      background-position: center;
+      background-repeat: {% if section.settings.backgorund_image_repeat %}repeat-x{% else %}no-repeat{% endif %};
+    {% endif %}
+  }
+  {% if section.settings.backgorund_image_parallax == true %}
+    @media screen and (min-width: 750px) {
+      #shopify-section-{{ section.id }} {
+          background-attachment: fixed;
+      }
+    }
+  {% endif %}
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div
+  id="{{ section.settings.anchor }}"
+  class="isolate{% unless section.settings.full_width %} page-width{% endunless %}"
+>
+  <div class="rich-section content-container {% if section.settings.full_width %} rich-section--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="rich-section__wrapper {% if section.settings.full_width %} page-width{% endif %}">
+          <div class="rich-section__blocks-custom center" style="margin: 0 auto;">
+            <div class="rich-section__flex_between direction_column_on_mobile">
+              <div
+                class="take-40 custom-button-layout"
+                style="display: flex; flex-direction: column; justify-content: flex-end; margin:20px 0"
+              >
+                <img src="{{ section.settings.featured_image | img_url: 'master' }}" width="100%">
+                <h2 class="caption-subtitle">
+                  {{ section.settings.title }}
+                </h2>
+                <p class="caption-text">
+                  {{ section.settings.caption1 | newline_to_br }}
+                </p>
+                <a
+                  href="{{ section.settings.caption_link1 }}"
+                  {% if section.settings.outer_link == true %}target="_blank" rel="noopener noreferrer"{% endif %}
+                  class="custom-Button {% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
+                  >{{section.settings.caption_link_text}}<span>{% render 'icon-arrow' %}</span></a
+                >
+              </div>
+              <div class="take-40" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));gap:1rem">
+                <img src="{{ section.settings.images1 | img_url: 'master' }}" style="width: 100%">
+                <img src="{{ section.settings.images2 | img_url: 'master' }}" style="width: 100%">
+                <img src="{{ section.settings.images3 | img_url: 'master' }}" style="width: 100%">
+                <img src="{{ section.settings.images4 | img_url: 'master' }}" style="width: 100%">
+                <img src="{{ section.settings.images5 | img_url: 'master' }}" style="width: 100%">
+                <img src="{{ section.settings.images6 | img_url: 'master' }}" style="width: 100%">
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+
+<style>
+#shopify-section-{{ section.id }} .rich-section__blocks-custom {
+  max-width: 1000px;
+  width: 100%;
+}
+#shopify-section-{{ section.id }} .caption-subtitle {
+  font-size: 24px;
+  text-wrap: nowrap;
+  margin: 5px auto 5px 10px;
+  color: #fff;
+  text-align: center;
+}
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .caption-subtitle {
+    font-size: 20px;
+  }
+}
+#shopify-section-{{ section.id }} .caption-text {
+  font-size: 14px;
+  margin: 0;
+  color: #fff;
+  margin: 5px 0 5px auto;
+  padding-left: 30px;
+  text-align: left;
+}
+#shopify-section-{{ section.id }} .custom-Button {
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 0px 20px;
+  margin-top: 15px;
+  margin-left: auto;
+}
+#shopify-section-{{ section.id }} .custom-Button::after {
+  box-shadow: 0 0 0 0 #fff;
+}
+#shopify-section-{{ section.id }} .rich-section__wrapper {
+  width: 100%;
+}
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .take-40 {
+      width: 95%;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "(C)リッチセクション4",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "アンカーID",
+      "default": "news"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "背景画像"
+    },
+    {
+      "type": "checkbox",
+      "id": "backgorund_image_repeat",
+      "label": "背景画像を繰り返す",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "backgorund_image_parallax",
+      "label": "パララックスをオンにする",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.rich-section.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.rich-section.settings.desktop_content_position.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.rich-section.settings.desktop_content_position.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.rich-section.settings.desktop_content_position.label",
+      "info": "t:sections.rich-section.settings.desktop_content_position.info"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "タイトル",
+      "label": "タイトル"
+    },
+    {
+      "type": "header",
+      "content": "コンテンツ"
+    },
+    {
+      "type": "image_picker",
+      "id": "featured_image",
+      "label": "メイン画像"
+    },
+    {
+      "type": "url",
+      "id": "caption_link1",
+      "label": "リンク"
+    },
+    {
+      "type": "checkbox",
+      "id": "outer_link",
+      "label": "別タブで開く",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "caption_link_text",
+      "label": "リンクテキスト"
+    },
+    {
+      "type": "text",
+      "id": "caption_title1",
+      "default": "キャプションタイトル1",
+      "label": "キャプションタイトル1"
+    },
+    {
+      "type": "textarea",
+      "id": "caption1",
+      "default": "キャプション1",
+      "label": "キャプション1"
+    },
+    {
+      "type": "image_picker",
+      "id": "images1",
+      "label": "画像1"
+    },
+    {
+      "type": "image_picker",
+      "id": "images2",
+      "label": "画像2"
+    },
+    {
+      "type": "image_picker",
+      "id": "images3",
+      "label": "画像3"
+    },
+    {
+      "type": "image_picker",
+      "id": "images4",
+      "label": "画像4"
+    },
+    {
+      "type": "image_picker",
+      "id": "images5",
+      "label": "画像5"
+    },
+    {
+      "type": "image_picker",
+      "id": "images6",
+      "label": "画像6"
+    },
+
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "t:sections.rich-section.settings.full_width.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "presets": [
+    {
+      "name": "(C)リッチセクション4"
+    }
+  ]
+}
+{% endschema %}

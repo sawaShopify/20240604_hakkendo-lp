@@ -1,0 +1,241 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_PRnFNX": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/1_72309_1.png",
+        "banner_none": true,
+        "content_background_color": "rgba(0, 0, 0, 0.5)",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_custom4_JXPzpY": {
+      "type": "rich-text_custom4",
+      "blocks": {
+        "block_image_qffjH6": {
+          "type": "block_image",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/2_3.png",
+            "top_margin": 50,
+            "bottom_margin": 50,
+            "top_margin_mp": 22,
+            "bottom_margin_mp": 50
+          }
+        },
+        "heading_cWaxmq": {
+          "type": "heading",
+          "settings": {
+            "heading": "企業理念",
+            "heading_size": "h1"
+          }
+        },
+        "text_9KQJhD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\n私たち八恵堂は<br>\nこだわりの素材と最先端の製法で、日本生まれの最高のキムチを作り、<br>\n「美味しさ」と「健康」をお届けし、家族、仲間、お客様の幸せに貢献いたします。\n<\/p>",
+            "bg_color": false,
+            "text_with_title": "",
+            "top_margin": 35,
+            "bottom_margin": 100,
+            "top_margin_mp": 30,
+            "bottom_margin_mp": 100
+          }
+        },
+        "heading_VJk4RF": {
+          "type": "heading",
+          "settings": {
+            "heading": "会社概要",
+            "heading_size": "h1"
+          }
+        },
+        "text2_WgcAwt": {
+          "type": "text2",
+          "settings": {
+            "text": "<div class=\"shadownone\">\n<table class=\"text-table\">\n  <tbody>\n<tr>\n    <td class=\"icon-cell\">▶ 商号<\/td>\n    <td class=\"text-cell\">株式会社八恵堂<\/td>\n  <\/tr>\n  <tr>\n    <td class=\"icon-cell\">▶ 設立<\/td>\n    <td class=\"text-cell\">令和4年8月<\/td>\n  <\/tr>\n  <tr>\n    <td class=\"icon-cell\">▶ 資本金<\/td>\n    <td class=\"text-cell\"> 10,000,000円<\/td>\n  <\/tr>\n  <tr>\n    <td class=\"icon-cell\">▶ 所在地<\/td>\n    <td class=\"text-cell\">〒812-0026 福岡県福岡市博多区上川端町11-287<\/td>\n  <\/tr>\n  <tr>\n    <td class=\"icon-cell\">▶ 代表者<\/td>\n    <td class=\"text-cell\">代表取締役  稲尾 崇<\/td>\n  <\/tr>\n  <tr>\n    <td class=\"icon-cell\">▶ 従業員数<\/td>\n    <td class=\"text-cell\">15名 (アルバイト、パート含む)<\/td>\n  <\/tr>\n  <tr>\n    <td class=\"icon-cell\">▶ 事業内容<\/td>\n    <td class=\"text-cell\">国産キムチの製造・販売、ECサイトの運営<\/td>\n  <\/tr>\n  <tr>\n    <td class=\"icon-cell\">▶ 電話番号<\/td>\n    <td class=\"text-cell\">092-710-7360 (福岡博多本店)<\/td>\n  <\/tr>\n  <tr>\n    <td class=\"icon-cell\">▶ ECサイト<\/td>\n    <td class=\"text-cell\">https:\/\/hakkeido.com<\/td>\n  <\/tr>\n  <tr>\n    <td class=\"icon-cell\">▶ 製造工場<\/td>\n    <td class=\"text-cell\">〒812-0026 福岡県福岡市博多区上川端町11-287 上川端ビル2F<\/td>\n  <\/tr>\n  <tr>\n    <td class=\"icon-cell\">▶ 店舗<\/td>\n    <td class=\"text-cell\">〈福岡博多本店〉<br>\n      〒812-0026 福岡県福岡市博多区上川端町11-287 上川端ビル1F<br>\n      <br>\n      〈新宿マルイ店〉<br>\n      〒160-0022 東京都新宿区新宿3-30-13 新宿マルイ本館B1F\n    <\/td>\n  <\/tr>\n<\/tbody>\n<\/table>\n<\/div>",
+            "bg_color": false,
+            "text_with_title": "",
+            "top_margin": 35,
+            "bottom_margin": 100,
+            "top_margin_mp": 30,
+            "bottom_margin_mp": 100
+          }
+        },
+        "heading_eJ9Eei": {
+          "type": "heading",
+          "settings": {
+            "heading": "SDGsへの取り組み",
+            "heading_size": "h1"
+          }
+        },
+        "block_image2_aErh6z": {
+          "type": "block_image2",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/SDGs_1.png",
+            "top_margin": 20,
+            "bottom_margin": 50,
+            "top_margin_mp": 50,
+            "bottom_margin_mp": 50
+          }
+        },
+        "text_AMrP8a": {
+          "type": "text",
+          "settings": {
+            "text": "<p class=\"shadownone\" style=\"text-align: left;\">\n世界全体では、毎年約13億トン（食料生産量の3分の1相当）もの食品が廃棄されており、私たち日本でも、なんと毎年523万トンもの食品ロスが発生しています。<br>\n一方、世界の気候変動にはCO2の排出が大きく影響しているとされ、世界各国ではカーボンニュートラルへの動きが活発化しています。<br>\n<br>\n私たち八恵堂でも、SDGsの活動に貢献できるよう、以下の取り組みを行っています。\n<\/p>",
+            "bg_color": false,
+            "text_with_title": "",
+            "top_margin": 50,
+            "bottom_margin": 50,
+            "top_margin_mp": 50,
+            "bottom_margin_mp": 50
+          }
+        },
+        "image_text3_BLkgWQ": {
+          "type": "image-text3",
+          "settings": {
+            "image1": "shopify:\/\/shop_images\/12_2.png",
+            "content1_title": "<p style=\"color: #d29200;\" class=\"f-bigmega\">\nつくる責任・のこさず食べきる責任\n<\/p>",
+            "content1_text": "<p class=\"shadownone\">\n特許取得済の冷凍製法で、一切ロスのない食品製造と、旬の野菜を品質を保ったまま冷凍保管できることが八恵堂の強みです。<br>お届け後のご家庭でも冷凍保存を推奨し、「食べたいときに、食べきれる」を実現します。\n<\/p>",
+            "image2": "shopify:\/\/shop_images\/13_2.png",
+            "content2_title": "<p style=\"color: #417934;\" class=\"f-bigmega\">\nCO2排出削減への貢献\n<\/p>",
+            "content2_text": "<p class=\"shadownone\">\n弊社製品パッケージには、ストーンペーパーを採用。<br>\n燃焼時にCO2を排出する紙ではなく、太陽光（日光）で分解され土に還る石灰由来のペーパーです。\n<\/p>",
+            "top_margin": 50,
+            "bottom_margin": 50,
+            "top_margin_mp": 50,
+            "bottom_margin_mp": 50
+          }
+        },
+        "text_xF3JKP": {
+          "type": "text",
+          "settings": {
+            "text": "<p style=\"text-align: left;\">\nより繊細な“生きた菌”をお届けする発酵食品製造企業としての責任はもちろんのこと、<br>\n持続可能な生産消費形態と、スマートなビジネスモデルの構築を目指します。\n<\/p>",
+            "bg_color": false,
+            "text_with_title": "",
+            "top_margin": 65,
+            "bottom_margin": 50,
+            "top_margin_mp": 50,
+            "bottom_margin_mp": 50
+          }
+        }
+      },
+      "block_order": [
+        "block_image_qffjH6",
+        "heading_cWaxmq",
+        "text_9KQJhD",
+        "heading_VJk4RF",
+        "text2_WgcAwt",
+        "heading_eJ9Eei",
+        "block_image2_aErh6z",
+        "text_AMrP8a",
+        "image_text3_BLkgWQ",
+        "text_xF3JKP"
+      ],
+      "settings": {
+        "width_wide": false,
+        "backgorund_image_repeat": false,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "padding_top_mp": 40,
+        "padding_bottom_mp": 52
+      }
+    },
+    "b69ce229-2af0-4316-b914-766184761b63": {
+      "type": "page-main-section",
+      "blocks": {
+        "c2c41b99-5526-482f-9550-92a22cbc7468": {
+          "type": "content",
+          "settings": {
+            "anchor_link": "",
+            "image_caption1": "脂肪<br>代謝",
+            "image_caption_color1": "",
+            "image_caption2": "発汗<br>作用",
+            "image_caption_color2": "",
+            "with_border": true,
+            "border_width": 1,
+            "border_color": "#ffffff",
+            "image_position": "left",
+            "title_image_width": 200,
+            "title": "企業理念",
+            "title_color": "#121212",
+            "title_align": "left",
+            "title_size": "h1",
+            "have_title_underline": false,
+            "subtitle": "こだわりつくした最高の酵素キムチで、\nお客様の美容と健康に貢献する",
+            "subtitle_color": "#121212",
+            "subtitle_align": "left",
+            "subtitle_size": "h2",
+            "content": "<p>八恵堂は・・・・<\/p>",
+            "content_color": "#121212",
+            "content_align": "left",
+            "content_size": "h4"
+          }
+        },
+        "0d4197ce-a6d5-4028-baae-d7b23807232a": {
+          "type": "content",
+          "settings": {
+            "anchor_link": "",
+            "image_caption1": "脂肪<br>代謝",
+            "image_caption_color1": "",
+            "image_caption2": "発汗<br>作用",
+            "image_caption_color2": "",
+            "with_border": true,
+            "border_width": 1,
+            "border_color": "#ffffff",
+            "image_position": "left",
+            "title_image_width": 200,
+            "title": "会社概要",
+            "title_color": "#121212",
+            "title_align": "left",
+            "title_size": "h1",
+            "have_title_underline": false,
+            "subtitle": "",
+            "subtitle_color": "#fffcdf",
+            "subtitle_align": "left",
+            "subtitle_size": "h3",
+            "content": "<p>▸商号　　　株式会社八恵堂<\/p><p>▸設立　　　令和５年<\/p><p>▸資本金　　10,000,000円<\/p>",
+            "content_color": "#121212",
+            "content_align": "left",
+            "content_size": "h4"
+          }
+        }
+      },
+      "block_order": [
+        "c2c41b99-5526-482f-9550-92a22cbc7468",
+        "0d4197ce-a6d5-4028-baae-d7b23807232a"
+      ],
+      "disabled": true,
+      "settings": {
+        "backgorund_image_repeat": true,
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_PRnFNX",
+    "rich_text_custom4_JXPzpY",
+    "b69ce229-2af0-4316-b914-766184761b63"
+  ]
+}

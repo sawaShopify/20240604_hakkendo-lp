@@ -1,0 +1,91 @@
+{
+  "sections": {
+    "1705030662e1dd312d": {
+      "type": "apps",
+      "blocks": {
+        "hakkeido_app_hakkeido_account_header_3BqchJ": {
+          "type": "shopify:\/\/apps\/hakkeido-app\/blocks\/hakkeido_account_header\/bcb51888-c035-4a68-a339-e4b6015d3a01",
+          "settings": {
+            "section_padding_top": 20,
+            "section_padding_bottom": 20
+          }
+        },
+        "hakkeido_app_hakkeido_account_news_8LNDkL": {
+          "type": "shopify:\/\/apps\/hakkeido-app\/blocks\/hakkeido_account_news\/bcb51888-c035-4a68-a339-e4b6015d3a01",
+          "settings": {
+            "news": "",
+            "section_padding_top": 20,
+            "section_padding_bottom": 20
+          }
+        },
+        "hakkeido_app_hakkeido_account_UeqQpJ": {
+          "type": "shopify:\/\/apps\/hakkeido-app\/blocks\/hakkeido_account\/bcb51888-c035-4a68-a339-e4b6015d3a01",
+          "settings": {
+            "first_product": "beginners-set",
+            "first_product_url": "",
+            "collection": "定期便用商品",
+            "change_date": "shopify:\/\/shop_images\/e46d9522df86421e3b608a2506730d47.png",
+            "shipping_address": "shopify:\/\/shop_images\/e2020044a52dc80287f21e57d292f55c.png",
+            "payment_method": "shopify:\/\/shop_images\/846b83ec794ded28c068ada4c325d5a0_d050aebb-bcc2-4f33-9034-7f3c36e7bf30.png",
+            "customer_info": "shopify:\/\/shop_images\/50d70a67f3d4dd6eba7e0bbcd777865e.png",
+            "skip_cancel": "shopify:\/\/shop_images\/9c78b77782c45d8f23afca089fe44576.png",
+            "contact": "shopify:\/\/shop_images\/fecaedfd87437c8ff5f656120f8059d9.png",
+            "change_password": "shopify:\/\/shop_images\/79c2bdbe6eda9fca482c5a7e60b249e0_9cf5bb33-a533-408e-9374-b342a4346ef1.png",
+            "contact_form_id": "shopify-section-template--21521884938537__contact_form_6JbWtN"
+          }
+        }
+      },
+      "block_order": [
+        "hakkeido_app_hakkeido_account_header_3BqchJ",
+        "hakkeido_app_hakkeido_account_news_8LNDkL",
+        "hakkeido_app_hakkeido_account_UeqQpJ"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "contact_form_6JbWtN": {
+      "type": "contact-form",
+      "settings": {
+        "form_type": "customer",
+        "heading": "お問い合わせ",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-account",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17070649353d18b35d": {
+      "type": "apps",
+      "blocks": {
+        "hakkeido_app_hakkeido_account_history_qhUcmf": {
+          "type": "shopify:\/\/apps\/hakkeido-app\/blocks\/hakkeido_account_history\/bcb51888-c035-4a68-a339-e4b6015d3a01",
+          "settings": {
+            "padding_top": 36,
+            "padding_bottom": 36
+          }
+        }
+      },
+      "block_order": [
+        "hakkeido_app_hakkeido_account_history_qhUcmf"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "1705030662e1dd312d",
+    "contact_form_6JbWtN",
+    "main",
+    "17070649353d18b35d"
+  ]
+}

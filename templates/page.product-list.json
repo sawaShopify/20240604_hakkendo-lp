@@ -1,0 +1,172 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_title_fYdgRy": {
+      "type": "rich-text_title",
+      "blocks": {
+        "heading_UYiQXN": {
+          "type": "heading",
+          "settings": {
+            "heading": "商品一覧",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UYiQXN"
+      ],
+      "settings": {
+        "backgorund_image_repeat": false,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "padding_top_mp": 40,
+        "padding_bottom_mp": 52
+      }
+    },
+    "featured_collection_custom2_kNbCpR": {
+      "type": "featured-collection_custom2",
+      "settings": {
+        "title": "単品",
+        "anchor": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "ad_url": "",
+        "collection": "単品",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "change_image": true,
+        "show_vendor": false,
+        "show_price": true,
+        "show_title_with_image": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_custom2_UG8iJW": {
+      "type": "featured-collection_custom2",
+      "settings": {
+        "title": "セット",
+        "anchor": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "ad_url": "",
+        "collection": "セット",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "change_image": true,
+        "show_vendor": false,
+        "show_price": true,
+        "show_title_with_image": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_section_p_custom_baYzBr": {
+      "type": "rich-section-p-custom",
+      "settings": {
+        "anchor": "news",
+        "title": "定期便<span>(忘れずお届けコース)<\/span>",
+        "backgorund_image_repeat": false,
+        "backgorund_image_parallax": false,
+        "desktop_content_position": "center",
+        "images1": "shopify:\/\/shop_images\/image_tekiki.png",
+        "images2": "shopify:\/\/shop_images\/syokai.png",
+        "images3": "shopify:\/\/shop_images\/2kaime.png",
+        "sub_title": "八恵堂酵素キムチ\n忘れずお届け便(定期便)",
+        "title_image": "shopify:\/\/shop_images\/1_1.png",
+        "caption1": "初回はおすすめキムチ4種をお届けします。\n※初回お届け時に、キムチ保存用八恵堂オリジナルの壺を進呈します。\n2回目以降は、定期的にお好きなキムチ4個をお届けします。\n\n★お届け商品について\n\n<span>＜八恵堂酵素キムチ4個＞<\/span>\n初回は、八恵堂のおすすめ酵素キムチ4種類を。\n2回目以降は、お好きなキムチを4個お選びいただけます。\n\n<span>＜有田焼 八恵壺＞<\/span>\n※数量限定\nキムチの為に設計された、保存専用壺。\n100 年続く窯元で一つ一つ手作りしています。\nサイズ：直径Φ11cm 高さ 7.5cm\n\n賞味期限：冷凍状態で、製造日より 12 か月となります。\n※解凍後は、要冷蔵のうえ、お早めにお召し上がりください。\n海鮮系キムチは、要冷蔵のうえ、 5 日を目安にお召し上がりください。\n\n配送方法：冷凍便(無料)",
+        "caption_link1": "shopify:\/\/products\/beginners-set",
+        "outer_link": false,
+        "btn_images": "shopify:\/\/shop_images\/8e0a2eb45c308471cd4b0107685bff8e.png",
+        "description_images": "shopify:\/\/shop_images\/1-3_1.png",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_title2_UyenEM": {
+      "type": "rich-text_title2",
+      "blocks": {
+        "heading_DhArFj": {
+          "type": "heading",
+          "settings": {
+            "heading": "<span>毎週木曜日までのご注文を金曜日発送でお届けしております<\/span>",
+            "heading_size": "h2"
+          }
+        },
+        "text_qWYBz8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\n※ 初回ご購入分につきましては、解約・キャンセルの受付ができかねますのでご了承ください。<br>\n※ 商品の変更、配送日時変更、スキップ、停止、再開、解約は発送の10日前までマイページから変更可能です。<br>\n※ 回数の約束や停止、解約に伴う違約金及び壺の返却などは一切ございません。<br>\n※ 基本的に、送料無料でお届けしております。一部離島のみ追加料金をいただく地域がございます。<br>\n※ 一部配送ができない地域がございます。\n<\/p>",
+            "top_margin": 50,
+            "bottom_margin": 50,
+            "top_margin_mp": 50,
+            "bottom_margin_mp": 50
+          }
+        }
+      },
+      "block_order": [
+        "heading_DhArFj",
+        "text_qWYBz8"
+      ],
+      "settings": {
+        "backgorund_image_repeat": false,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 100,
+        "padding_top_mp": 0,
+        "padding_bottom_mp": 80
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_title_fYdgRy",
+    "featured_collection_custom2_kNbCpR",
+    "featured_collection_custom2_UG8iJW",
+    "rich_section_p_custom_baYzBr",
+    "rich_text_title2_UyenEM"
+  ]
+}

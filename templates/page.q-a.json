@@ -1,0 +1,530 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "10ff8137-e392-4119-b2f0-befd72bea959": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Asset_1.jpg",
+        "banner_none": true,
+        "content_background_color": "rgba(0, 0, 0, 0.5)",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "971be905-2865-443f-910c-3cfe0905cc87": {
+      "type": "page-main-section",
+      "blocks": {
+        "04690ad5-6a3d-4181-84b3-b0e00bfbe596": {
+          "type": "content",
+          "settings": {
+            "anchor_link": "",
+            "image_caption1": "脂肪<br>代謝",
+            "image_caption_color1": "",
+            "image_caption2": "発汗<br>作用",
+            "image_caption_color2": "",
+            "with_border": true,
+            "border_width": 1,
+            "border_color": "#ffffff",
+            "image_position": "left",
+            "title_image_width": 200,
+            "title": "よくある質問",
+            "title_color": "#121212",
+            "title_align": "center",
+            "title_size": "h3",
+            "have_title_underline": false,
+            "subtitle": "FAQ",
+            "subtitle_color": "#121212",
+            "subtitle_align": "center",
+            "subtitle_size": "h1",
+            "content": "",
+            "content_color": "#ffffff",
+            "content_align": "left",
+            "content_size": "h5"
+          }
+        }
+      },
+      "block_order": [
+        "04690ad5-6a3d-4181-84b3-b0e00bfbe596"
+      ],
+      "disabled": true,
+      "settings": {
+        "backgorund_image_repeat": false,
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "543727ad-3799-4b97-8bbc-312053eb8207": {
+      "type": "button-list",
+      "blocks": {
+        "template--21542108627241__543727ad-3799-4b97-8bbc-312053eb8207-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "店舗について",
+            "button_description": "店舗について",
+            "button_link": "",
+            "outer_link": false
+          }
+        },
+        "template--21542108627241__543727ad-3799-4b97-8bbc-312053eb8207-button-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "商品について",
+            "button_description": "商品について",
+            "button_link": "",
+            "outer_link": false
+          }
+        },
+        "template--21542108627241__543727ad-3799-4b97-8bbc-312053eb8207-button-3": {
+          "type": "button",
+          "settings": {
+            "button_label": "ネット販売について",
+            "button_description": "ネット販売について",
+            "button_link": "",
+            "outer_link": false
+          }
+        },
+        "template--21542108627241__543727ad-3799-4b97-8bbc-312053eb8207-button-4": {
+          "type": "button",
+          "settings": {
+            "button_label": "お支払いについて",
+            "button_description": "お支払いについて",
+            "button_link": "",
+            "outer_link": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21542108627241__543727ad-3799-4b97-8bbc-312053eb8207-button-1",
+        "template--21542108627241__543727ad-3799-4b97-8bbc-312053eb8207-button-2",
+        "template--21542108627241__543727ad-3799-4b97-8bbc-312053eb8207-button-3",
+        "template--21542108627241__543727ad-3799-4b97-8bbc-312053eb8207-button-4"
+      ],
+      "disabled": true,
+      "settings": {
+        "pattern": "pattern4",
+        "content_only_1": false,
+        "anchor": "news",
+        "title": "FAQ",
+        "subtitle": "よくある質問",
+        "view_all": "もっと見る",
+        "view_all_link": "",
+        "description": "私たち八恵堂は、お客様の美と健康のため、そしてご飯のお供に新感覚の酵素キムチを食して頂きたい。\nその想いから、毎月お届け便をご用意させて頂いておりますが、まずはそのこだわりや美味しさを気軽に知って頂けるよう、\nまるでブティックかのような落ち着いた雰囲気で、試食も可能な販売店舗を展開しております。\n皆さまの、ご来店を心よりお待ちしております。\n\n八恵堂スタッフ一同",
+        "bg_color": "",
+        "background_image_repeat": false,
+        "backgorund_image_parallax": false,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "button_list_faq_R9Qj8a": {
+      "type": "button-list_faq",
+      "blocks": {
+        "button_BUxW6J": {
+          "type": "button",
+          "settings": {
+            "anchor_text": "about-store",
+            "button_label": "店舗について",
+            "button_link": ""
+          }
+        },
+        "button_afhzaF": {
+          "type": "button",
+          "settings": {
+            "anchor_text": "about-product",
+            "button_label": "商品について",
+            "button_link": ""
+          }
+        },
+        "button_7DNGq6": {
+          "type": "button",
+          "settings": {
+            "anchor_text": "about-eccomerce",
+            "button_label": "ネット販売について",
+            "button_link": ""
+          }
+        },
+        "button_9gUdn3": {
+          "type": "button",
+          "settings": {
+            "anchor_text": "about-payment",
+            "button_label": "お支払いについて",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_BUxW6J",
+        "button_afhzaF",
+        "button_7DNGq6",
+        "button_9gUdn3"
+      ],
+      "settings": {
+        "anchor": "news",
+        "subtitle": "よくある質問",
+        "title": "FAQ",
+        "background_image_repeat": false,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "5621f2ec-3c4c-4bb5-bf4b-6494c6f10650": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--21542108627241__5621f2ec-3c4c-4bb5-bf4b-6494c6f10650-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "店舗の所在地は、どこですか？",
+            "icon": "question_mark",
+            "row_content": "<p>◆博多本店<br\/>〒812-0022<br\/>福岡市博多区上川端町11－287<br\/><br\/>◆新宿マルイ店<br\/>〒160－0022<br\/>東京都新宿区新宿3丁目30－13<br\/>新宿マルイ本館　B1<\/p>",
+            "page": ""
+          }
+        },
+        "template--21542108627241__5621f2ec-3c4c-4bb5-bf4b-6494c6f10650-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "店舗からの発送はできますか？",
+            "icon": "question_mark",
+            "row_content": "<p>店舗からの発送もお受けいたしております。<br\/>「冷凍便」の為、一部配達できない地域があります。<br\/>店舗のスタッフにお尋ねください。<br\/><\/p>",
+            "page": ""
+          }
+        },
+        "template--21542108627241__5621f2ec-3c4c-4bb5-bf4b-6494c6f10650-collapsible_row-3": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "店舗から配送をお願いできますか？",
+            "icon": "question_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--21542108627241__5621f2ec-3c4c-4bb5-bf4b-6494c6f10650-collapsible_row-4": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "店舗から配送を…？",
+            "icon": "question_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21542108627241__5621f2ec-3c4c-4bb5-bf4b-6494c6f10650-collapsible_row-1",
+        "template--21542108627241__5621f2ec-3c4c-4bb5-bf4b-6494c6f10650-collapsible_row-2",
+        "template--21542108627241__5621f2ec-3c4c-4bb5-bf4b-6494c6f10650-collapsible_row-3",
+        "template--21542108627241__5621f2ec-3c4c-4bb5-bf4b-6494c6f10650-collapsible_row-4"
+      ],
+      "settings": {
+        "anchor": "about-store",
+        "q_number": true,
+        "caption": "",
+        "heading": "店舗について",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_hyLy9G": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_6MRXQ9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "商品の種類について",
+            "icon": "check_mark",
+            "row_content": "<p>現在商品は6種類ございます。<br\/>今後、旬の食材等を使ったキムチが登場予定です。<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_x8Y9pb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "内容量の変更はできますか？",
+            "icon": "check_mark",
+            "row_content": "<p>当店のキムチは、製法中にすべてパック詰めされます。<br\/>この為、お好みの量でお届けすることができません。<br\/><br\/>《野菜キムチ》<br\/>白菜キムチ→250グラム<br\/>山芋キムチ→250グラム<br\/>ごぼうキムチ→250グラム<br\/>《海鮮キムチ》<br\/>たこキムチ→150グラム<br\/>いかキムチ→150グラム<br\/>《変わり種キムチ》<br\/>大葉キムチ→100グラム<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8rzNbM": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "<p>当店のキムチは、製法中にすべてパック詰めされます。<br\/>この為、お好みの量でお届けすることができません。<br\/><br\/>《野菜キムチ》<br\/>白菜キムチ→250グラム<br\/>山芋キムチ→250グラム<br\/>ごぼうキムチ→250グラム<br\/>《海鮮キムチ》<br\/>たこキムチ→150グラム<br\/>いかキムチ→150グラム<br\/>《変わり種キムチ》<br\/>大葉キムチ→100グラム<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_HEGrfx": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_6MRXQ9",
+        "collapsible_row_x8Y9pb",
+        "collapsible_row_8rzNbM",
+        "collapsible_row_HEGrfx"
+      ],
+      "settings": {
+        "anchor": "about-product",
+        "q_number": true,
+        "caption": "",
+        "heading": "商品について",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_axGrTY": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_4miLG8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "送料はどのくらいかかりますか？",
+            "icon": "check_mark",
+            "row_content": "<p>定期便：送料無料<br\/>単品商品：全国一律880円（税込）<\/p><p>詳しくは<a href=\"\/policies\/legal-notice\" target=\"_blank\" title=\"Legal Notice\">こちら<\/a>からご確認ください。<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_YP9Tnw": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_XYbzJ3": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_T9pA3Q": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_4miLG8",
+        "collapsible_row_YP9Tnw",
+        "collapsible_row_XYbzJ3",
+        "collapsible_row_T9pA3Q"
+      ],
+      "settings": {
+        "anchor": "about-eccomerce",
+        "q_number": true,
+        "caption": "",
+        "heading": "ネット販売について",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_tcbTgB": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_LVhafn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "お支払い方法は何がありますか？",
+            "icon": "check_mark",
+            "row_content": "<p>クレジットカード決済、Amazon Payがご利用いただけます。<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6efLJ8": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_DwUwKr": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_mHbzcq": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_LVhafn",
+        "collapsible_row_6efLJ8",
+        "collapsible_row_DwUwKr",
+        "collapsible_row_mHbzcq"
+      ],
+      "settings": {
+        "anchor": "about-payment",
+        "q_number": true,
+        "caption": "",
+        "heading": "お支払いについて",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_custom2_47gbgp": {
+      "type": "multicolumn_custom2",
+      "blocks": {
+        "column_yCr84n": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/17_1.png",
+            "background_color": "rgba(0,0,0,0)",
+            "title": "酵素キムチ",
+            "title_size": "h3",
+            "link": "shopify:\/\/collections\/all",
+            "outer_link": false
+          }
+        },
+        "column_EYehkz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/18_1.png",
+            "background_color": "rgba(0,0,0,0)",
+            "title": "キャンペーン情報",
+            "title_size": "h3",
+            "link": "shopify:\/\/blogs\/news",
+            "outer_link": false
+          }
+        },
+        "column_iTtiWq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/19_1.png",
+            "background_color": "rgba(0,0,0,0)",
+            "title": "八恵レシピ",
+            "title_size": "h3",
+            "link": "https:\/\/style.hakkeido.com\/",
+            "outer_link": true
+          }
+        }
+      },
+      "block_order": [
+        "column_yCr84n",
+        "column_EYehkz",
+        "column_iTtiWq"
+      ],
+      "settings": {
+        "backgorund_image_repeat": false,
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "3",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_image_AUYp3M": {
+      "type": "image-banner_image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_10253_1.png",
+        "image_mp": "shopify:\/\/shop_images\/Group_10255.png",
+        "background_image": "shopify:\/\/shop_images\/105e3befc58b5157b701af11d203c267_e52e9a7a-2bb2-487e-a253-0565cc4588c2.png",
+        "backgorund_image_repeat": true,
+        "banner_link": "shopify:\/\/products\/beginners-set"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "10ff8137-e392-4119-b2f0-befd72bea959",
+    "971be905-2865-443f-910c-3cfe0905cc87",
+    "543727ad-3799-4b97-8bbc-312053eb8207",
+    "button_list_faq_R9Qj8a",
+    "5621f2ec-3c4c-4bb5-bf4b-6494c6f10650",
+    "collapsible_content_hyLy9G",
+    "collapsible_content_axGrTY",
+    "collapsible_content_tcbTgB",
+    "multicolumn_custom2_47gbgp",
+    "image_banner_image_AUYp3M"
+  ]
+}

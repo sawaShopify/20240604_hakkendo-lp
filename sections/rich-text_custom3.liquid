@@ -1,0 +1,1404 @@
+{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mp }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mp }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div id="section-{{section.id}}" class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
+  <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+    <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
+      <div class="rich-text__blocks {{ section.settings.content_alignment }}">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'heading' -%}
+              <h2
+                class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {{ block.settings.heading }}
+              </h2>
+            {%- when 'caption' -%}
+              <p
+                class="rich-text__caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {{ block.settings.caption | escape }}
+              </p>
+            {%- when 'text' -%}
+              <div
+                class="spacer-{{ block.id }} rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {% if block.settings.side_image != blank %}
+                  {% if block.settings.text_with_title != blank %}
+                  <div class="side-image-text-with-title">
+                    {{  block.settings.text_with_title }}
+                  </div>
+                  <style>
+                    #section-{{section.id}} .side-image-text-with-title {
+                      padding-top: 30px;
+                    }
+                  </style>
+                  {% endif %}
+                  <div class="side-image-text">
+                    <div class="side-image">
+                      <img src="{{ block.settings.side_image | image_url:width:500 }}">
+                    </div>
+                    <div class="side-text">
+                      {{ block.settings.text }}
+                    </div>
+                  </div>
+                  <style>
+                    #section-{{section.id}} .side-image-text {
+                      display: flex;
+                      justify-content: space-between;
+                      gap: 5%;
+                      padding: 20px 30px;
+                    }
+                    #section-{{section.id}} .side-text {
+                      width: 70%;
+                    }
+                    #section-{{section.id}} .side-image {
+                      width: 25%;
+                    }
+                    #section-{{section.id}} .side-image img {
+                      width: 100%;
+                      height: auto;
+                    }
+                    @media screen and (max-width: 749px) {
+                      #section-{{section.id}} .side-image-text {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        gap: 5%;
+                        padding: 20px 18px;
+                      }
+                      #section-{{section.id}} .side-text {
+                        width: 100%;
+                      }
+                      #section-{{section.id}} .side-image {
+                        width: 100%;
+                      }
+                      #section-{{section.id}} .side-image img {
+                        width: 100%;
+                        height: auto;
+                      }
+                    }
+                  </style>
+                {% else %}
+                <div class="nonside-text">
+                  {{ block.settings.text }}
+                </div>
+                <style>
+                  #section-{{section.id}} .nonside-text {
+                    max-width: 500px;
+                    width: 100%;
+                    margin-right: auto;
+                    margin-left: auto;
+                  }
+                </style>
+                {% endif %}
+              </div>
+              <style>
+                .spacer-{{ block.id }} {
+                  margin-top: {{block.settings.top_margin}}px;
+                  margin-bottom: {{block.settings.bottom_margin}}px;
+                  {% if block.settings.bg_color == true %}
+                  background: linear-gradient(to left,#79562f 0%, #79562f 50%, #d5bfa4 75%, #d5bfa4 100%)!important;
+                  color: #fff!important;
+                  {% endif %}
+                }
+                @media screen and (max-width: 749px) {
+                  .spacer-{{ block.id }} {
+                    margin-top: {{block.settings.top_margin_mp}}px;
+                    margin-bottom: {{block.settings.bottom_margin_mp}}px;
+                  }
+                }
+              </style>
+            {%- when 'block_image' -%}
+            <div
+                class="spacer-{{ block.id }} rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+            >
+                {%- if block.settings.block_image != blank -%}
+                  <div class="imageBannerWrap">
+                    <img class="imageBanner" src="{{ block.settings.block_image | image_url: width: 1000 }}">
+                  </div>
+                {%- else -%}
+                {%- endif -%}
+            </div>
+            <style>
+              .spacer-{{ block.id }} {
+                margin-top: {{block.settings.top_margin}}px;
+                margin-bottom: {{block.settings.bottom_margin}}px;
+              }
+              @media screen and (max-width: 749px) {
+                .spacer-{{ block.id }} {
+                  margin-top: {{block.settings.top_margin_mp}}px;
+                  margin-bottom: {{block.settings.bottom_margin_mp}}px;
+                }
+              }
+            </style>
+            <style>
+              .spacer-{{ block.id }} .imageBannerWrap {
+                max-width: 500px;
+                width: 100%;
+                margin: 0 auto;
+              }
+              .spacer-{{ block.id }} .imageBannerWrap img {
+                width: 100%;
+                height: auto;
+              }
+            </style>
+
+            {%- when 'image-text' -%}
+              <div
+                class="spacer-{{ block.id }} rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+                >
+                <div class="flex-middle-content">
+                  <div class="flex-small-content">
+                    <div class="materials-wrap">
+                      <a href="{{ block.settings.link1 }}">
+                        <img src="{{ block.settings.link_image1 | img_url: 'master' }}" width="100%">
+                      </a>
+                      <a href="{{ block.settings.link2 }}">
+                        <img src="{{ block.settings.link_image2 | img_url: 'master' }}" width="100%">
+                      </a>
+                      <a href="{{ block.settings.link3 }}">
+                        <img src="{{ block.settings.link_image3 | img_url: 'master' }}" width="100%">
+                      </a>
+                    </div>
+                    <div class="title-wrap">
+                      {{ block.settings.text_title }}
+                    </div>
+                  </div>
+                  <div class="human-image-wrap">
+                    <img class="human-image" src="{{ block.settings.image1 | img_url: 'master' }}" width="100%">
+                    <p>{{ block.settings.caption }}</p>
+                  </div>
+                </div>
+
+                {{ block.settings.text1 }}
+
+                <img class="graph-image" src="{{ block.settings.image2 | img_url: 'master' }}" width="100%">
+
+                <div class="side-wrap">
+                  <div class="side-image">
+                    <img src="{{ block.settings.image3 | img_url: 'master' }}" width="100%">
+                  </div>
+                  <div class="side-content">
+                    {{block.settings.content1_title}}
+                    {{block.settings.content1_text}}
+                  </div>
+                </div>
+
+                <div class="side-wrap">
+                  <img class="side-image" src="{{ block.settings.image4 | img_url: 'master' }}" width="100%">
+                  <div class="side-content">
+                    {{block.settings.content2_title}}
+                    {{block.settings.content2_text}}
+                  </div>
+                </div>
+              </div>
+              <style>
+                .spacer-{{ block.id }} {
+                  margin-top: {{block.settings.top_margin}}px;
+                  margin-bottom: {{block.settings.bottom_margin}}px;
+                }
+                @media screen and (max-width: 749px) {
+                  .spacer-{{ block.id }} {
+                    margin-top: {{block.settings.top_margin_mp}}px;
+                    margin-bottom: {{block.settings.bottom_margin_mp}}px;
+                  }
+                }
+              </style>
+
+            {%- when 'image-text2' -%}
+              <div
+                id="block-{{ block.id }}"
+                class="spacer-{{ block.id }} rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+                >
+                <div class="flex-method-content">
+                  <div class="side-images-wrap">
+                    <div class="side-image">
+                      <img class="" src="{{ block.settings.side_image | image_url:width:1000 }}" width="100%">
+                    </div>
+                    <div class="side-content">
+                      {% if block.settings.title_image != blank %}
+                        <img class="title-image" style="border: 0px solid #fff;" src="{{ block.settings.title_image | image_url:width:1000 }}">
+                      {% else %}
+                        <h2 class="h2 side-content-title">
+                        {{block.settings.content1_title}}
+                        </h2>
+                      {% endif %}
+                        {{block.settings.content1_text}}
+                    </div>
+                    <style>
+                      #section-{{section.id}} .title-image {
+                        max-width: 80%;
+                        width: auto;
+                        max-height: 80px;
+                        display: block;
+                        margin: 0 auto;
+                      }
+                      #section-{{section.id}}  .side-content-title {
+                        font-size: 40px;
+                        {%comment%}text-shadow: 0.5px 0 currentColor, -0.5px 0 currentColor;{%endcomment%}
+                      }
+                      @media screen and (max-width: 749px) {
+                        #section-{{section.id}}  .side-content-title {
+                          font-size: 30px;
+                        }
+                      }
+                      #section-{{section.id}} .flex-method-content {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        gap: 2%;
+                      }
+                      #section-{{section.id}} .side-images-wrap {
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 5%;
+                      }
+                      #section-{{section.id}} .side-images-wrap .side-image {
+                        width: 40%;
+                      }
+                      #section-{{section.id}} .side-images-wrap .side-content {
+                        width: 55%;
+                        margin-bottom: 20px;
+                      }
+                      @media screen and (max-width: 749px) {
+                        #section-{{section.id}} .flex-method-content {
+                          display: flex;
+                          justify-content: space-between;
+                          flex-direction: column;
+                          gap: 2%;
+                        }
+                        #section-{{section.id}} .side-images-wrap {
+                          display: flex;
+                          justify-content: space-between;
+                          flex-direction: column;
+                          gap: 2%;
+                        }
+                        #section-{{section.id}} .side-images-wrap .side-image {
+                          width: 100%;
+                        }
+                        #section-{{section.id}} .side-images-wrap .side-content {
+                          width: 100%;
+                          margin-bottom: 20px;
+                        }
+                      }
+                      {% if block.settings.content_image_right == true %}
+                        #section-{{section.id}} #block-{{ block.id }} .side-images-wrap {
+                          display: flex;
+                          justify-content: space-between;
+                          flex-direction: row-reverse;
+                          gap: 2%;
+                        }
+                        @media screen and (max-width: 749px) {
+                          #section-{{section.id}} #block-{{ block.id }} .side-images-wrap {
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: column;
+                            gap: 2%;
+                          }
+                        }
+                      {% endif %}
+                    </style>
+                  </div>
+                  <div class="sub-images-flex">
+                    <div class="sub-image-wrap">
+                      <img src="{{ block.settings.sub_image1 | img_url: 'master' }}" width="100%">
+                    </div>
+                  </div>
+                  <style>
+                    #section-{{section.id}} .sub-images-flex {
+                      display: flex;
+                      justify-content: space-between;
+                      gap: 2%;
+                    }
+                    @media screen and (max-width: 749px) {
+                      #section-{{section.id}} .sub-images-flex {
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 0.5%;
+                      }
+                    }
+                  </style>
+                </div>
+              </div>
+              <style>
+                .spacer-{{ block.id }} {
+                  margin-top: {{block.settings.top_margin}}px;
+                  margin-bottom: {{block.settings.bottom_margin}}px;
+                }
+                @media screen and (max-width: 749px) {
+                  .spacer-{{ block.id }} {
+                    margin-top: {{block.settings.top_margin_mp}}px;
+                    margin-bottom: {{block.settings.bottom_margin_mp}}px;
+                  }
+                }
+              </style>
+
+
+            {%- when 'border' -%}
+              <hr style="margin: 0; background-color: #434343; height:2px;">
+
+            {%- when 'button' -%}
+              <div
+                class="rich-text__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} rich-text__buttons--multiple{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {{ block.shopify_attributes }}
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {%- if block.settings.button_label != blank -%}
+                  <a
+                    {% if block.settings.button_link == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.button_link }}"
+                    {% endif %}
+                    class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                  >
+                    {{- block.settings.button_label | escape -}}
+                  </a>
+                {%- endif -%}
+                {%- if block.settings.button_label_2 != blank -%}
+                  <a
+                    {% if block.settings.button_link_2 == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.button_link_2 }}"
+                    {% endif %}
+                    class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                  >
+                    {{- block.settings.button_label_2 | escape -}}
+                  </a>
+                {%- endif -%}
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if section.settings.width_wide %}
+<style>
+@media screen and (min-width: 990px) {
+  #shopify-section-{{ section.id }} .rich-text__blocks {
+      max-width: 90rem;
+  }
+}
+</style>
+{% endif %}
+
+<style>
+#shopify-section-{{ section.id }} .h1.rich-text__heading {
+  font-size: 35px;
+  line-height: 1.8;
+  {%comment%}text-shadow: 0.5px 0 currentColor, -0.5px 0 currentColor;{%endcomment%}
+}
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .h1.rich-text__heading {
+    font-size: 27px;
+    line-height: 1.6;
+    {%comment%}text-shadow: 0.5px 0 currentColor, -0.5px 0 currentColor;{%endcomment%}
+  }
+}
+</style>
+
+<style>
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .rich-text__wrapper {
+    padding: 0 1rem;
+  }
+}
+
+#shopify-section-{{ section.id }} p {
+  font-weight: bold;
+}
+
+
+#shopify-section-{{ section.id }} {
+  {% if section.settings.background_image != blank %}
+    background-image: url('{{ section.settings.background_image | img_url: 'master' }}');
+    background-size: {% if section.settings.backgorund_image_repeat %}contain{% else %}cover{% endif %};
+    background-position: center;
+    background-repeat: {% if section.settings.backgorund_image_repeat %}repeat{% else %}no-repeat{% endif %};
+  {% endif %}
+}
+#shopify-section-{{ section.id }} .rich-text {
+  background: transparent;
+}
+#section-{{section.id}} .sub-Title {
+  color: #3c3c3d;
+  font-size: 26px;
+  {%comment%}text-shadow: 0.2px 0 currentColor, -0.2px 0 currentColor;{%endcomment%}
+  margin-bottom: 0px;
+}
+#section-{{section.id}} .Title {
+  color: #3c3c3d;
+  font-size: 50px;
+  {%comment%}text-shadow: 0.5px 0 currentColor, -0.5px 0 currentColor;{%endcomment%}
+  margin: 0px;
+}
+#section-{{section.id}} .sub-caption {
+  color: #ad2924;
+  font-size: 26px;
+  {%comment%}text-shadow: 0.3px 0 currentColor, -0.3px 0 currentColor;{%endcomment%}
+  line-height: 1.5;
+}
+@media screen and (max-width: 749px) {
+  #section-{{section.id}} .sub-Title {
+    font-size: 20px;
+  }
+  #section-{{section.id}} .Title {
+    font-size: 36px;
+  }
+  #section-{{section.id}} .sub-caption {
+    font-size: 20px;
+  }
+}
+
+#section-{{section.id}} p {
+  color: #3c3c3d;
+  {%comment%}text-shadow: 0.3px 0 currentColor, -0.3px 0 currentColor;{%endcomment%}
+}
+#section-{{section.id}} p.shadownone {
+  {%comment%}text-shadow: 0px 0 currentColor, -0px 0 currentColor;{%endcomment%}
+}
+#section-{{section.id}} p.shadownone .shadow {
+  {%comment%}text-shadow: 0.3px 0 currentColor, -0.3px 0 currentColor;{%endcomment%}
+}
+#section-{{section.id}} .base-text {
+  color: #3c3c3d;
+  text-align: left;
+  {%comment%}text-shadow: 0.3px 0 currentColor, -0.3px 0 currentColor;{%endcomment%}
+}
+#section-{{section.id}} .sub_gold {
+  color: #9a5c2f;
+  font-size: 24px;
+  {%comment%}text-shadow: 0.3px 0 currentColor, -0.3px 0 currentColor;{%endcomment%}
+  line-height: 1.5;
+  max-width: 700px;
+  width: 100%;
+  text-align: left;
+  margin: 0 auto;
+}
+#section-{{section.id}} .sub_red {
+  color: #d1222a;
+  font-size: 24px;
+  {%comment%}text-shadow: 0.3px 0 currentColor, -0.3px 0 currentColor;{%endcomment%}
+  line-height: 1.5;
+  max-width: 700px;
+  width: 100%;
+  text-align: left;
+  margin: 0 auto;
+}
+#section-{{section.id}} .line {
+  display: inline-block;
+  width: 150px;
+  height: 1.5px;
+  background: #9a5c2f;
+  margin: 0 5px;
+  margin-bottom: 8px;
+}
+@media screen and (max-width: 749px) {
+  #section-{{section.id}} .sub_gold {
+    font-size: 17px;
+  }
+  #section-{{section.id}} .sub_red {
+    font-size: 17px;
+  }
+  #section-{{section.id}} .line {
+    width: 100px;
+  }
+}
+
+
+#section-{{section.id}} .flex-middle-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+}
+#section-{{section.id}} .flex-small-content {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+#section-{{section.id}} .materials-wrap {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+#section-{{section.id}} .materials-wrap a {
+  width: 100px;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+#section-{{section.id}} .materials-wrap a:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+#section-{{section.id}} .human-image-wrap {
+  width: 45%;
+}
+#section-{{section.id}} .caption {
+  margin: 0px;
+  font-size: 12px;
+}
+#section-{{section.id}} .title-wrap {
+  text-align: right;
+}
+@media screen and (max-width: 749px) {
+  #section-{{section.id}} .flex-middle-content {
+    flex-direction: column;
+    gap: 10%;
+  }
+  #section-{{section.id}} .flex-small-content {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  #section-{{section.id}} .materials-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+  }
+  #section-{{section.id}} .materials-wrap a {
+    width: 32%;
+  }
+  #section-{{section.id}} .human-image-wrap {
+    width: 100%;
+  }
+  #section-{{section.id}} .caption {
+    margin: 0px;
+    font-size: 12px;
+  }
+  #section-{{section.id}} .title-wrap {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+
+#section-{{section.id}} .graph-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.side-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5%;
+  margin: 40px auto;
+}
+.side-image {
+  width: 30%;
+}
+.side-image img {
+  width: 100%;
+  height: auto;
+}
+.side-content {
+  width: 65%;
+}
+.side-content h2 {
+  margin: 0px;
+  text-align: left;
+}
+.side-content p {
+  margin: 0px;
+  margin-top: 10px;
+  text-align: left;
+}
+@media screen and (max-width: 749px) {
+  .side-wrap {
+    flex-direction: column;
+    gap: 5%;
+    margin: 30px auto;
+  }
+  .side-image {
+    width: 100%;
+  }
+  .side-image img {
+    width: 100%;
+    height: auto;
+  }
+  .side-content {
+    width: 100%;
+  }
+  .side-content h2 {
+    margin-top: 10px;
+  }
+}
+
+
+#section-{{section.id}} .rh2 {
+  font-size: 50px;
+  text-shadow: 0.7px 0 currentColor, -0.7px 0 currentColor;
+  margin: 0px;
+}
+#section-{{section.id}} .rh3 {
+  font-size: 30px;
+  {%comment%}text-shadow: 0.5px 0 currentColor, -0.5px 0 currentColor;{%endcomment%}
+  margin: 0px;
+}
+#section-{{section.id}} .f-middle {
+  font-size: 14px;
+}
+#section-{{section.id}} .f-middlebig {
+  font-size: 17px;
+}
+#section-{{section.id}} .f-big {
+  font-size: 20px;
+}
+#section-{{section.id}} .f-mega {
+  font-size: 30px;
+}
+#section-{{section.id}} .f-red {
+  color: #d1222a;
+}
+#section-{{section.id}} .f-darkred {
+  color: #ad2923;
+}
+#section-{{section.id}} .red-underline {
+  border-bottom: 4px solid #ad2923;
+}
+#section-{{section.id}} .f-brown {
+  color: #71655d;
+}
+#section-{{section.id}} .w-short {
+  max-width: 500px;
+  width: 100%;
+  text-align: left;
+  margin: 40px auto;
+}
+@media screen and (max-width: 749px) {
+  #section-{{section.id}} .rh2 {
+    font-size: 36px;
+    text-shadow: 0.7px 0 currentColor, -0.7px 0 currentColor;
+    margin: 0px;
+  }
+  #section-{{section.id}} .rh3, #section-{{section.id}} h2 {
+    font-size: 18px;
+  }
+  #section-{{section.id}} .f-middle {
+    font-size: 12px;
+  }
+  #section-{{section.id}} .f-middlebig {
+    font-size: 14px;
+  }
+  #section-{{section.id}} .f-big {
+    font-size: 16px;
+  }
+  #section-{{section.id}} .f-mega {
+    font-size: 24px;
+  }
+  #section-{{section.id}} .red-underline {
+    border-bottom: 3px solid #ad2923;
+  }
+  #section-{{section.id}} .w-short {
+    max-width: 500px;
+    width: 100%;
+    text-align: left;
+    margin: 40px auto;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "(C3)リッチテキスト",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "width_wide",
+      "label": "横幅をワイドに",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "背景画像"
+    },
+    {
+      "type": "checkbox",
+      "id": "backgorund_image_repeat",
+      "label": "背景画像を繰り返す",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.rich-text.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.rich-text.settings.desktop_content_position.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.rich-text.settings.desktop_content_position.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.rich-text.settings.desktop_content_position.label",
+      "info": "t:sections.rich-text.settings.desktop_content_position.info"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.rich-text.settings.content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.rich-text.settings.content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.rich-text.settings.content_alignment.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.rich-text.settings.content_alignment.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "t:sections.rich-text.settings.full_width.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mp",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "モバイルトップ",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mp",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "モバイルボトム",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.rich-text.blocks.heading.name",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "html",
+          "id": "heading",
+          "default": "Talk about your brand",
+          "label": "t:sections.rich-text.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            },
+            {
+              "value": "hxl",
+              "label": "t:sections.all.heading_size.options__4.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        }
+      ]
+    },
+    {
+      "type": "caption",
+      "name": "t:sections.rich-text.blocks.caption.name",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "caption",
+          "default": "Add a tagline",
+          "label": "t:sections.rich-text.blocks.caption.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "subtitle",
+              "label": "t:sections.rich-text.blocks.caption.settings.text_style.options__1.label"
+            },
+            {
+              "value": "caption-with-letter-spacing",
+              "label": "t:sections.rich-text.blocks.caption.settings.text_style.options__2.label"
+            }
+          ],
+          "default": "caption-with-letter-spacing",
+          "label": "t:sections.rich-text.blocks.caption.settings.text_style.label"
+        },
+        {
+          "type": "select",
+          "id": "text_size",
+          "options": [
+            {
+              "value": "small",
+              "label": "t:sections.rich-text.blocks.caption.settings.caption_size.options__1.label"
+            },
+            {
+              "value": "medium",
+              "label": "t:sections.rich-text.blocks.caption.settings.caption_size.options__2.label"
+            },
+            {
+              "value": "large",
+              "label": "t:sections.rich-text.blocks.caption.settings.caption_size.options__3.label"
+            }
+          ],
+          "default": "medium",
+          "label": "t:sections.rich-text.blocks.caption.settings.caption_size.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.rich-text.blocks.text.name",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "html",
+          "id": "text",
+          "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+          "label": "t:sections.rich-text.blocks.text.settings.text.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "side_image",
+          "label": "背景画像"
+        },
+        {
+          "type": "checkbox",
+          "id": "bg_color",
+          "label": "背景グラデーションの表示",
+          "default": false
+        },
+        {
+          "type": "html",
+          "id": "text_with_title",
+          "label": "タイトルの表示"
+        },
+        {
+            "type": "header",
+            "content": "全体レイアウト"
+        },
+        {
+            "type": "range",
+            "id": "top_margin",
+            "label": "上部の余白(外側_margin)",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        },
+        {
+            "type": "range",
+            "id": "bottom_margin",
+            "label": "下部の余白(外側_margin)",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        },
+        {
+            "type": "header",
+            "content": "全体レイアウト(モバイル)"
+        },
+        {
+            "type": "range",
+            "id": "top_margin_mp",
+            "label": "上部の余白(外側_margin)",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        },
+        {
+            "type": "range",
+            "id": "bottom_margin_mp",
+            "label": "下部の余白(外側_margin)",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        }
+      ]
+    },
+    {
+      "type": "image-text",
+      "name": "画像&テキスト",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "link_image1",
+          "label": "リンク画像1"
+        },
+        {
+          "type": "url",
+          "id": "link1",
+          "label": "リンク1"
+        },
+        {
+          "type": "image_picker",
+          "id": "link_image2",
+          "label": "リンク画像2"
+        },
+        {
+          "type": "url",
+          "id": "link2",
+          "label": "リンク2"
+        },
+        {
+          "type": "image_picker",
+          "id": "link_image3",
+          "label": "リンク画像3"
+        },
+        {
+          "type": "url",
+          "id": "link3",
+          "label": "リンク3"
+        },
+        {
+          "type": "html",
+          "id": "text_title",
+          "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+          "label": "タイトルテキスト"
+        },
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "イメージ画像1"
+        },
+        {
+          "type": "html",
+          "id": "caption",
+          "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+          "label": "キャプション"
+        },
+        {
+          "type": "html",
+          "id": "text1",
+          "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+          "label": "コンテンツ1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "イメージ画像2"
+        },
+        {
+          "type": "html",
+          "id": "content1_title",
+          "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+          "label": "タイトルテキスト"
+        },
+        {
+          "type": "html",
+          "id": "content1_text",
+          "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+          "label": "テキスト"
+        },
+        {
+          "type": "html",
+          "id": "content2_title",
+          "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+          "label": "タイトルテキスト"
+        },
+        {
+          "type": "html",
+          "id": "content2_text",
+          "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+          "label": "テキスト"
+        },
+        {
+          "type": "image_picker",
+          "id": "image3",
+          "label": "イメージ画像3"
+        },
+        {
+          "type": "image_picker",
+          "id": "image4",
+          "label": "イメージ画像4"
+        },
+        {
+            "type": "header",
+            "content": "全体レイアウト"
+        },
+        {
+            "type": "range",
+            "id": "top_margin",
+            "label": "上部の余白(外側_margin)",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        },
+        {
+            "type": "range",
+            "id": "bottom_margin",
+            "label": "下部の余白(外側_margin)",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        },
+        {
+            "type": "header",
+            "content": "全体レイアウト(モバイル)"
+        },
+        {
+            "type": "range",
+            "id": "top_margin_mp",
+            "label": "上部の余白(外側_margin)",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        },
+        {
+            "type": "range",
+            "id": "bottom_margin_mp",
+            "label": "下部の余白(外側_margin)",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        }
+      ]
+    },
+    {
+      "type": "image-text2",
+      "name": "画像&テキスト2",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "content_image_right",
+          "default": false,
+          "label": "画像コンテンツを右に"
+        },
+        {
+          "type": "html",
+          "id": "content1_title",
+          "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+          "label": "タイトルテキスト"
+        },
+        {
+          "type": "image_picker",
+          "id": "title_image",
+          "label": "タイトル画像(ある場合はタイトルテキストと差し変わる)"
+        },
+        {
+          "type": "html",
+          "id": "content1_text",
+          "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+          "label": "テキスト"
+        },
+        {
+          "type": "image_picker",
+          "id": "side_image",
+          "label": "サイド画像"
+        },
+        {
+          "type": "image_picker",
+          "id": "sub_image1",
+          "label": "サブ画像1"
+        },
+        {
+            "type": "header",
+            "content": "全体レイアウト"
+        },
+        {
+            "type": "range",
+            "id": "top_margin",
+            "label": "上部の余白(外側_margin)",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        },
+        {
+            "type": "range",
+            "id": "bottom_margin",
+            "label": "下部の余白(外側_margin)",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        },
+        {
+            "type": "header",
+            "content": "全体レイアウト(モバイル)"
+        },
+        {
+            "type": "range",
+            "id": "top_margin_mp",
+            "label": "上部の余白(外側_margin)",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        },
+        {
+            "type": "range",
+            "id": "bottom_margin_mp",
+            "label": "下部の余白(外側_margin)",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:sections.rich-text.blocks.buttons.name",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_label_1.label",
+          "info": "t:sections.rich-text.blocks.buttons.settings.button_label_1.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_link_1.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "default": false,
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_1.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_label_2.label",
+          "info": "t:sections.rich-text.blocks.buttons.settings.button_label_2.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_link_2.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_2",
+          "default": false,
+          "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_2.label"
+        }
+      ]
+    },
+    {
+      "type": "border",
+      "name": "ボーダー",
+      "limit": 5,
+      "settings": []
+    },
+    {
+      "type": "block_image",
+      "name": "画像",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "画像"
+        },
+        {
+            "type": "header",
+            "content": "全体レイアウト"
+        },
+        {
+            "type": "range",
+            "id": "top_margin",
+            "label": "上部の余白(外側_margin)",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        },
+        {
+            "type": "range",
+            "id": "bottom_margin",
+            "label": "下部の余白(外側_margin)",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        },
+        {
+            "type": "header",
+            "content": "全体レイアウト(モバイル)"
+        },
+        {
+            "type": "range",
+            "id": "top_margin_mp",
+            "label": "上部の余白(外側_margin)",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        },
+        {
+            "type": "range",
+            "id": "bottom_margin_mp",
+            "label": "下部の余白(外側_margin)",
+            "default": 50,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "(C3)リッチテキスト",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

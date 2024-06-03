@@ -1,0 +1,92 @@
+<div
+  id="Banner-{{ section.id }}"
+  class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+>
+  {%- if section.settings.image != blank -%}
+    <a href="{{ section.settings.banner_link }}" class="mp-none {% if section.settings.image == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+      <img class="imageBanner" src="{{ section.settings.image | image_url: width: 2400 }}">
+    </a>
+    <a href="{{ section.settings.banner_link }}" class="pc-none {% if section.settings.image == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+      <img class="imageBanner" src="{{ section.settings.image_mp | image_url: width: 1000 }}">
+    </a>
+  {%- else -%}
+    <div class="banner__media media{% if section.settings.image == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+      {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+    </div>
+  {%- endif -%}
+
+</div>
+
+<style>
+#shopify-section-{{ section.id }} {
+  {% if section.settings.background_image != blank %}
+    background-image: url({{ section.settings.background_image | img_url: 'master' }});
+    background-size: {% if section.settings.backgorund_image_repeat %}contain{% else %}cover{% endif %};
+    background-position: center;
+    background-repeat: {% if section.settings.backgorund_image_repeat %}repeat{% else %}no-repeat{% endif %};
+  {% endif %}
+}
+
+#shopify-section-{{ section.id }} .mp-none {
+  display: block;
+}
+#shopify-section-{{ section.id }} .pc-none {
+  display: none;
+}
+
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .mp-none {
+    display: none;
+  }
+  #shopify-section-{{ section.id }} .pc-none {
+    display: block;
+  }
+}
+
+#shopify-section-{{ section.id }} .imageBanner {
+  height: 100%;
+  width: 100%;
+  margin-bottom: -10px;
+}
+</style>
+
+{% schema %}
+{
+  "name": "(C)画像",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-banner.settings.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mp",
+      "label": "イメージバナーMP"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "背景画像"
+    },
+    {
+      "type": "checkbox",
+      "id": "backgorund_image_repeat",
+      "label": "背景画像を繰り返す",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "banner_link",
+      "label": "バナーリンク"
+    }
+  ],
+  "presets": [
+    {
+      "name": "(C)画像"
+    }
+  ]
+}
+{% endschema %}

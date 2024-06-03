@@ -1,0 +1,388 @@
+{{ 'section-rich-section.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  #shopify-section-{{ section.id }} {
+    {% if section.settings.background_image != blank %}
+      background-image: url({{ section.settings.background_image | img_url: 'master' }});
+      background-size: {% if section.settings.backgorund_image_repeat %}contain{% else %}cover{% endif %};
+      background-position: center;
+      background-repeat: {% if section.settings.backgorund_image_repeat %}repeat-x{% else %}no-repeat{% endif %};
+    {% endif %}
+  }
+  {% if section.settings.backgorund_image_parallax == true %}
+    @media screen and (min-width: 750px) {
+      #shopify-section-{{ section.id }} {
+          background-attachment: fixed;
+      }
+    }
+  {% endif %}
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div
+  id="{{ section.settings.anchor }}"
+  class="isolate{% unless section.settings.full_width %} page-width{% endunless %}"
+>
+  <div class="rich-section content-container {% if section.settings.full_width %} rich-section--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="rich-section__wrapper {% if section.settings.full_width %} page-width{% endif %}">
+        {%- if section.settings.title != blank -%}
+          <h2
+            style="text-align: center;"
+            class="custom-title inline-richtext h2{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          >
+            {{ section.settings.title }}
+          </h2>
+        {%- endif -%}
+          <div class="rich-section__blocks-custom center" style="margin: 0 auto;">
+            <div class="rich-section__flex_between direction_column_on_mobile">
+              <div class="left-product-images">
+                <img src="{{ section.settings.images1 | img_url: 'master' }}" style="width: 100%">
+                <img src="{{ section.settings.images2 | img_url: 'master' }}" style="width: 100%">
+                <img src="{{ section.settings.images3 | img_url: 'master' }}" style="width: 100%">
+              </div>
+              <div
+                class="custom-button-layout right-product-contents"
+              >
+                <div class="title-wrapper">
+                  <h2 class="caption-subtitle">
+                    {{ section.settings.sub_title | newline_to_br }}
+                  </h2>
+                  <div class="title-iamge">
+                    <img src="{{ section.settings.title_image | img_url: 'master' }}" style="width: 100%">
+                  </div>
+                </div>
+                <p class="caption-text">
+                  {{ section.settings.caption1 | newline_to_br }}
+                </p>
+                <div class="review-summary-container" data-pid="8847614705961" data-group="true" data-action="summary"></div>
+                <div class="product-btn-wrap">
+                  <a
+                    href="{{ section.settings.caption_link1 }}"
+                    {% if section.settings.outer_link == true %}target="_blank" rel="noopener noreferrer"{% endif %}
+                    class="link underlined-link"
+                    >
+                      <img src="{{ section.settings.btn_images | image_url:width:1000 }}" style="width: 100%">
+                  </a>
+                </div>
+
+                <div class="description-image">
+                  <img src="{{ section.settings.description_images | img_url: 'master' }}" style="width: 100%">
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+
+<style>
+#shopify-section-{{ section.id }} .custom-title {
+  font-size: 28px;
+  letter-spacing: 5px;
+  padding: 8px;
+  border: 2px solid #333;
+}
+#shopify-section-{{ section.id }} .custom-title span {
+  font-size: 24px;
+  padding-left: 15px;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .custom-title {
+    font-size: 28px;
+  }
+  #shopify-section-{{ section.id }} .custom-title span {
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding-left: 10px;
+  }
+}
+
+#shopify-section-{{ section.id }} .rich-section__flex_between {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 4%;
+}
+#shopify-section-{{ section.id }} .left-product-images {
+  width: 48%;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+#shopify-section-{{ section.id }} .right-product-contents {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .rich-section__flex_between {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4%;
+  }
+  #shopify-section-{{ section.id }} .left-product-images {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 20px 0;
+  }
+  #shopify-section-{{ section.id }} .right-product-contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 20px 0;
+  }
+}
+#shopify-section-{{ section.id }} .title-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  justify-content: left;
+}
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .title-wrapper {
+    margin-bottom: 20px;
+  }
+}
+#shopify-section-{{ section.id }} .caption-subtitle {
+  width: auto;
+  font-size: 24px;
+  font-weight: bold;
+  color: #b42419;
+  text-align: left;
+  line-height: 1.5;
+  margin: 0px;
+}
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .caption-subtitle {
+    font-size: 20px;
+  }
+}
+#shopify-section-{{ section.id }} .title-iamge {
+  width: 70px;
+}
+#shopify-section-{{ section.id }} .title-iamge img {
+  transform: scale(1.5);
+}
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .title-iamge {
+    width: 60px;
+  }
+}
+
+#shopify-section-{{ section.id }} .caption-text {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+  text-align: left;
+}
+#shopify-section-{{ section.id }} .caption-text span {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .caption-text {
+    font-size: 14px;
+  }
+  #shopify-section-{{ section.id }} .caption-text span {
+    font-size: 18px;
+  }
+}
+
+#shopify-section-{{ section.id }} .product-btn-wrap {
+  margin-top: 35px;
+  margin-bottom: 65px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .product-btn-wrap {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+}
+#shopify-section-{{ section.id }} .product-btn-wrap a {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  transition: all 0.2s;
+}
+#shopify-section-{{ section.id }} .product-btn-wrap a:hover {
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+</style>
+
+{% schema %}
+{
+  "name": "(CP)リッチセクション",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "アンカーID",
+      "default": "news"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "default": "タイトル",
+      "label": "タイトル"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "背景画像"
+    },
+    {
+      "type": "checkbox",
+      "id": "backgorund_image_repeat",
+      "label": "背景画像を繰り返す",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "backgorund_image_parallax",
+      "label": "パララックスをオンにする",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.rich-section.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.rich-section.settings.desktop_content_position.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.rich-section.settings.desktop_content_position.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.rich-section.settings.desktop_content_position.label",
+      "info": "t:sections.rich-section.settings.desktop_content_position.info"
+    },
+    {
+      "type": "image_picker",
+      "id": "images1",
+      "label": "レフト画像1"
+    },
+    {
+      "type": "image_picker",
+      "id": "images2",
+      "label": "レフト画像2"
+    },
+    {
+      "type": "image_picker",
+      "id": "images3",
+      "label": "レフト画像3"
+    },
+    {
+      "type": "html",
+      "id": "sub_title",
+      "default": "サブタイトル",
+      "label": "サブタイトル"
+    },
+    {
+      "type": "image_picker",
+      "id": "title_image",
+      "label": "タイトル横画像"
+    },
+    {
+      "type": "header",
+      "content": "コンテンツ"
+    },
+    {
+      "type": "textarea",
+      "id": "caption1",
+      "default": "キャプション1",
+      "label": "キャプション1"
+    },
+    {
+      "type": "url",
+      "id": "caption_link1",
+      "label": "リンク"
+    },
+    {
+      "type": "checkbox",
+      "id": "outer_link",
+      "label": "別タブで開く",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "btn_images",
+      "label": "ボタン画像"
+    },
+    {
+      "type": "image_picker",
+      "id": "description_images",
+      "label": "説明画像"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "t:sections.rich-section.settings.full_width.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "presets": [
+    {
+      "name": "(CP)リッチセクション"
+    }
+  ]
+}
+{% endschema %}

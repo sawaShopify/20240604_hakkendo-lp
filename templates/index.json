@@ -1,0 +1,612 @@
+{
+  "sections": {
+    "slideshow_swiper_4JkpXn": {
+      "type": "slideshow_swiper",
+      "blocks": {
+        "text_BhLBWM": {
+          "type": "text",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/TOP.png",
+            "slide_link": ""
+          }
+        },
+        "text_4pe7RV": {
+          "type": "text",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/TOP_b77a2008-852b-4581-8dfd-71b908e0a61a.png",
+            "slide_link": ""
+          }
+        },
+        "text_6mzUjk": {
+          "type": "text",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/TOP_3.png",
+            "slide_link": ""
+          }
+        },
+        "text_A9mq6g": {
+          "type": "text",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/TOP_4.png",
+            "slide_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_BhLBWM",
+        "text_4pe7RV",
+        "text_6mzUjk",
+        "text_A9mq6g"
+      ],
+      "settings": {
+        "slide_title": "",
+        "top_margin": 0,
+        "top_padding": 0,
+        "bottom_padding": 0,
+        "bottom_margin": 0,
+        "top_margin_mp": 0,
+        "top_padding_mp": 0,
+        "bottom_padding_mp": 0,
+        "bottom_margin_mp": 0
+      }
+    },
+    "slideshow_default_McT3xN": {
+      "type": "slideshow_default",
+      "blocks": {
+        "slide_c7bgc8": {
+          "type": "slide",
+          "settings": {
+            "pattern2": false,
+            "image": "shopify:\/\/shop_images\/1.png",
+            "heading": "こだわり尽くした<br>\n日本生まれの酵素キムチ",
+            "contena-none": true,
+            "heading_size": "h1",
+            "subheading": "<p>\n国産白菜100%使用。国内工場にて製造。<br>\n保存料・着色料・香料・増粘剤・酸化防止剤は使用しておりません。\n<\/p>",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "bottom-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 10,
+            "color_scheme": "scheme-3",
+            "pattern2-1": "ダシの効いた旨甘辛味",
+            "pattern2-2": "保存料・甘味料不使用",
+            "pattern2-3": "冷蔵庫のキムチ臭なし",
+            "pattern2-4": "酸っぱくない(pH値が一定)",
+            "text_alignment_mobile": "left"
+          }
+        },
+        "slide_7E9ehH": {
+          "type": "slide",
+          "settings": {
+            "pattern2": false,
+            "image": "shopify:\/\/shop_images\/2.png",
+            "heading": "<div class=\"slide-title-img\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0840\/8770\/1801\/files\/25_2x_28796553-6eaa-4b58-84b6-7444a074fb21.png?v=1706581709\">\n<\/div>\nおつまみにも、主食にも。<br>\n毎日違う美味しさに出会う",
+            "contena-none": true,
+            "heading_size": "h1",
+            "subheading": "<p>\n国産白菜100%使用。国内工場にて製造。<br>\n保存料・着色料・香料・増粘剤・酸化防止剤は使用しておりません。\n<\/p>",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "bottom-right",
+            "show_text_box": false,
+            "text_alignment": "right",
+            "image_overlay_opacity": 20,
+            "color_scheme": "scheme-3",
+            "pattern2-1": "ダシの効いた旨甘辛味",
+            "pattern2-2": "保存料・甘味料不使用",
+            "pattern2-3": "冷蔵庫のキムチ臭なし",
+            "pattern2-4": "酸っぱくない(pH値が一定)",
+            "text_alignment_mobile": "left"
+          }
+        },
+        "slide_Vi4MqH": {
+          "type": "slide",
+          "settings": {
+            "pattern2": false,
+            "image": "shopify:\/\/shop_images\/3.png",
+            "heading": "<p class=\"f-big\">\n毎日の食卓に酵素キムチ。\n<\/p>\n<p class=\"m-t-0\">\n美容と健康を美味しく<br>\nいただきます！\n<\/p>",
+            "contena-none": true,
+            "heading_size": "h1",
+            "subheading": "<p>\n国産白菜100%使用。国内工場にて製造。<br>\n保存料・着色料・香料・増粘剤・酸化防止剤は使用しておりません。\n<\/p>",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "bottom-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 20,
+            "color_scheme": "scheme-3",
+            "pattern2-1": "ダシの効いた旨甘辛味",
+            "pattern2-2": "保存料・甘味料不使用",
+            "pattern2-3": "冷蔵庫のキムチ臭なし",
+            "pattern2-4": "酸っぱくない(pH値が一定)",
+            "text_alignment_mobile": "left"
+          }
+        },
+        "slide_MUJLT9": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "pattern2": true,
+            "image": "shopify:\/\/shop_images\/4.png",
+            "heading": "<p>\n<span class=\"f-middle\">こだわり<\/span>尽くした\n<\/p>\n<p>\n日本生まれの\n<\/p>\n<p>\n<span class=\"f-mega\">酵素<span><span class=\"f-middle\">キムチ<\/span>\n<\/span><\/span><\/p>",
+            "contena-none": true,
+            "heading_size": "h1",
+            "subheading": "<p>このキムチが日々の食卓に並び<\/p>\n<p>皆さまの美容と健康に貢献することができれば幸いです。<\/p>",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 10,
+            "color_scheme": "scheme-3",
+            "pattern2-1": "ダシの効いた旨甘辛味",
+            "pattern2-2": "保存料・甘味料不使用",
+            "pattern2-3": "冷蔵庫のキムチ臭なし",
+            "pattern2-4": "酸っぱくない<span class=\"f-small\">(pH値が一定)<\/span>",
+            "text_alignment_mobile": "left"
+          }
+        }
+      },
+      "block_order": [
+        "slide_c7bgc8",
+        "slide_7E9ehH",
+        "slide_Vi4MqH",
+        "slide_MUJLT9"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "large",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "featured_blog_default_custom_rrxfwM": {
+      "type": "featured-blog_default_custom",
+      "settings": {
+        "information_max_size": 800,
+        "bg_image": "shopify:\/\/shop_images\/1_f6430df3-5ba5-423a-84b1-cc9764d43fff.png",
+        "sub_title": "",
+        "bold_sub": false,
+        "title": "八恵堂<br class=\"pc-br\">NEWS",
+        "bold": false,
+        "fontColorTitle": "#333333",
+        "news_list": "news",
+        "post_limit": 2,
+        "news_list_date": true,
+        "news_list_category": false,
+        "category_color": "#000000",
+        "btn_text": "",
+        "btnMainColor": "#4b4c4d",
+        "btnTextColor": "#ffffff",
+        "top_margin": 0,
+        "top_padding": 60,
+        "bottom_padding": 40,
+        "bottom_margin": 0,
+        "top_margin_mp": 0,
+        "top_padding_mp": 30,
+        "bottom_padding_mp": 30,
+        "bottom_margin_mp": 0
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "商品一覧",
+        "bold": false,
+        "sub_title": "PRODUCT",
+        "bold_sub": false,
+        "anchor": "products",
+        "heading_size": "h0",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "background_image": "shopify:\/\/shop_images\/1_f6430df3-5ba5-423a-84b1-cc9764d43fff.png",
+        "ad_image": "shopify:\/\/shop_images\/2024.png",
+        "ad_image_mobile": "shopify:\/\/shop_images\/2024_2d63ae3c-3cfb-453d-affe-3b5751830c3a.png",
+        "ad_url": "shopify:\/\/collections\/定期便",
+        "collection": "all",
+        "collection_url": "shopify:\/\/pages\/product-all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "outline",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-2",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_price": true,
+        "show_title_with_image": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "72a553e4-a5f2-470c-aa23-25d65523f8f6": {
+      "type": "rich-section",
+      "blocks": {
+        "button_tiEJMj": {
+          "type": "button",
+          "settings": {
+            "label": "唐辛子",
+            "link": "\/pages\/kodawari-materials#tougarashi",
+            "image": "shopify:\/\/shop_images\/17_3x_ed203cc9-1206-46ea-9f27-a4619e247880.png",
+            "popup_image": "shopify:\/\/shop_images\/6-1.png",
+            "popup_image_mp": "shopify:\/\/shop_images\/01-tougarashi.png"
+          }
+        },
+        "button_H7a34C": {
+          "type": "button",
+          "settings": {
+            "label": "かつお節",
+            "link": "\/pages\/kodawari-materials#katsuobushi",
+            "image": "shopify:\/\/shop_images\/9_3x_a9c826f7-ed62-40b2-a806-aec0f7de5ed6.png",
+            "popup_image": "shopify:\/\/shop_images\/6-2.png",
+            "popup_image_mp": "shopify:\/\/shop_images\/02-katsuobushi.png"
+          }
+        },
+        "button_AaFqWg": {
+          "type": "button",
+          "settings": {
+            "label": "黒にんにく",
+            "link": "\/pages\/kodawari-materials#kuroninniku",
+            "image": "shopify:\/\/shop_images\/11_3x_0ce40584-896d-482b-b86e-6bf56b53c613.png",
+            "popup_image": "shopify:\/\/shop_images\/6-3.png",
+            "popup_image_mp": "shopify:\/\/shop_images\/03-ninniku.png"
+          }
+        },
+        "button_kJaynp": {
+          "type": "button",
+          "settings": {
+            "label": "白味噌",
+            "link": "\/pages\/kodawari-materials#sinsyumiso",
+            "image": "shopify:\/\/shop_images\/12_3x_735c92fd-bd38-4008-b291-5a4c00533678.png",
+            "popup_image": "shopify:\/\/shop_images\/6-4.png",
+            "popup_image_mp": "shopify:\/\/shop_images\/04-miso.png"
+          }
+        },
+        "button_A4Fc6r": {
+          "type": "button",
+          "settings": {
+            "label": "紫岩塩",
+            "link": "\/pages\/kodawari-materials#murasakiganen",
+            "image": "shopify:\/\/shop_images\/13_3x_17205fff-8a30-4fb6-b917-a465b84aba72.png",
+            "popup_image": "shopify:\/\/shop_images\/6-5.png",
+            "popup_image_mp": "shopify:\/\/shop_images\/05-murasakiganen.png"
+          }
+        },
+        "button_tKMMwk": {
+          "type": "button",
+          "settings": {
+            "label": "生姜",
+            "link": "\/pages\/kodawari-materials#syouga",
+            "image": "shopify:\/\/shop_images\/14_3x_8581c684-e66e-461f-b3bc-fd9491922af7.png",
+            "popup_image": "shopify:\/\/shop_images\/6-6.png",
+            "popup_image_mp": "shopify:\/\/shop_images\/06-shouga.png"
+          }
+        },
+        "button_kEwTQr": {
+          "type": "button",
+          "settings": {
+            "label": "きび糖",
+            "link": "\/pages\/kodawari-materials#tensaitou",
+            "image": "shopify:\/\/shop_images\/15_3x_85b8d7a7-7c69-48a4-b86c-1947e7434b3f.png",
+            "popup_image": "shopify:\/\/shop_images\/6-7.png",
+            "popup_image_mp": "shopify:\/\/shop_images\/07-tensai.png"
+          }
+        },
+        "button_BGyqF4": {
+          "type": "button",
+          "settings": {
+            "label": "はちみつ",
+            "link": "\/pages\/kodawari-materials#hatimitsu",
+            "image": "shopify:\/\/shop_images\/16_3x_f692aca1-317a-484e-ae28-0032d99a892b.png",
+            "popup_image": "shopify:\/\/shop_images\/6-8.png",
+            "popup_image_mp": "shopify:\/\/shop_images\/08-hachimitsu.png"
+          }
+        }
+      },
+      "block_order": [
+        "button_tiEJMj",
+        "button_H7a34C",
+        "button_AaFqWg",
+        "button_kJaynp",
+        "button_A4Fc6r",
+        "button_tKMMwk",
+        "button_kEwTQr",
+        "button_BGyqF4"
+      ],
+      "settings": {
+        "anchor": "materials",
+        "background_image": "shopify:\/\/shop_images\/Asset_9.jpg",
+        "backgorund_image_repeat": false,
+        "backgorund_image_parallax": true,
+        "desktop_content_position": "center",
+        "title": "素材へのこだわり",
+        "title_size": "h1",
+        "featured_image": "shopify:\/\/shop_images\/Asset_3_478186f3-6d8e-4c2d-a932-d1f092165ec7.jpg",
+        "caption_image1": "shopify:\/\/shop_images\/Asset_2.jpg",
+        "caption1": "ぴりっとした辛味の中に感じる出汁の旨味と素材の甘味。<br>日本各地を巡って、妥協することなく厳選した素材です。",
+        "caption_link1": "shopify:\/\/pages\/kodawari-materials",
+        "outer_link": false,
+        "caption_link_text": "詳しく見る",
+        "full_width": true,
+        "mobile_link": "shopify:\/\/pages\/kodawari-materials",
+        "mobile_link_text": "すべてを見る",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "rich_section2_FNpVnL": {
+      "type": "rich-section2",
+      "settings": {
+        "anchor": "news",
+        "background_image": "shopify:\/\/shop_images\/Asset_36.jpg",
+        "backgorund_image_repeat": true,
+        "backgorund_image_parallax": false,
+        "desktop_content_position": "center",
+        "title": "革新的製法",
+        "title_size": "h0",
+        "subtitle": "こだわり極めた、八恵堂独自の",
+        "subtitle_size": "h2",
+        "subtitle2": "製法特許取得済",
+        "caption_size": "h2",
+        "featured_image": "shopify:\/\/shop_images\/Asset_14.jpg",
+        "caption_image1": "shopify:\/\/shop_images\/Asset_10.png",
+        "caption_title_image1": "shopify:\/\/shop_images\/11_d82770e9-536a-46b0-8141-8953f7032c93.png",
+        "button_link1": "shopify:\/\/pages\/kodawari-manufacturing",
+        "outer_link": false,
+        "all_btn": "もっと見る",
+        "caption1": "宇宙空間とほぼ同等の真空状態の中で、白菜の空気を抜き、ヤンニョムを白菜全体に瞬時に浸透させます。通常2～３日漬ける工程が、わずか数十秒で実現できます。",
+        "caption_image2": "shopify:\/\/shop_images\/Asset_11.png",
+        "caption_title_image2": "shopify:\/\/shop_images\/12_c7da32d0-2216-4890-a143-e5dc6bc0168a.png",
+        "caption2": "マイナス30度の液体凍結機で瞬間冷凍させることで、細胞破壊を最小限にとどめ、食感を保ちます。また、低温でも発酵する乳酸菌の活動環境を整える役割も担っています。",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "rich_section3_HjQmXa": {
+      "type": "rich-section3",
+      "settings": {
+        "anchor": "tsubo",
+        "title": "キムチ保存のために開発した、<br class=\"mp-br\">八恵堂プレミアム磁器製壺",
+        "background_image": "shopify:\/\/shop_images\/Asset_15.jpg",
+        "background_image_mp": "shopify:\/\/shop_images\/1_4b1c7966-00b4-46e3-922c-944ccd79d8de.jpg",
+        "backgorund_image_repeat": false,
+        "backgorund_image_parallax": false,
+        "desktop_content_position": "center",
+        "caption_size": "h1",
+        "featured_image": "shopify:\/\/shop_images\/Asset_16.jpg",
+        "caption_image1": "shopify:\/\/shop_images\/24_3x_0166d491-e6cc-43cb-9273-d2593cd0ad62.png",
+        "caption_link1": "shopify:\/\/pages\/kodawari-preservation",
+        "outer_link": false,
+        "caption_title1": "特性シリコーン蓋",
+        "caption_btn1": "もっと見る",
+        "caption1": "竹炭・トルマリンを練りこみました。<br>\n菌量とキムチ臭をコントロールします。",
+        "caption_image2": "shopify:\/\/shop_images\/Asset_18.png",
+        "caption_link2": "shopify:\/\/pages\/kodawari-preservation",
+        "caption_title2": "八恵壺（有田焼）",
+        "caption_btn2": "もっと見る",
+        "caption2": "伝統技術の型抜き製法で作ったオリジナル壺。<br>\n有田焼の窯元で焼き上げた一点物。",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "rich_section4_3Yfpik": {
+      "type": "rich-section4",
+      "settings": {
+        "anchor": "news",
+        "background_image": "shopify:\/\/shop_images\/230204__0066.jpg",
+        "backgorund_image_repeat": false,
+        "backgorund_image_parallax": true,
+        "desktop_content_position": "center",
+        "title": "",
+        "featured_image": "shopify:\/\/shop_images\/19_a645787b-e420-4cea-968b-c61d6f49fc5d.png",
+        "caption_link1": "http:\/\/hakkeido.style",
+        "outer_link": true,
+        "caption_link_text": "レシピを見る",
+        "caption_title1": "キャプションタイトル1",
+        "caption1": "八恵堂の酵素キムチは、料理専門家や管理栄養士、または愛用者のアイデアから様々な料理としてのアレンジレシピが生まれ続けています。皆さまが、より美味しく、そして楽しみながら元気に腸活を続けられるように、定期的にレシピブックのお届けと、サイトでの情報提供を致しております。",
+        "images1": "shopify:\/\/shop_images\/Asset_18_2.jpg",
+        "images2": "shopify:\/\/shop_images\/Asset_19.jpg",
+        "images3": "shopify:\/\/shop_images\/Asset_20.jpg",
+        "images4": "shopify:\/\/shop_images\/Asset_21.jpg",
+        "images5": "shopify:\/\/shop_images\/Asset_22.jpg",
+        "images6": "shopify:\/\/shop_images\/Asset_23.jpg",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_qz9KfQ": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"gallery-pictures-container\" data-gallery-id=\"1031\" data-group=\"true\"><\/div>\n<div class=\"review-container\" data-review-type=\"product\" data-action=\"slider\" data-review-count=\"12\" data-autoplay=\"1\" data-autoplay-speed=\"7000\" data-morereview-page=\"1\" data-morereview-page-link=\"https:\/\/hakkeido.com\/pages\/reviews\" data-morereview-page-text=\"もっと見る\" ><\/div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "4b9a9020-bdef-4b4d-8cd5-5c692289be6f": {
+      "type": "button-list",
+      "blocks": {
+        "template--21521884709161__4b9a9020-bdef-4b4d-8cd5-5c692289be6f-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "店舗について",
+            "button_description": "ボタン説明文",
+            "button_link": "https:\/\/hakkeido.myshopify.com\/pages\/faq#about-store",
+            "outer_link": false
+          }
+        },
+        "template--21521884709161__4b9a9020-bdef-4b4d-8cd5-5c692289be6f-button-3": {
+          "type": "button",
+          "settings": {
+            "button_label": "商品について",
+            "button_description": "ボタン説明文",
+            "button_link": "https:\/\/hakkeido.myshopify.com\/pages\/faq#about-product",
+            "outer_link": false
+          }
+        },
+        "template--21521884709161__4b9a9020-bdef-4b4d-8cd5-5c692289be6f-button-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "ネット販売について",
+            "button_description": "ボタン説明文",
+            "button_link": "https:\/\/hakkeido.myshopify.com\/pages\/faq#about-eccomerce",
+            "outer_link": false
+          }
+        },
+        "template--21521884709161__4b9a9020-bdef-4b4d-8cd5-5c692289be6f-button-4": {
+          "type": "button",
+          "settings": {
+            "button_label": "お支払いについて",
+            "button_description": "ボタン説明文",
+            "button_link": "https:\/\/hakkeido.myshopify.com\/pages\/faq#about-payment",
+            "outer_link": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21521884709161__4b9a9020-bdef-4b4d-8cd5-5c692289be6f-button-1",
+        "template--21521884709161__4b9a9020-bdef-4b4d-8cd5-5c692289be6f-button-3",
+        "template--21521884709161__4b9a9020-bdef-4b4d-8cd5-5c692289be6f-button-2",
+        "template--21521884709161__4b9a9020-bdef-4b4d-8cd5-5c692289be6f-button-4"
+      ],
+      "settings": {
+        "pattern": "pattern1",
+        "content_only_1": false,
+        "anchor": "news",
+        "title": "よくあるご質問",
+        "subtitle": "FAQ",
+        "view_all": "もっと見る",
+        "view_all_link": "shopify:\/\/pages\/faq",
+        "description": "",
+        "bg_color": "#ededed",
+        "background_image_repeat": false,
+        "backgorund_image_parallax": false,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "53c430c0-2167-4951-943c-e94d40921043": {
+      "type": "button-list",
+      "blocks": {
+        "template--21521884709161__53c430c0-2167-4951-943c-e94d40921043-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "お客様用",
+            "button_description": "店舗、商品、サービス等<br>\nに関するお問合わせはこちら",
+            "button_link": "shopify:\/\/pages\/contact",
+            "outer_link": false
+          }
+        },
+        "button_eeBfgM": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "メディア・企業様用",
+            "button_description": "取材申込み、プレスリリース等<br>に関するお問合わせはこちら",
+            "button_link": "shopify:\/\/pages\/company_contact",
+            "outer_link": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21521884709161__53c430c0-2167-4951-943c-e94d40921043-button-1",
+        "button_eeBfgM"
+      ],
+      "settings": {
+        "pattern": "pattern2",
+        "content_only_1": true,
+        "anchor": "news",
+        "title": "お問合わせ",
+        "subtitle": "CONTACT　US",
+        "view_all": "もっと見る",
+        "view_all_link": "#",
+        "description": "",
+        "bg_color": "",
+        "background_image": "shopify:\/\/shop_images\/Asset_26.jpg",
+        "background_image_repeat": true,
+        "backgorund_image_parallax": false,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "39572c15-432e-4e6e-af3b-f067914a9f90": {
+      "type": "button-list",
+      "blocks": {
+        "template--21521884709161__39572c15-432e-4e6e-af3b-f067914a9f90-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "八恵堂 福岡本店",
+            "button_description": "",
+            "button_link": "https:\/\/www.hakkeido.co.jp\/",
+            "outer_link": true,
+            "button_icon": "shopify:\/\/shop_images\/Asset_27.jpg"
+          }
+        },
+        "template--21521884709161__39572c15-432e-4e6e-af3b-f067914a9f90-button-4": {
+          "type": "button",
+          "settings": {
+            "button_label": "八恵堂 新宿マルイ店",
+            "button_description": "",
+            "button_link": "#",
+            "outer_link": false,
+            "button_icon": "shopify:\/\/shop_images\/1_1_1_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--21521884709161__39572c15-432e-4e6e-af3b-f067914a9f90-button-1",
+        "template--21521884709161__39572c15-432e-4e6e-af3b-f067914a9f90-button-4"
+      ],
+      "settings": {
+        "pattern": "pattern3",
+        "content_only_1": false,
+        "anchor": "news",
+        "title": "店舗案内",
+        "subtitle": "SHOP GUIDE",
+        "view_all": "もっと見る",
+        "view_all_link": "",
+        "description": "私たち八恵堂は、お客様の美と健康のため、そしてご飯のお供に新感覚の酵素キムチを食して頂きたい。\nその想いから、毎月お届け便をご用意させて頂いておりますが、まずはそのこだわりや美味しさを気軽に知って頂けるよう、\nまるでブティックかのような落ち着いた雰囲気で、試食も可能な販売店舗を展開しております。\n皆さまの、ご来店を心よりお待ちしております。\n\n八恵堂スタッフ一同",
+        "bg_color": "",
+        "background_image": "shopify:\/\/shop_images\/Asset_29.jpg",
+        "background_image_repeat": false,
+        "backgorund_image_parallax": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "slideshow_swiper_4JkpXn",
+    "slideshow_default_McT3xN",
+    "featured_blog_default_custom_rrxfwM",
+    "featured_collection",
+    "72a553e4-a5f2-470c-aa23-25d65523f8f6",
+    "rich_section2_FNpVnL",
+    "rich_section3_HjQmXa",
+    "rich_section4_3Yfpik",
+    "custom_liquid_qz9KfQ",
+    "4b9a9020-bdef-4b4d-8cd5-5c692289be6f",
+    "53c430c0-2167-4951-943c-e94d40921043",
+    "39572c15-432e-4e6e-af3b-f067914a9f90"
+  ]
+}

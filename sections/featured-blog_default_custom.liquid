@@ -1,0 +1,537 @@
+{%- assign blog = blogs[section.settings.news_list] -%}
+
+<div id="section-{{section.id}}" class="blog gradient custom-bg-image">
+    <div id="section-news-list1" class="page-width-custom">
+        <div class="custom-fade custom-fadeY flex-news-content {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            {% if section.settings.title %}
+            <a href="{{ blog.url }}" style="text-decoration: none;" class="SectionHeader SectionHeader--center custom-title-wrapper title-wrapper-heading {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                <h2 class="h1 SectionHeader__Heading Heading u-h2" style="{% if section.settings.bold %}font-weight:bold!important;{% endif %} color:{{section.settings.fontColorTitle}};">{{section.settings.title}}</h2>
+                {% if section.settings.sub_title %}
+                <p class="SectionHeader__SubHeading Heading u-h6" style="{% if section.settings.bold_sub %}font-weight:bold!important;{% endif %} color:{{section.settings.fontColorTitle}};">{{section.settings.sub_title}}</p>
+                {% endif %}
+            </a>
+            {% endif %}
+            <ul class="news-list">
+                {% for article in blog.articles limit: section.settings.post_limit %}
+                <li class="news-list-items">
+                    <a href="{{ article.url }}">
+                        <div class="news-list-info">
+                            {% if section.settings.news_list_date %}
+                            <span class="news-list-date">{{ article.published_at | date: "%y.%m.%d" }}</span>
+                            {% endif %}
+                            {% if section.settings.news_list_category %}
+                            <span style="background-color: {{ section.settings.category_color }};" class="news-list-category">{{ article.tags }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="news-list-title">{{ article.title }}</div>
+                    </a>
+                    <svg class="arrow-icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.2 23.4"><defs><style>.cls-1{font-size:19.2px;fill:#3c3736;font-family:HiraginoMin-W6-90msp, HiraginoMin W6-90msp-RKSJ-H;}</style></defs><g id="レイヤー_2" data-name="レイヤー 2"><g id="レイヤー_1-2" data-name="レイヤー 1"><text class="cls-1" transform="translate(0 16.9)">→</text></g></g></svg>
+                </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+
+        {% if section.settings.btn_text != blank %}
+          <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            <a
+              href="{{ blog.url }}"
+              class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
+              aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
+            >
+              {{section.settings.btn_text}}
+              <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+            </a>
+          </div>
+        {% endif %}
+    </div>
+</div>
+<style>
+#section-{{section.id}} .flex-news-content {
+  display: flex;
+  align-items: center;
+  border: 5px solid #aaacaf;
+  padding: 25px 50px;
+  background: #fff;
+}
+@media screen and (max-width: 749px) {
+  #section-{{section.id}} .flex-news-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 5px solid #aaacaf;
+    padding: 20px 10px;
+    background: #fff;
+  }
+}
+
+@media screen and (max-width: 749px) {
+    #section-{{section.id}} .SectionHeader{
+    }
+
+}
+#section-{{section.id}} .SectionHeader .Heading {
+  color: #3b3c3d;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+#section-{{section.id}} .SectionHeader .SectionHeader__Heading {
+  margin: 0px;
+  line-height: 1.1;
+  {%comment%}text-shadow: 0.5px 0 currentColor, -0.5px 0 currentColor;{%endcomment%}
+}
+#section-{{section.id}} .SectionHeader .SectionHeader__SubHeading {
+  margin: 0px;
+  margin-top: 10px;
+  font-size: 22px;
+  {%comment%}text-shadow: 0.5px 0 currentColor, -0.5px 0 currentColor;{%endcomment%}
+}
+@media screen and (max-width: 749px) {
+    #section-{{section.id}} .SectionHeader .SectionHeader__SubHeading {
+        display: none;
+    }
+}
+@media screen and (max-width: 749px) {
+  #section-{{section.id}} .SectionHeader .SectionHeader__SubHeading {
+    margin: 0px;
+    margin-top: 0px;
+    font-size: 20px;
+  }
+}
+#section-{{section.id}} .news-list {
+  width: 100%;
+  margin: 0px;
+}
+#section-{{section.id}} .news-list-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#shopify-section-{{ section.id }} .collection__view-all {
+  margin-top: 20px;
+}
+#shopify-section-{{ section.id }} .collection__view-all a {
+  transition: all 0.3s;
+  color: #4b4c4d;
+  background: transparent;
+}
+#shopify-section-{{ section.id }} .collection__view-all a:hover {
+  transform: rotate(0deg);
+}
+#shopify-section-{{ section.id }} .collection__view-all a .arrow-icons {
+  transition: all 0.3s;
+  padding-top: 3px;
+  color: #4b4c4d;
+  margin-left: 5px;
+  padding-bottom: 0px;
+}
+#shopify-section-{{ section.id }} .collection__view-all a:hover .arrow-icons {
+  transform: scale(1.3);
+  transition: all 0.3s;
+  color: #4b4c4d;
+}
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .arrow-icons {
+    margin-right: 10px;
+    padding-bottom: 15px;
+  }
+}
+#section-{{section.id}} .news-list-items:hover .arrow-icons {
+  transform: scale(1.3);
+  transition: all 0.3s;
+}
+#section-{{section.id}} .arrow-icons {
+  transition: all 0.3s;
+  width: 15px;
+  height: auto;
+  padding-bottom: 10px;
+}
+
+{% if section.settings.bg_image %}
+  #section-{{section.id}}.custom-bg-image {
+  background-image: url('{{ section.settings.bg_image | image_url: width: 500}}');
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+}
+{% endif %}
+</style>
+
+<style>
+#section-{{section.id}} .page-width-custom {
+    max-width: {{section.settings.information_max_size}}px;
+    padding-right: 16px;
+    padding-left: 16px;
+    width: 100%;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1200px) {
+    #section-{{section.id}} .page-width-custom {
+        width: 100%;
+    }
+}
+
+
+#section-{{section.id}} ul {
+    list-style:none!important;
+}
+#section-{{section.id}} li a {
+    text-decoration: none!important;
+    color: #000;
+}
+
+#section-{{section.id}} .news-list-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+#section-{{section.id}} .container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 55px;
+}
+#section-{{section.id}} .news-list{
+    /*border: 1px solid #ccc;*/
+}
+#section-{{section.id}} .news-list-items{
+    /*border-bottom: 1px solid #ccc;*/
+}
+#section-{{section.id}} .news-list-items a{
+    display: flex;
+    /*flex-direction: column;*/
+    align-items: flex-start;
+    justify-content: left;
+    gap: 0px;
+    max-width: 700px;
+    width: 100%;
+    padding: 5px 10px;
+    margin: 0 auto;
+    {% comment %} border: 1.5px solid #ccc;
+    border-bottom: 0px solid #ccc; {% endcomment %}
+}
+#section-{{section.id}} .news-list-items:last-child a{
+    {% comment %} border-bottom: 1.5px solid #ccc; {% endcomment %}
+}
+#section-{{section.id}} .news-list-date{
+    font-size: 16px;
+    margin-right: 15px;
+}
+#section-{{section.id}} .news-list-category{
+    font-size: 18px;
+    color: #fff;
+    padding: 5px;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+#section-{{section.id}} .news-list-info{
+    position: relative;
+    top: -1px;
+}
+#section-{{section.id}} .news-list-title{
+    font-size: 14px;
+    margin-bottom: 0;
+    {% comment %} text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; {% endcomment %}
+    position: relative;
+    top: 1px;
+}
+#section-{{section.id}} .center {
+    text-align: center;
+}
+
+
+/*ボタンのcss*/
+#section-{{section.id}} .moreButton {
+    text-align: center;
+    margin-top: 50px;
+}
+#section-{{section.id}} .moreButton .Button {
+    text-transform: none;
+    padding: 14px 60px;
+    color: {{section.settings.btnTextColor}};
+    border: 1px solid {{section.settings.btnMainColor}};
+    background-color: {{section.settings.btnMainColor}};
+    transition: all ease 0.3s;
+    text-decoration: none;
+}
+#section-{{section.id}} .moreButton .Button:hover {
+    background-color: {{section.settings.btnTextColor}};
+    color: {{section.settings.btnMainColor}};
+    border: 1px solid {{section.settings.btnMainColor}};
+    transition: all ease 0.3s;
+}
+
+#section-{{section.id}} .right-arrow-btn {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: 0px;
+    border-top: solid 2px {{section.settings.btnTextColor}};
+    border-right: solid 2px {{section.settings.btnTextColor}};
+    transform: rotate(45deg);
+    margin-left: 10px;
+    margin-bottom: 2px;
+    transition: all ease 0.3s;
+}
+#section-{{section.id}} .moreButton .Button:hover .right-arrow-btn {
+    border-top: solid 2px {{section.settings.btnMainColor}};
+    border-right: solid 2px {{section.settings.btnMainColor}};
+    transition: all ease 0.3s;
+}
+@media screen and (max-width: 749px) {
+    #section-{{section.id}} .moreButton {
+        text-align: center;
+        margin-top: 36px;
+    }
+}
+/*ボタンのcss END*/
+
+
+@media screen and (max-width: 749px){
+    #section-{{section.id}} .container{
+        padding: 35px 20px;
+    }
+    #section-{{section.id}} .news-list-items>a{
+        display: block;
+        padding: 0px;
+        padding-bottom: 5px;
+    }
+    #section-{{section.id}} .news-list{
+        padding-left: 10px;
+    }
+    #section-{{section.id}} .news-list-info{
+        margin-bottom: 0px;
+    }
+    #section-{{section.id}} .news-list-title{
+        top: 0px;
+    }
+}
+
+
+</style>
+
+{% style %}
+.section-adjustment.news-list_top_10 #section-{{ section.id }} {
+    margin-top: {{section.settings.top_margin}}px;
+    padding-top: {{section.settings.top_padding}}px;
+    padding-bottom: {{section.settings.bottom_padding}}px;
+    margin-bottom: {{section.settings.bottom_margin}}px;
+}
+@media screen and (max-width: 749px) {
+    .section-adjustment.news-list_top_10 #section-{{ section.id }} {
+        margin-top: {{section.settings.top_margin_mp}}px;
+        padding-top: {{section.settings.top_padding_mp}}px;
+        padding-bottom: {{section.settings.bottom_padding_mp}}px;
+        margin-bottom: {{section.settings.bottom_margin_mp}}px;
+    }
+}
+{% endstyle %}
+
+{% schema %}
+{
+    "name": "(C)NewsList",
+    "class": "section-adjustment news-list_top_10 background-color-custom",
+    "settings": [
+    {
+        "id": "information_max_size",
+        "type": "range",
+        "label": "ニュースの最大表示幅",
+        "unit": "px",
+        "min": 400,
+        "max": 1200,
+        "step": 50,
+        "default": 800
+    },
+    {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "背景画像"
+    },
+    {
+        "type": "html",
+        "id": "sub_title",
+        "default": "サブタイトル",
+        "label": "サブタイトル"
+    },
+    {
+        "type": "checkbox",
+        "id": "bold_sub",
+        "default": false,
+        "label": "サブタイトルを太字にする"
+    },
+    {
+        "id": "title",
+        "type": "html",
+        "label": "タイトル",
+        "default": "お知らせ一覧"
+    },
+    {
+        "type": "checkbox",
+        "id": "bold",
+        "default": false,
+        "label": "タイトルを太字にする"
+    },
+    {
+        "type": "color",
+        "id": "fontColorTitle",
+        "default": "#333",
+        "label": "タイトルの文字色"
+    },
+    {
+        "id": "news_list",
+        "type": "blog",
+        "label": "表示するブログ記事を選択"
+    },
+    {
+        "id": "post_limit",
+        "type": "range",
+        "label": "表示数を選択",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 3
+    },
+    {
+        "id": "news_list_date",
+        "type": "checkbox",
+        "label": "日付を表示する",
+        "default": true
+    },
+    {
+        "id": "news_list_category",
+        "type": "checkbox",
+        "label": "カテゴリーを表示する",
+        "default": true
+    },
+    {
+        "type": "color",
+        "id": "category_color",
+        "default": "#000",
+        "label": "カテゴリラベルの色"
+    },
+    {
+        "type": "text",
+        "id": "btn_text",
+        "default": "VIEW MORE",
+        "label": "ボタンのテキスト"
+    },
+    {
+        "type": "color",
+        "id": "btnMainColor",
+        "default": "#992327",
+        "label": "ボタンのメイン色"
+    },
+    {
+        "type": "color",
+        "id": "btnTextColor",
+        "default": "#ffffff",
+        "label": "ボタンのテキスト色"
+    },
+    {
+        "type": "header",
+        "content": "全体レイアウト"
+    },
+    {
+        "type": "range",
+        "id": "top_margin",
+        "label": "上部の余白(外側_margin)",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+    },
+    {
+        "type": "range",
+        "id": "top_padding",
+        "label": "上部の余白(内側_padding)",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+    },
+    {
+        "type": "range",
+        "id": "bottom_padding",
+        "label": "下部の余白(内側_padding)",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+    },
+    {
+        "type": "range",
+        "id": "bottom_margin",
+        "label": "下部の余白(外側_margin)",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+    },
+    {
+        "type": "header",
+        "content": "全体レイアウト(モバイル)"
+    },
+    {
+        "type": "range",
+        "id": "top_margin_mp",
+        "label": "上部の余白(外側_margin)",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+    },
+    {
+        "type": "range",
+        "id": "top_padding_mp",
+        "label": "上部の余白(内側_padding)",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+    },
+    {
+        "type": "range",
+        "id": "bottom_padding_mp",
+        "label": "下部の余白(内側_padding)",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+    },
+    {
+        "type": "range",
+        "id": "bottom_margin_mp",
+        "label": "下部の余白(外側_margin)",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+    }
+    ],
+    "presets": [
+    {
+        "name": "(C)NewsList",
+        "category": "Advance"
+    }
+    ]
+}
+{% endschema %}
+
+
+
+{% javascript %}
+{% endjavascript %}

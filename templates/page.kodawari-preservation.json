@@ -1,0 +1,409 @@
+{
+  "sections": {
+    "image_banner_title_KfxhTD": {
+      "type": "image-banner_title2",
+      "blocks": {
+        "image_itXjMT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/16_1.png",
+            "image_width": 130
+          }
+        },
+        "text_wRjY6R": {
+          "type": "text",
+          "settings": {
+            "text": "<span class=\"premium-text\">\nPREMIUM\n<\/span>",
+            "text_style": "body"
+          }
+        },
+        "heading_HaGTxY": {
+          "type": "heading",
+          "settings": {
+            "heading": "<span class=\"f-mega\">\n八恵壺\n<\/span>",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "image_itXjMT",
+        "text_wRjY6R",
+        "heading_HaGTxY"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_10256.png",
+        "content_background_color": "rgb(95 93 93 \/ 50%)",
+        "background_none": true,
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "10ff8137-e392-4119-b2f0-befd72bea959": {
+      "type": "image-banner",
+      "blocks": {
+        "14bf48e1-1ba0-488b-830c-5163d28391ea": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Asset_3_478186f3-6d8e-4c2d-a932-d1f092165ec7.jpg",
+            "image_width": 170
+          }
+        },
+        "template--21521885004073__10ff8137-e392-4119-b2f0-befd72bea959-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "美味しさと品質の両立",
+            "text_style": "body"
+          }
+        },
+        "template--21521885004073__10ff8137-e392-4119-b2f0-befd72bea959-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "至極のこだわり素材",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "14bf48e1-1ba0-488b-830c-5163d28391ea",
+        "template--21521885004073__10ff8137-e392-4119-b2f0-befd72bea959-text-1",
+        "template--21521885004073__10ff8137-e392-4119-b2f0-befd72bea959-heading-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Asset_9.jpg",
+        "banner_none": false,
+        "content_background_color": "rgba(0, 0, 0, 0.5)",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_custom2_yaRdH7": {
+      "type": "rich-text_custom3",
+      "blocks": {
+        "heading_LhG7Ph": {
+          "type": "heading",
+          "settings": {
+            "heading": "キムチ専用に開発した、八恵堂プレミアム磁器製壺",
+            "heading_size": "h1"
+          }
+        },
+        "block_image_CwqdBB": {
+          "type": "block_image",
+          "settings": {
+            "block_image": "shopify:\/\/shop_images\/2_2.png",
+            "top_margin": 21,
+            "bottom_margin": 0,
+            "top_margin_mp": 20,
+            "bottom_margin_mp": 0
+          }
+        },
+        "text_FrWLWn": {
+          "type": "text",
+          "settings": {
+            "text": "<p class=\"shadownone f-middlebig\">\n私たち日本人は、味噌・醤油・納豆・日本酒・漬物・鰹節などの様々な発酵食品を積極的に食生活に取り入れてきました。<br><br>\nキムチは、世界５大健康食品にもあげられる人気の発酵食品ですが、市販されている多くのキムチには、「保存料」「増粘剤」などの食品添加物が含まれており、悪玉菌を抑制すると同時に、善玉菌の働きをも抑制しています。<br><br>\n<strong>「保存料や増粘剤を使わない、自然発酵キムチ」<br>\n「酸っぱくない、美味しくて、ダシの効いたキムチ」<\/strong>\n<\/p>",
+            "bg_color": false,
+            "text_with_title": "",
+            "top_margin": 50,
+            "bottom_margin": 50,
+            "top_margin_mp": 50,
+            "bottom_margin_mp": 50
+          }
+        },
+        "image_text2_Hkh6hD": {
+          "type": "image-text2",
+          "settings": {
+            "content_image_right": true,
+            "content1_title": "<span class=\"f-darkred\">\n有田焼「型抜き製法」\n<\/span>",
+            "content1_text": "<p class=\"shadownone\">\n日本で初めて磁器が焼かれた産地として、400年以上の歴史を誇る有田焼に窯を持つ伯父山窯で、一から設計、創りあげました。<br>\n日本に数少ない職人の<span class=\"f-darkred f-big shadow\">「型抜き製法」<\/span>で一つ一つ作っています。こだわった壺の形や大きさは、キムチの保存環境を整えるためのもので、「八恵」を「八形」と模しています。\n<\/p>",
+            "side_image": "shopify:\/\/shop_images\/4_28627.png",
+            "sub_image1": "shopify:\/\/shop_images\/5_2.png",
+            "top_margin": 50,
+            "bottom_margin": 87,
+            "top_margin_mp": 50,
+            "bottom_margin_mp": 70
+          }
+        },
+        "border_e4r3iL": {
+          "type": "border",
+          "settings": {
+          }
+        },
+        "image_text2_eiwFKY": {
+          "type": "image-text2",
+          "settings": {
+            "content_image_right": true,
+            "content1_title": "<span class=\"f-darkred\">\n特製シリコーン蓋\n<\/span><br>\n<span class=\"f-big f-darkred\">\n（竹炭・トルマリン入り）\n<\/span>",
+            "content1_text": "<p class=\"shadownone\">\n有田焼で作った壷は、一つ一つ手作りの為、口径が一定ではありません。異なる口の大きさに合わせる為、蓋はシリコーンを選びました。蓋の扱い易さと密封度を両立させる為、1ミリ以下の調整を何度も行いました。<br>\n粒子レベルで漏れる匂いを<span class=\"f-darkred f-big shadow\">「竹炭」<\/span>が吸着し、<span class=\"f-darkred f-big shadow\">「トルマリン」<\/span>の赤外線が、防菌・鮮度保持を助けます。粒の大きさ（ミクロン）と配合割合を細かな単位で調整し、しなやかで機能性のあるシリコ\nーン蓋を完成させました。\n<\/p>",
+            "side_image": "shopify:\/\/shop_images\/7_2.png",
+            "sub_image1": "shopify:\/\/shop_images\/8_2.png",
+            "top_margin": 100,
+            "bottom_margin": 50,
+            "top_margin_mp": 70,
+            "bottom_margin_mp": 50
+          }
+        }
+      },
+      "block_order": [
+        "heading_LhG7Ph",
+        "block_image_CwqdBB",
+        "text_FrWLWn",
+        "image_text2_Hkh6hD",
+        "border_e4r3iL",
+        "image_text2_eiwFKY"
+      ],
+      "settings": {
+        "width_wide": true,
+        "backgorund_image_repeat": true,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 52,
+        "padding_top_mp": 40,
+        "padding_bottom_mp": 16
+      }
+    },
+    "b69ce229-2af0-4316-b914-766184761b63": {
+      "type": "page-main-section",
+      "blocks": {
+        "36d31006-8ac0-4f89-9c8d-12546fc8b4c9": {
+          "type": "content",
+          "settings": {
+            "anchor_link": "",
+            "image": "shopify:\/\/shop_images\/Asset_3_c45e27e3-732b-410a-975f-254edc120d52.jpg",
+            "image_caption1": "脂肪<br>代謝",
+            "image_caption_color1": "",
+            "image_caption2": "発汗<br>作用",
+            "image_caption_color2": "",
+            "with_border": false,
+            "border_width": 1,
+            "border_color": "#ffffff",
+            "image_position": "right",
+            "title_image": "shopify:\/\/shop_images\/Asset_11_1b08737c-3ec7-4ea0-bbc8-698e53e6ec68.png",
+            "title_image_width": 300,
+            "title": "大山の唐辛子",
+            "title_color": "#ffffff",
+            "title_align": "center",
+            "title_size": "h2",
+            "have_title_underline": true,
+            "subtitle": "サブタイトル",
+            "subtitle_color": "#fffcdf",
+            "subtitle_align": "center",
+            "subtitle_size": "h4",
+            "content": "<p>サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章<\/p>",
+            "content_color": "#ffffff",
+            "content_align": "left",
+            "content_size": "h5"
+          }
+        },
+        "f5ae1c04-afc0-4267-868a-4cf10fc9a6a5": {
+          "type": "hr",
+          "settings": {
+            "margin_top": 40,
+            "margin_bottom": 40
+          }
+        },
+        "6c98bf5a-c5da-47a3-810e-595cde467b5a": {
+          "type": "content",
+          "settings": {
+            "anchor_link": "",
+            "image": "shopify:\/\/shop_images\/Asset_4_19aeb290-7dfc-4b3c-9889-5528c4790595.jpg",
+            "image_caption1": "脂肪<br>代謝",
+            "image_caption_color1": "",
+            "image_caption2": "発汗<br>作用",
+            "image_caption_color2": "",
+            "with_border": true,
+            "border_width": 1,
+            "border_color": "#ffffff",
+            "image_position": "left",
+            "title_image": "shopify:\/\/shop_images\/Asset_12_467dcefe-6f50-4465-97e9-723e6f7c4196.png",
+            "title_image_width": 300,
+            "title": "焼津のかつお節",
+            "title_color": "#ffffff",
+            "title_align": "center",
+            "title_size": "h2",
+            "have_title_underline": true,
+            "subtitle": "サブタイトル",
+            "subtitle_color": "#fffcdf",
+            "subtitle_align": "center",
+            "subtitle_size": "h4",
+            "content": "<p>サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章<\/p>",
+            "content_color": "#ffffff",
+            "content_align": "left",
+            "content_size": "h5"
+          }
+        }
+      },
+      "block_order": [
+        "36d31006-8ac0-4f89-9c8d-12546fc8b4c9",
+        "f5ae1c04-afc0-4267-868a-4cf10fc9a6a5",
+        "6c98bf5a-c5da-47a3-810e-595cde467b5a"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/Asset_3.jpg",
+        "backgorund_image_repeat": true,
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_custom_KqKJDY": {
+      "type": "multicolumn_custom",
+      "blocks": {
+        "column_eXPieK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/14_1.png",
+            "background_color": "rgba(0,0,0,0)",
+            "title": "Column",
+            "title_size": "h3",
+            "link": "shopify:\/\/pages\/kodawari-materials"
+          }
+        },
+        "column_RqEFKg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/16_1.png",
+            "background_color": "rgba(0,0,0,0)",
+            "title": "Column",
+            "title_size": "h3",
+            "link": "shopify:\/\/pages\/kodawari-preservation"
+          }
+        },
+        "column_xcHMK4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/15_1.png",
+            "background_color": "rgba(0,0,0,0)",
+            "title": "Column",
+            "title_size": "h3",
+            "link": "shopify:\/\/pages\/kodawari-manufacturing"
+          }
+        }
+      },
+      "block_order": [
+        "column_eXPieK",
+        "column_RqEFKg",
+        "column_xcHMK4"
+      ],
+      "settings": {
+        "backgorund_image_repeat": false,
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "3",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_custom2_XpeYed": {
+      "type": "multicolumn_custom2",
+      "blocks": {
+        "column_BJDUe4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/17_1.png",
+            "background_color": "rgba(0,0,0,0)",
+            "title": "酵素キムチ",
+            "title_size": "h3",
+            "link": "shopify:\/\/collections\/all",
+            "outer_link": false
+          }
+        },
+        "column_L3EtAW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/18_1.png",
+            "background_color": "rgba(0,0,0,0)",
+            "title": "キャンペーン情報",
+            "title_size": "h3",
+            "link": "shopify:\/\/blogs\/news",
+            "outer_link": false
+          }
+        },
+        "column_yTLePy": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/19_1.png",
+            "background_color": "rgba(0,0,0,0)",
+            "title": "八恵レシピ",
+            "title_size": "h3",
+            "link": "https:\/\/style.hakkeido.com\/",
+            "outer_link": true
+          }
+        }
+      },
+      "block_order": [
+        "column_BJDUe4",
+        "column_L3EtAW",
+        "column_yTLePy"
+      ],
+      "settings": {
+        "backgorund_image_repeat": false,
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "3",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_image_7mjarR": {
+      "type": "image-banner_image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_10253_1.png",
+        "image_mp": "shopify:\/\/shop_images\/Group_10255.png",
+        "backgorund_image_repeat": true,
+        "banner_link": "shopify:\/\/products\/beginners-set"
+      }
+    }
+  },
+  "order": [
+    "image_banner_title_KfxhTD",
+    "main",
+    "10ff8137-e392-4119-b2f0-befd72bea959",
+    "rich_text_custom2_yaRdH7",
+    "b69ce229-2af0-4316-b914-766184761b63",
+    "multicolumn_custom_KqKJDY",
+    "multicolumn_custom2_XpeYed",
+    "image_banner_image_7mjarR"
+  ]
+}

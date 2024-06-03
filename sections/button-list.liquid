@@ -1,0 +1,434 @@
+{{ 'section-button-list.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+  {%  if section.settings.background_image != blank %}
+  #shopify-section-{{ section.id }} {
+    background-image: url({{ section.settings.background_image | img_url: 'master' }});
+    background-repeat: {% if section.settings.background_image_repeat %}repeat{% else %}no-repeat{% endif %};
+    background-size: {% if section.settings.background_image_repeat %}auto{% else %}cover{% endif %};
+  }
+  {% endif %}
+
+  {% if section.settings.backgorund_image_parallax == true %}
+    @media screen and (min-width: 750px) {
+      #shopify-section-{{ section.id }} {
+          background-attachment: fixed;
+      }
+    }
+  {% endif %}
+
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+{%- endstyle -%}
+{%  if section.settings.bg_color != blank %}
+<style>
+  #shopify-section-{{ section.id }} {
+    background: {{ section.settings.bg_color }};
+  }
+</style>
+{% endif %}
+<div id="{{ section.settings.anchor }}" class="isolate page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}" style="color:#4C4A49;">
+  <div class="button-list content-container section-{{ section.id }}-padding">
+    {%- case section.settings.pattern -%}
+      {%- when 'pattern1' -%}
+        <h2 class="faq-title h2">
+          {{ section.settings.title | escape }}
+        </h2>
+        <h3 class="faq-subtitle">
+          {{ section.settings.subtitle | escape }}
+        </h3>
+        <div class="button-list__wrapper">
+          <div class="button-list__blocks-wrapper">
+            {%- for block in section.blocks -%}
+              <a
+                {% if block.settings.outer_link == true %}target="_blank" rel="noopener noreferrer"{% endif %}
+                href="{{ block.settings.button_link }}"
+                class="button-list__button-style"
+                ><span style="flex:1; text-align: center">{{ block.settings.button_label }}</span
+                ><span style="margin-right: 15px">＞</span></a
+              >
+            {%- endfor -%}
+          </div>
+        </div>
+        <a
+          href="{{ section.settings.view_all_link }}"
+          class="custom-Button {% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
+        >
+          <span>{{ section.settings.view_all | escape }}</span>
+          <span>{% render 'icon-arrow' %}</span>
+        </a>
+      {%- when 'pattern2' -%}
+        <h2 class="faq-title h2">
+          {{ section.settings.title | escape }}
+        </h2>
+        <h3 class="faq-subtitle">
+          {{ section.settings.subtitle | escape }}
+        </h3>
+        <div class="button-list__wrapper">
+          <div class="button-list__blocks-wrapper" style="column-gap: 100px;">
+            {%- for block in section.blocks -%}
+              <a {% if block.settings.outer_link == true %}target="_blank" rel="noopener noreferrer"{% endif %}
+                href="{{ block.settings.button_link }}"
+                class="button-list__button-style__pattern2"
+              >
+                <span class="contact-title">{{ block.settings.button_label }}</span>
+                <span class="contact-text">{{ block.settings.button_description }}</span>
+                <span style="margin-right: 15px">▼</span>
+              </a>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- when 'pattern3' -%}
+        <h2 class="company-title h2">
+          {{ section.settings.title | escape }}
+        </h2>
+        <h3 class="company-subtitle">
+          {{ section.settings.subtitle | escape }}
+        </h3>
+        <div class="button-list__wrapper">
+          <div class="button-list__blocks-wrapper" style="column-gap: 100px; max-width:500px;">
+            {%- for block in section.blocks -%}
+              <a {% if block.settings.outer_link == true %}target="_blank" rel="noopener noreferrer"{% endif %}
+                href="{{ block.settings.button_link }}"
+                class="button-list__button-style__pattern3"
+              >
+                <img src="{{ block.settings.button_icon | img_url: 'master' }}" width="100%">
+                <span style="flex:1; text-align: center; font-size:10pt; margin-top:4px">
+                  {{- block.settings.button_label -}}
+                </span>
+              </a>
+            {%- endfor -%}
+          </div>
+        </div>
+        <p class="company-text">
+          {{ section.settings.description | newline_to_br }}
+        </p>
+      {%- when 'pattern4' -%}
+        <h2 class="company-title h2">
+          {{ section.settings.title | escape }}
+        </h2>
+        <h3 class="company-subtitle">
+          {{ section.settings.subtitle | escape }}
+        </h3>
+        <div class="button-list__wrapper__pattern4">
+          <div class="button-list__blocks-wrapper__pattern4">
+            {%- for block in section.blocks -%}
+              <a {% if block.settings.outer_link == true %}target="_blank" rel="noopener noreferrer"{% endif %}
+                href="{{ block.settings.button_link }}"
+                class="button-list__button-style__pattern4"
+                ><span style="flex:1; text-align: center">{{ block.settings.button_label }}</span></a
+              >
+            {%- endfor -%}
+          </div>
+        </div>
+    {%- endcase -%}
+  </div>
+</div>
+
+<style>
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .button-list__wrapper {
+    width: 95%;
+  }
+}
+#shopify-section-{{ section.id }} .button-list__blocks-wrapper {
+  max-width: 800px;
+  width: 100%;
+}
+#shopify-section-{{ section.id }} .button-list {
+  text-align: center;
+}
+#shopify-section-{{ section.id }} .faq-title {
+  width: 100%;
+  text-align: center;
+  margin: 5px auto;
+  font-size: 36px;
+  {%comment%}text-shadow: 0.5px 0 currentColor, -0.5px 0 currentColor;{%endcomment%}
+}
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .faq-title {
+    font-size: 28px;
+  }
+}
+#shopify-section-{{ section.id }} .faq-subtitle {
+  width:100%;
+  text-align: center;
+  font-size: 16px;
+  color: #734C24;
+  margin:0 auto 30px;
+}
+#shopify-section-{{ section.id }} .button-list__button-style {
+  padding: 10px 20px;
+  font-size: 18px;
+  {%comment%}text-shadow: 0.2px 0 currentColor, -0.2px 0 currentColor;{%endcomment%}
+  {% if section.settings.bg_color != blank %}
+  background: {{section.settings.bg_color}};
+  {% endif %}
+  transition: all 0.3s;
+}
+#shopify-section-{{ section.id }} .button-list__button-style:hover {
+  {% if section.settings.bg_color != blank %}
+  background: #333;
+  {% endif %}
+  transition: all 0.3s;
+}
+#shopify-section-{{ section.id }} .custom-Button {
+  color: #4B4C4D;
+  padding: 0px 20px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  {% if section.settings.bg_color != blank %}
+    background: {{section.settings.bg_color}};
+  {% endif %}
+}
+</style>
+
+<style>
+#shopify-section-{{ section.id }} .contact-title {
+  font-size: 26px;
+  text-align: center;
+  {%comment%}text-shadow: 0.3px 0 currentColor, -0.3px 0 currentColor;{%endcomment%}
+}
+#shopify-section-{{ section.id }} .contact-text {
+  font-size: 14px;
+  text-align: center;
+  text-shadow: 0.1px 0 currentColor, -0.1px 0 currentColor;
+}
+</style>
+
+<style>
+#shopify-section-{{ section.id }} .company-title {
+  width: 100%;
+  text-align: center;
+  margin: 5px auto;
+  font-size: 36px;
+  {%comment%}text-shadow: 0.5px 0 currentColor, -0.5px 0 currentColor;{%endcomment%}
+  color: #fff;
+}
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .company-title {
+    font-size: 28px;
+  }
+}
+#shopify-section-{{ section.id }} .company-subtitle {
+  width:100%;
+  text-align: center;
+  font-size: 16px;
+  color: #fcd5af;
+  margin:0 auto 30px;
+}
+#shopify-section-{{ section.id }} .company-text {
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 50px;
+}
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .company-text {
+    text-align:left;
+    margin-top: 20px;
+  }
+}
+</style>
+
+{% if section.settings.content_only_1 == true %}
+<style>
+  #shopify-section-{{ section.id }} .button-list__blocks-wrapper {
+    width: 100%;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    column-gap: 0px;
+    row-gap: 8px;
+}
+</style>
+{% endif %}
+
+{% schema %}
+{
+  "name": "(C)ボタンリスト",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "pattern",
+      "label": "フォーマットパターン",
+      "default": "pattern1",
+      "options": [
+        {
+          "value": "pattern1",
+          "label": "FAQ用"
+        },
+        {
+          "value": "pattern4",
+          "label": "FAQメニュー用"
+        },
+        {
+          "value": "pattern2",
+          "label": "お問い合わせ用"
+        },
+        {
+          "value": "pattern3",
+          "label": "店舗用"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "content_only_1",
+      "label": "パターンが「お問い合わせ用」で、項目が1つの場合にチェック",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "アンカーID",
+      "default": "news"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "タイトル",
+      "default": "タイトル"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "サブタイトル",
+      "default": "サブタイトル"
+    },
+    {
+      "type": "text",
+      "id": "view_all",
+      "label": "もっと見るラベル",
+      "default": "もっと見る"
+    },
+    {
+      "type": "url",
+      "id": "view_all_link",
+      "label": "もっと見るリンク"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "説明文",
+      "default": "私たち八恵堂は、お客様の美と健康のため、そしてご飯のお供に新感覚の酵素キムチを食して頂きたい。\nその想いから、毎月お届け便をご用意させて頂いておりますが、まずはそのこだわりや美味しさを気軽に知って頂けるよう、\nまるでブティックかのような落ち着いた雰囲気で、試食も可能な販売店舗を展開しております。\n皆さまの、ご来店を心よりお待ちしております。\n\n八恵堂スタッフ一同"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景色"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "背景画像"
+    },
+    {
+      "type": "checkbox",
+      "id": "background_image_repeat",
+      "label": "背景画像を繰り返す"
+    },
+    {
+      "type": "checkbox",
+      "id": "backgorund_image_parallax",
+      "label": "パララックスをオンにする",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "t:sections.rich-text.blocks.buttons.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "タイトル"
+        },
+        {
+          "type": "html",
+          "id": "button_description",
+          "default": "ボタン説明文",
+          "label": "ボタン説明文"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "リンク"
+        },
+        {
+          "type": "checkbox",
+          "id": "outer_link",
+          "label": "別タブで開く",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "button_icon",
+          "label": "ボタン画像"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "(C)ボタンリスト",
+      "blocks": [
+        {
+          "type": "button"
+        },
+        {
+          "type": "button"
+        },
+        {
+          "type": "button"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

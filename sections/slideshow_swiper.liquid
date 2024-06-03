@@ -1,0 +1,360 @@
+<section class="slider--custom" id="slider">
+  <div class="Slider--title-wrapper">
+      {%- if section.settings.slide_title != blank -%}
+          <h2 class="Slider--title appear-delay{% cycle '','-1','-2','-3','-4' %}">{{ section.settings.slide_title }}</h2>
+      {%- endif -%}
+  </div>
+
+  <div class="swiper-container swiper-card">
+      <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+          <div class="swiper-slide">
+          <a href="{{ block.settings.slide_link }}">
+              <img src=" {{ block.settings.slide_image  | img_url: '2048x' }}" alt="{{ block.settings.slide_image_alt | escape }}">
+          </a>
+          </div>
+          {% endfor %}
+      </div>
+      <div class="swiper-pagination swiper-pagination-card"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<style>
+
+#shopify-section-{{ section.id }} .swiper-pagination-current {
+  font-size: 16px;
+  letter-spacing: 1.6px;
+}
+#shopify-section-{{ section.id }} .swiper-pagination-total {
+  font-size: 16px;
+  letter-spacing: 1.6px;
+}
+</style>
+
+
+
+<script>
+const swiper1 = new Swiper('.swiper-container', {
+  pagination: {
+      el: '.swiper-pagination-card',
+      type: 'bullets',
+      clickable: true
+  },
+
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+
+  direction: 'horizontal',
+  loop: true,//スライドをループ
+  centeredSlides: true,
+  slidesPerView: '1',//1ページ中に何枚表示するか(小数点可)
+  allowTouchMove: true,//フリック操作を有効に
+  spaceBetween: 0,//スライド左右の余白
+  speed: 2000,//スライド切り替わりスピード
+
+  autoplay: {
+      delay: 3000,
+      stopOnLastSlide: false,
+      disableOnInteraction: false,
+      reverseDirection: false
+  },
+
+  {% comment %} breakpoints: {
+      1000: {
+          spaceBetween: 0
+      },
+      768: {
+          spaceBetween: 0
+      },
+      0: {
+          spaceBetween: 0
+      }
+  } {% endcomment %}
+});
+</script>
+
+{% style %}
+.section-adjustment.swiper-slider-top1_add {
+  margin-top: {{section.settings.top_margin}}px;
+  padding-top: {{section.settings.top_padding}}px;
+  padding-bottom: {{section.settings.bottom_padding}}px;
+  margin-bottom: {{section.settings.bottom_margin}}px;
+}
+@media screen and (max-width: 768px) {
+  .section-adjustment.swiper-slider-top1_add {
+    margin-top: {{section.settings.top_margin_mp}}px;
+    padding-top: {{section.settings.top_padding_mp}}px;
+    padding-bottom: {{section.settings.bottom_padding_mp}}px;
+    margin-bottom: {{section.settings.bottom_margin_mp}}px;
+  }
+}
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "(N)swiperスライドPC",
+  "class": "section section-adjustment swiper-slider-top1_add",
+  "settings": [
+      {
+          "type": "header",
+          "content": "スライド表示設定"
+      },
+      {
+          "type": "html",
+          "id": "slide_title",
+          "label": "スライダーのタイトル"
+      },
+      {
+        "type": "header",
+        "content": "全体レイアウト"
+      },
+      {
+        "type": "range",
+        "id": "top_margin",
+        "label": "上部の余白(外側_margin)",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "top_padding",
+        "label": "上部の余白(内側_padding)",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "bottom_padding",
+        "label": "下部の余白(内側_padding)",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "bottom_margin",
+        "label": "下部の余白(外側_margin)",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "header",
+        "content": "全体レイアウト(モバイル)"
+      },
+      {
+        "type": "range",
+        "id": "top_margin_mp",
+        "label": "上部の余白(外側_margin)",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "top_padding_mp",
+        "label": "上部の余白(内側_padding)",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "bottom_padding_mp",
+        "label": "下部の余白(内側_padding)",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "bottom_margin_mp",
+        "label": "下部の余白(外側_margin)",
+        "default": 50,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+      }
+  ],
+  "blocks": [
+      {
+          "name": "slide",
+          "type": "text",
+          "settings": [
+              {
+                  "type": "image_picker",
+                  "id": "slide_image",
+                  "label": "Slide Image"
+              },
+              {
+                  "type": "url",
+                  "id": "slide_link",
+                  "label": "Slide Link"
+              }
+          ]
+      }
+  ],
+  "presets": [
+      {
+          "name": "(N)swiperスライドPC",
+          "category": "Advance",
+          "blocks": [
+              {
+                  "type": "text"
+              },
+              {
+                  "type": "text"
+              },
+              {
+                  "type": "text"
+              },
+              {
+                  "type": "text"
+              },
+              {
+                  "type": "text"
+              }
+          ]
+      }
+  ]
+}
+
+{% endschema %}
+
+
+<style>
+.swiper-slider-top1_add .swiper-slide {
+  background-image: url(//hakkeido.myshopify.com/cdn/shop/files/1_f6430df3-5ba5-423a-84b1-cc9764d43fff.png?v=1705976418&width=500);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+}
+/*----------------------
+* ☆スライダー-Custom2(共通)
+* ----------------------*/
+.swiper-slider-top1_add {
+overflow: hidden;
+/* background: #F3F6F5; */
+background: #fff;
+}
+
+.swiper-slider-top1_add .swiper-pagination {
+  z-index: 3;
+}
+.swiper-slider-top1_add .swiper-container {
+position: relative;
+}
+.swiper-slider-top1_add .swiper-container .swiper-wrapper .swiper-slide {
+max-width: 100%;
+width: 100%;
+height: auto;
+-o-object-fit: contain;
+  object-fit: contain;
+overflow: hidden;
+border-radius: 0px 0px;
+}
+.swiper-slider-top1_add .swiper-container .swiper-wrapper .swiper-slide img {
+-o-object-fit: contain;
+  object-fit: contain;
+/* aspect-ratio: 1.34; */
+width: 100%;
+}
+
+.swiper-slider-top1_add .swiper-container .swiper-pagination-fraction {
+color: #AFAFAF;
+font-size: 15px;
+font-weight: 700;
+letter-spacing: 5px;
+position: absolute;
+top: 3px;
+margin-left: 1px;
+}
+.swiper-slider-top1_add .swiper-container .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 20px;
+}
+.swiper-slider-top1_add .swiper-container .swiper-pagination-bullet-active.swiper-pagination-bullet {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: #fff;
+  border: 1px solid #333;
+}
+.swiper-slider-top1_add .swiper-container .swiper-pagination-bullet {
+  border: 1px solid #fff;
+  width: 10px;
+  height: 10px;
+  opacity: var(--swiper-pagination-bullet-opacity, 0.6);
+  cursor: pointer;
+}
+.swiper-slider-top1_add .swiper-container .swiper-pagination-fraction .swiper-pagination-current {
+color: #437c51;
+font-size: 16px;
+letter-spacing: 1.6px;
+}
+.swiper-slider-top1_add .swiper-container .swiper-pagination-fraction .swiper-pagination-total {
+color: #AFAFAF;
+font-size: 16px;
+letter-spacing: 1.6px;
+}
+
+.swiper-slider-top1_add .swiper-container .swiper-button-prev {
+position: absolute;
+top: auto;
+bottom: -6px;
+left: 42.6%;
+right: auto;
+width: 44px;
+height: 44px;
+border-radius: 50%;
+background: #437c51;
+}
+.swiper-slider-top1_add .swiper-container .swiper-button-prev::after {
+width: 8px;
+height: 8px;
+border-top: 1.5px solid #fff;
+border-right: 1.5px solid #fff;
+z-index: 1;
+transform: rotate(225deg);
+}
+
+.swiper-slider-top1_add .swiper-container .swiper-button-next {
+position: absolute;
+top: auto;
+bottom: -6px;
+right: 42.6%;
+left: auto;
+width: 44px;
+height: 44px;
+border-radius: 50%;
+background: #437c51;
+}
+.swiper-slider-top1_add .swiper-container .swiper-button-next::after {
+width: 8px;
+height: 8px;
+border-top: 1.5px solid #fff;
+border-right: 1.5px solid #fff;
+z-index: 1;
+transform: rotate(45deg);
+}
+
+
+</style>

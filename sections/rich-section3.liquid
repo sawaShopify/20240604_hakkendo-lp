@@ -1,0 +1,370 @@
+{{ 'section-rich-section.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  #shopify-section-{{ section.id }} {
+    {% if section.settings.background_image != blank %}
+      background-image: url({{ section.settings.background_image | img_url: 'master' }});
+      background-size: {% if section.settings.backgorund_image_repeat %}contain{% else %}cover{% endif %};
+      background-position: center;
+      background-repeat: {% if section.settings.backgorund_image_repeat %}repeat-x{% else %}no-repeat{% endif %};
+    {% endif %}
+  }
+{% if section.settings.background_image_mp != blank %}
+  #shopify-section-{{ section.id }} {
+      background-image: url({{ section.settings.background_image_mp | img_url: 'master' }});
+  }
+{% endif %}
+  {% if section.settings.backgorund_image_parallax == true %}
+    @media screen and (min-width: 750px) {
+      #shopify-section-{{ section.id }} {
+          background-attachment: fixed;
+      }
+    }
+  {% endif %}
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div
+  id="{{ section.settings.anchor }}"
+  class="isolate{% unless section.settings.full_width %} page-width{% endunless %}"
+>
+  <div class="rich-section content-container {% if section.settings.full_width %} rich-section--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="rich-section__wrapper {% if section.settings.full_width %} page-width{% endif %}">
+          <div class="rich-section__blocks center" style="margin: 0 auto;">
+            <div
+              class="direction_column_on_mobile"
+            >
+              <img
+                class="floea-image"
+                src="{{ section.settings.featured_image | img_url: 'master' }}"
+                style="max-width: 120px;"
+              >
+              <div class="innner-connntents" style="display:flex; flex-direction:column;">
+                <div class="innner-connntents-flex" style="display:flex">
+                  <div style="padding-top:5px;">
+                    <img class="arrow-swing-image1" src="{{ section.settings.caption_image1 | img_url: 'master' }}" width="100px">
+                  </div>
+                  <div class="custom-button-layout" style="display:flex flex-direction: column">
+                    <h3 class="caption-title">{{ section.settings.caption_title1 }}</h3>
+                    <p class="caption-text">{{ section.settings.caption1 }}</p>
+                    <a
+                      class="custom-Button {% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
+                      href="{{ section.settings.caption_link1 }}"
+                      {% if section.settings.outer_link == true %}target="_blank" rel="noopener noreferrer"{% endif %}
+                      >{{section.settings.caption_btn1}}<span class="icon-wrap">{% render 'icon-arrow' %}</span></a
+                    >
+                  </div>
+                </div>
+                <div class="custom-button-layout innner-connntents-flex" style="display:flex; margin-top: 10rem;">
+                  <div style="padding-top:5px;">
+                    <img class="arrow-swing-image2" src="{{ section.settings.caption_image2 | img_url: 'master' }}" width="100px">
+                  </div>
+                  <div style="display:flex flex-direction: column">
+                    <h3 class="caption-title">{{ section.settings.caption_title2 }}</h3>
+                    <p class="caption-text">{{ section.settings.caption2 }}</p>
+                    <a
+                      class="custom-Button custom-Button2 {% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
+                      href="{{ section.settings.caption_link2 }}"
+                      >{{section.settings.caption_btn2}}<span class="icon-wrap">{% render 'icon-arrow' %}</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 style="text-align: center; color: white; margin-top: 0; margin-bottom: 6rem;">{{ section.settings.title }}</h2>
+          </div>
+    </div>
+  </div>
+</div>
+
+<style>
+@media screen and (max-width: 749px) {
+.innner-connntents {
+  width: 100%;
+}
+.innner-connntents-flex {
+  justify-content: center;
+}
+}
+@media screen and (max-width: 749px) {
+  .arrow-swing-image1 {
+      margin-left: 30px!important;
+      width: 70px!important;
+  }
+  .arrow-swing-image2 {
+      margin-left: 30px!important;
+      width: 70px!important;
+      rotate: 45deg;
+      transform: scaleY(-1);
+  }
+}
+  
+  @media screen and (min-width: 990px) {
+  #shopify-section-{{ section.id }} .rich-section__blocks {
+      max-width: 90rem;
+  }
+}
+  
+#shopify-section-{{ section.id }} .direction_column_on_mobile {
+  padding: 10rem 0;
+  color: white;
+  display:flex;
+  justify-content: space-around;
+  align-items: start;
+}
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .direction_column_on_mobile {
+    padding: 4rem 0;
+  }
+}
+#shopify-section-{{ section.id }} .floea-image {
+  margin-right: auto;
+  margin-left: 0px;
+}
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .floea-image {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+  }
+}
+#shopify-section-{{ section.id }} .custom-button-layout {
+  margin: 0px;
+}
+#shopify-section-{{ section.id }} .custom-Button {
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 0px 20px;
+  margin-top: 15px;
+}
+@media screen and (min-width: 750px) {
+#shopify-section-{{ section.id }} .custom-Button2 {
+  margin-right: 45px;
+}
+}
+#shopify-section-{{ section.id }} .custom-Button::after {
+  box-shadow: 0 0 0 0 #fff;
+}
+#shopify-section-{{ section.id }} .caption-title {
+  color: #fff;
+  margin: 5px;
+  margin-bottom: 10px;
+  font-size: 28px;
+  text-align: left;
+  {%comment%}text-shadow: 0.5px 0 currentColor, -0.5px 0 currentColor;{%endcomment%}
+}
+#shopify-section-{{ section.id }} .caption-text {
+  font-size: 14px;
+  margin: 0;
+  text-align: left;
+}
+
+@media screen and (max-width: 749px) {
+  #shopify-section-{{ section.id }} .caption-title {
+    font-size: 22px;
+  }
+  #shopify-section-{{ section.id }} .caption-text {
+    font-size: 12px;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "(C)リッチセクション3",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "アンカーID",
+      "default": "news"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "タイトル"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "背景画像"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mp",
+      "label": "背景画像モバイル"
+    },
+    {
+      "type": "checkbox",
+      "id": "backgorund_image_repeat",
+      "label": "背景画像を繰り返す",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "backgorund_image_parallax",
+      "label": "パララックスをオンにする",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.rich-section.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.rich-section.settings.desktop_content_position.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.rich-section.settings.desktop_content_position.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.rich-section.settings.desktop_content_position.label",
+      "info": "t:sections.rich-section.settings.desktop_content_position.info"
+    },
+    {
+      "type": "select",
+      "id": "caption_size",
+      "options": [
+        {
+          "value": "h3",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "文字サイズ"
+    },
+    {
+      "type": "header",
+      "content": "コンテンツ"
+    },
+    {
+      "type": "image_picker",
+      "id": "featured_image",
+      "label": "メイン画像"
+    },
+    {
+      "type": "image_picker",
+      "id": "caption_image1",
+      "label": "キャプション画像1"
+    },
+    {
+      "type": "url",
+      "id": "caption_link1",
+      "label": "ボタンリンク1"
+    },
+    {
+      "type": "checkbox",
+      "id": "outer_link",
+      "label": "別タブで開く",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "caption_title1",
+      "default": "キャプションタイトル1",
+      "label": "キャプションタイトル1"
+    },
+    {
+      "type": "text",
+      "id": "caption_btn1",
+      "default": "ボタンテキスト1",
+      "label": "ボタンテキスト1"
+    },
+    {
+      "type": "html",
+      "id": "caption1",
+      "default": "キャプション1",
+      "label": "キャプション1"
+    },
+    {
+      "type": "image_picker",
+      "id": "caption_image2",
+      "label": "キャプション画像2"
+    },
+    {
+      "type": "url",
+      "id": "caption_link2",
+      "label": "ボタンリンク2"
+    },
+    {
+      "type": "text",
+      "id": "caption_title2",
+      "default": "キャプションタイトル2",
+      "label": "キャプションタイトル2"
+    },
+    {
+      "type": "text",
+      "id": "caption_btn2",
+      "default": "ボタンリンク2",
+      "label": "ボタンリンク2"
+    },
+    {
+      "type": "html",
+      "id": "caption2",
+      "default": "キャプション2",
+      "label": "キャプション2"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "t:sections.rich-section.settings.full_width.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
+    }
+  ],
+  "presets": [
+    {
+      "name": "(C)リッチセクション3"
+    }
+  ]
+}
+{% endschema %}

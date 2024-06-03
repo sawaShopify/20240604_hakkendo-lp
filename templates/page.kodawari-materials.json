@@ -1,0 +1,594 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_title_QhnHgc": {
+      "type": "image-banner_title",
+      "blocks": {
+        "image_ngVgJA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/14_1_20beecd6-bb21-4ac9-8ddc-698b64a297b1.png",
+            "image_width": 130
+          }
+        },
+        "text_KpAmkP": {
+          "type": "text",
+          "settings": {
+            "text": "美味しさと品質の両立",
+            "text_style": "body"
+          }
+        },
+        "heading_WN9HRy": {
+          "type": "heading",
+          "settings": {
+            "heading": "至極のこだわり素材",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "image_ngVgJA",
+        "text_KpAmkP",
+        "heading_WN9HRy"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_background_color": "rgba(0, 0, 0, 0.5)",
+        "background_none": false,
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "10ff8137-e392-4119-b2f0-befd72bea959": {
+      "type": "image-banner",
+      "blocks": {
+        "14bf48e1-1ba0-488b-830c-5163d28391ea": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/14_1_20beecd6-bb21-4ac9-8ddc-698b64a297b1.png",
+            "image_width": 130
+          }
+        },
+        "template--21521885004073__10ff8137-e392-4119-b2f0-befd72bea959-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<span class=\"f-middle\">\n美味しさと品質の両立\n<\/span>",
+            "text_style": "body"
+          }
+        },
+        "template--21521885004073__10ff8137-e392-4119-b2f0-befd72bea959-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<span class=\"f-big\">\n至極のこだわり素材\n<\/span>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "14bf48e1-1ba0-488b-830c-5163d28391ea",
+        "template--21521885004073__10ff8137-e392-4119-b2f0-befd72bea959-text-1",
+        "template--21521885004073__10ff8137-e392-4119-b2f0-befd72bea959-heading-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/2_2x_19eded45-4adf-4fe1-b699-2639274de4cc.png",
+        "banner_none": false,
+        "content_background_color": "rgb(95 93 93 \/ 50%)",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "rich_text_custom2_zLMjH7": {
+      "type": "rich-text_custom2",
+      "blocks": {
+        "heading_Rg9YGY": {
+          "type": "heading",
+          "settings": {
+            "heading": "<span class=\"red-underline\"><span class=\"f-mega\">毎日でも口にしたくなる<\/span><br>\n<span class=\"f-darkred\">日本人好みの美味しいキムチ<\/span>を作っています。\n<\/span>",
+            "heading_size": "h1"
+          }
+        },
+        "text_HmQxrp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>\n日本全国を巡り、幾多の素材から選び抜いた、八恵堂ならではのプレミアム素材。<br>\n完成した、贅沢なオリジナルのヤンニョムが、従来のキムチの概念を一新します。\n<\/p>",
+            "bg_color": false,
+            "text_with_title": "",
+            "top_margin": 50,
+            "bottom_margin": 50,
+            "top_margin_mp": 30,
+            "bottom_margin_mp": 40
+          }
+        }
+      },
+      "block_order": [
+        "heading_Rg9YGY",
+        "text_HmQxrp"
+      ],
+      "settings": {
+        "width_wide": false,
+        "backgorund_image_repeat": false,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 16,
+        "padding_top_mp": 40,
+        "padding_bottom_mp": 0
+      }
+    },
+    "b69ce229-2af0-4316-b914-766184761b63": {
+      "type": "page-main-section",
+      "blocks": {
+        "36d31006-8ac0-4f89-9c8d-12546fc8b4c9": {
+          "type": "content",
+          "settings": {
+            "anchor_link": "tougarashi",
+            "image": "shopify:\/\/shop_images\/14_2x_b757a8c6-be23-433d-a700-1421d0bf0025.png",
+            "image_caption1": "脂肪<br>代謝",
+            "image_caption_color1": "#b35538",
+            "image_caption2": "発汗<br>作用",
+            "image_caption_color2": "#ef8d3a",
+            "with_border": false,
+            "border_width": 1,
+            "border_color": "#3c3c3d",
+            "image_position": "left",
+            "logo_image": "shopify:\/\/shop_images\/3_2x_ccb1ba69-10c2-46ec-85ca-cb66120b9847.png",
+            "title_image_width": 300,
+            "title": "大山の<span class=\"f-mega\">唐辛子<\/span>",
+            "title_color": "#3c3c3d",
+            "title_align": "left",
+            "title_size": "h2",
+            "have_title_underline": true,
+            "subtitle": "八恵堂の味を決める、甘口唐辛子",
+            "subtitle_color": "#e95d35",
+            "subtitle_align": "center",
+            "subtitle_size": "h3",
+            "content": "<p>世界中に3000種類以上あるといわれる唐辛子。<br\/>キムチに使われるのは、韓国唐辛子。日本の鷹の爪よりも辛味は低く、肉厚で大きく、辛味の中にも旨味や甘味があるのが特徴です。<\/p><p>八恵堂では韓国唐辛子の中でも「辛味」「旨味」「甘味」「風味」のバランスが取れた、大山の唐辛子を使用しています。日本国内で粗引き加工した新鮮な唐辛子を使うことで、その豊かな風味を壊さず、美味しいキムチに仕上げることができています。<\/p><p>唐辛子にはカプサイシンが多く含まれており、その様々な効能から「食べる漢方」としても重用されてきました。<br\/>カプサイシンには辛味を感じさせる成分ですが、体内のコレステロールや老廃物の排出を促進させる働きが見込まれており、生活習慣病の予防に効果が期待されています。<br\/>カプサイシン以外にも、βカロテン・ビタミンAやビタミンEが含まれており、これらは動脈硬化や心筋梗塞などの生活習慣病の予防や、皮膚の老化を抑える抗酸化作用への期待が高い成分です。<\/p>",
+            "content_color": "#434343",
+            "content_align": "left",
+            "content_size": "h5"
+          }
+        },
+        "f5ae1c04-afc0-4267-868a-4cf10fc9a6a5": {
+          "type": "hr",
+          "settings": {
+            "margin_top": 40,
+            "margin_bottom": 40
+          }
+        },
+        "6c98bf5a-c5da-47a3-810e-595cde467b5a": {
+          "type": "content",
+          "settings": {
+            "anchor_link": "katsuobushi",
+            "image": "shopify:\/\/shop_images\/13_2x_bca3d44c-1c11-45e4-a4a1-fe756ad75681.png",
+            "image_caption1": "利尿<br>作用",
+            "image_caption_color1": "#c09832",
+            "image_caption2": "疲労<br>回復",
+            "image_caption_color2": "#7c8d70",
+            "with_border": false,
+            "border_width": 1,
+            "border_color": "#3c3c3d",
+            "image_position": "right",
+            "logo_image": "shopify:\/\/shop_images\/4_2x_5318ad5e-2406-4061-8ea0-6c5680aac6d4.png",
+            "title_image_width": 300,
+            "title": "焼津の<span class=\"f-mega\">かつお節<\/span>",
+            "title_color": "#3c3c3d",
+            "title_align": "left",
+            "title_size": "h2",
+            "have_title_underline": true,
+            "subtitle": "静岡県焼津市の手火山式鰹節",
+            "subtitle_color": "#e95d35",
+            "subtitle_align": "center",
+            "subtitle_size": "h3",
+            "content": "<p>和食の風味に欠かせない「ダシ」その中でもカツオだしは、欠かすことができません。<\/p><p>八恵堂酵素キムチの特徴の一つは「ダシが効いていること」。<br\/>唐辛子の風味に負けず、どこかにふわっと香るダシを感じていただくことで、日本人に親しみやすい味のキムチを作り上げています。<\/p><p>八恵堂で使用している鰹節は、江戸時代からの伝統工法「手火山式」で一本一本丁寧に燻されています。原料となるカツオの鮮度や大きさ、脂の乗り具合、さらにはその日の気温や湿度、薪の乾燥具合によって火の調整や時間調整を行い、旨味が抜けてしまわないように加工されているのです。<\/p><p>八恵堂では、この鰹節の削り方を変えたものを3種類使用し、ヤンニョムの中でも存在感を放つダシの風味を確立しています。<\/p>",
+            "content_color": "#434343",
+            "content_align": "left",
+            "content_size": "h5"
+          }
+        },
+        "hr_HV46wz": {
+          "type": "hr",
+          "settings": {
+            "margin_top": 40,
+            "margin_bottom": 40
+          }
+        },
+        "content_fpnyyk": {
+          "type": "content",
+          "settings": {
+            "anchor_link": "kuroninniku",
+            "image": "shopify:\/\/shop_images\/12_2x_6f02b84e-15bd-4234-a407-3b8ac5fd23b9.png",
+            "image_caption1": "疲労<br>回復",
+            "image_caption_color1": "#7c8d70",
+            "image_caption2": "免疫<br>UP",
+            "image_caption_color2": "#9e795c",
+            "with_border": false,
+            "border_width": 1,
+            "border_color": "#ffffff",
+            "image_position": "left",
+            "logo_image": "shopify:\/\/shop_images\/5_2x_8e9a3122-ae6b-47f8-b8e9-12dcb597daf1.png",
+            "title_image_width": 200,
+            "title": "発酵<span class=\"f-mega\">黒にんにく<\/span>",
+            "title_color": "#3c3c3d",
+            "title_align": "left",
+            "title_size": "h2",
+            "have_title_underline": true,
+            "subtitle": "長時間かけてじっくりと熟成",
+            "subtitle_color": "#e95d35",
+            "subtitle_align": "center",
+            "subtitle_size": "h3",
+            "content": "<p>今や海外でも需要が高まっている黒ニンニクは、1995年には三重県の海女さんの間で食べられていたといわれています。<\/p><p>じっくりと長時間かけて熟成された発酵黒ニンニクは、栄養もさることながら、独特の風味と甘味を生み出します。八恵堂キムチのニンニクは、黒ニンニクを使うことによって、気になる匂いを抑え、甘味をプラスしています。含まれる機能性成分が増える温度帯が決まっているため、適切な温度と湿度を守りじっくりと熟成して作ります。<\/p><p>ニンニクが黒ニンニクへと熟成する過程で生まれるのが「S－アリルシステイン」強い抗酸化作用があり、老化現象を引き起こす活性酸素と腸内の悪玉コレステロールが結び着くのを防ぎます。これにより活性酸素が増えることによるシワなどの肌老化や動脈硬化、糖尿病などを防ぐのに有効だと考えられています。その他の成分「アミノ酸」や「ポリフェノール」「アルギニン」「アリシン」などの有効成分が生のニンニクより飛躍的にアップすることが分析機関などにより明らかにされています。<\/p>",
+            "content_color": "#434343",
+            "content_align": "left",
+            "content_size": "h5"
+          }
+        },
+        "hr_djRxpV": {
+          "type": "hr",
+          "settings": {
+            "margin_top": 40,
+            "margin_bottom": 40
+          }
+        },
+        "content_QUNLer": {
+          "type": "content",
+          "settings": {
+            "anchor_link": "sinsyumiso",
+            "image": "shopify:\/\/shop_images\/11_2x_bb7870b2-d514-4837-bfad-5c78807d39ba.png",
+            "image_caption1": "整腸<br>作用",
+            "image_caption_color1": "#2f5b64",
+            "image_caption2": "",
+            "image_caption_color2": "",
+            "with_border": false,
+            "border_width": 1,
+            "border_color": "#ffffff",
+            "image_position": "right",
+            "logo_image": "shopify:\/\/shop_images\/6_2x_4fd51d01-c6d8-4292-ae61-947f4f9c3008.png",
+            "title_image_width": 200,
+            "title": "無添加<span class=\"f-mega\">信州味噌<\/span>",
+            "title_color": "#3c3c3d",
+            "title_align": "left",
+            "title_size": "h2",
+            "have_title_underline": true,
+            "subtitle": "国産大豆と米麹でできた辛口味噌",
+            "subtitle_color": "#e95d35",
+            "subtitle_align": "center",
+            "subtitle_size": "h3",
+            "content": "<p>「味噌」は平安時代の文献には載るほど、日本で古くから欠かせない調味料として親しまれ、日本全国の気候・風土・原料の配合や製法により、各地で様々な味噌が作られています。<\/p><p>数ある味噌の中でも、八恵堂のヤンニョムに、深みのある味を与えているのは「信州味噌」。<\/p><p>長野県産の大豆とお米100％を使用。塩は、ミネラル分の多い昔ながらの製法で作る天日塩を使用しています。雑味の原因となる大豆の皮を極力取り除き、大豆を2度湯でこぼすことですっきりした甘さと麹の香りが引き立ちます。無添加生みそのため、発酵が続き、保管には大変気を遣う味噌です。<\/p>",
+            "content_color": "#434343",
+            "content_align": "left",
+            "content_size": "h5"
+          }
+        },
+        "hr_ALGH9w": {
+          "type": "hr",
+          "settings": {
+            "margin_top": 40,
+            "margin_bottom": 40
+          }
+        },
+        "content_ea84UM": {
+          "type": "content",
+          "settings": {
+            "anchor_link": "murasakiganen",
+            "image": "shopify:\/\/shop_images\/10_2x_56c4ba92-792d-456e-99b7-e6583c8d3f65.png",
+            "image_caption1": "免疫<br>UP",
+            "image_caption_color1": "#9e795c",
+            "image_caption2": "",
+            "image_caption_color2": "",
+            "with_border": false,
+            "border_width": 1,
+            "border_color": "#ffffff",
+            "image_position": "left",
+            "logo_image": "shopify:\/\/shop_images\/7_2x_4dc5f571-ac4f-42a9-b8aa-22093bee7f8b.png",
+            "title_image_width": 200,
+            "title": "ヒマラヤの<span class=\"f-mega\">紫岩塩<\/span>",
+            "title_color": "#3c3c3d",
+            "title_align": "left",
+            "title_size": "h2",
+            "have_title_underline": true,
+            "subtitle": "ヒマラヤ山脈から採取した奇跡の岩塩",
+            "subtitle_color": "#e95d35",
+            "subtitle_align": "center",
+            "subtitle_size": "h3",
+            "content": "<p>八恵堂最大の特徴がこの「紫岩塩」にあります。<\/p><p>八恵堂では、精製塩を一切使用しておりません。野菜の水抜き（塩もみ）に使う塩も、ヤンニョムに使う塩もすべて「紫岩塩」を使用しています。<br\/>岩塩にしてはとても珍しく、にがり成分である「マグネシウム」もしっかりと含んでいるため、塩もみにも使うことができるのです。<\/p><p>「紫岩塩」の成り立ちはとても珍しく、マグマに燻されてできた岩塩です。そのため岩塩の中に硫黄成分を含み、豊富なミネラル（84種類検出）も含んでいます。ミネラルは、人間の身体機能を維持する為に必須成分であり、採掘現地では昔から薬代わりとして重宝されています。<\/p>",
+            "content_color": "#434343",
+            "content_align": "left",
+            "content_size": "h5"
+          }
+        },
+        "hr_AJiVXn": {
+          "type": "hr",
+          "settings": {
+            "margin_top": 40,
+            "margin_bottom": 40
+          }
+        },
+        "content_EMpF3U": {
+          "type": "content",
+          "settings": {
+            "anchor_link": "syouga",
+            "image": "shopify:\/\/shop_images\/8_2x_615335fe-b117-4b24-b24c-6b166ef5c8ee.png",
+            "image_caption1": "消化<br>促進",
+            "image_caption_color1": "#727143",
+            "image_caption2": "血行<br>促進",
+            "image_caption_color2": "#a01e12",
+            "with_border": false,
+            "border_width": 1,
+            "border_color": "#ffffff",
+            "image_position": "right",
+            "logo_image": "shopify:\/\/shop_images\/8_2x_225dc56a-83fa-4b9a-bf4d-d52a5fd868b1.png",
+            "title_image_width": 200,
+            "title": "黄金<span class=\"f-middle\">（こがね）<\/span><span class=\"f-mega\">生姜<\/span>",
+            "title_color": "#3c3c3d",
+            "title_align": "left",
+            "title_size": "h2",
+            "have_title_underline": true,
+            "subtitle": "高知で長年かけて開発された生姜",
+            "subtitle_color": "#e95d35",
+            "subtitle_align": "center",
+            "subtitle_size": "h3",
+            "content": "<p>生姜は低カロリーで、食物繊維が豊富なうえに、昔から生薬としても各国で親しまれてきました。冷え性の改善や免疫力の向上が期待できる辛味成分の「ジンゲロール」と、血行促進や抗酸化作用、肩こりの解消に効果的と言われる香り成分「ショウガオール」を含んでいます。<\/p><p>八恵堂で使用している黄金生姜は、長い年月かけ開発された国産生姜で、一般的な生姜に比べて退色しにくく、色鮮やかな黄金色を保つ品種です。繊維質が少なく、辛み成分・香り成分が一般的な生姜よりも多く含まれています。<br\/>生姜がよく育つとされる高温多湿の条件を持つ高知県で栽培されており、土壌の管理や栽培方法にこだわって作られています。<\/p>",
+            "content_color": "#434343",
+            "content_align": "left",
+            "content_size": "h5"
+          }
+        },
+        "hr_7Ghaz3": {
+          "type": "hr",
+          "settings": {
+            "margin_top": 40,
+            "margin_bottom": 40
+          }
+        },
+        "content_aYiac6": {
+          "type": "content",
+          "settings": {
+            "anchor_link": "tensaitou",
+            "image": "shopify:\/\/shop_images\/2_2x_d3b70a7e-3d1a-43c6-8ed3-8964fff9e7d3.png",
+            "image_caption1": "整腸<br>作用",
+            "image_caption_color1": "#2f5b63",
+            "image_caption2": "",
+            "image_caption_color2": "",
+            "with_border": false,
+            "border_width": 1,
+            "border_color": "#ffffff",
+            "image_position": "left",
+            "logo_image": "shopify:\/\/shop_images\/9_2x_3ddb38e5-41b7-40fb-86d3-d91400cedeb1.png",
+            "title_image_width": 200,
+            "title": "<span class=\"f-mega\">きび・てんさい糖<\/span>",
+            "title_color": "#3c3c3d",
+            "title_align": "left",
+            "title_size": "h2",
+            "have_title_underline": true,
+            "subtitle": "奄美のキビ糖と北海道のてんさい糖",
+            "subtitle_color": "#e95d35",
+            "subtitle_align": "center",
+            "subtitle_size": "h3",
+            "content": "<p>きび糖は、サトウキビから採れた液を煮詰めて作る為、色が薄茶色をしており、精製されていない為、カルシウムやカリウムなどのミネラルを多く含むのが特徴です。独特の風味とコクを持ち、まろやかな甘みがあります。糖質が低めで、体内でゆっくりと吸収されるのがポイントです。<\/p><p>てんさい糖は、甜菜と呼ばれる作物から採れる砂糖です。カルシウムやカリウム、リンなどの天然のミネラルが豊富に含まれ、甜菜由来の天然のオリゴ糖が入っています。<br\/>オリゴ糖は、低消化性（低エネルギー）で、整腸作用や腸内細菌を増やす作用などが知られています。<\/p><p>八恵堂は、きび糖・てんさい糖などの天然の砂糖を使うことにより、体への消化負担や血糖値の急上昇を抑え、体に優しいヤンニョムを作っています。<\/p>",
+            "content_color": "#434343",
+            "content_align": "left",
+            "content_size": "h5"
+          }
+        },
+        "hr_LirQr7": {
+          "type": "hr",
+          "settings": {
+            "margin_top": 40,
+            "margin_bottom": 40
+          }
+        },
+        "content_kHnMwg": {
+          "type": "content",
+          "settings": {
+            "anchor_link": "hatimitsu",
+            "image": "shopify:\/\/shop_images\/9_2x_a05dcd55-2397-4144-9f6f-8c16cb7a98a1.png",
+            "image_caption1": "免疫<br>UP",
+            "image_caption_color1": "#9e795c",
+            "image_caption2": "疲労<br>回復",
+            "image_caption_color2": "#7b8d6f",
+            "with_border": false,
+            "border_width": 1,
+            "border_color": "#ffffff",
+            "image_position": "right",
+            "logo_image": "shopify:\/\/shop_images\/10_2x_a5e4191d-ac26-43ff-bda6-ad48c6289b4b.png",
+            "title_image_width": 200,
+            "title": "アカシヤ<span class=\"f-mega\">生蜂蜜<\/span>",
+            "title_color": "#3c3c3d",
+            "title_align": "left",
+            "title_size": "h2",
+            "have_title_underline": true,
+            "subtitle": "安曇野市で採取された非加熱の蜂蜜",
+            "subtitle_color": "#e95d35",
+            "subtitle_align": "center",
+            "subtitle_size": "h3",
+            "content": "<p>やさしい口当たりでクセが少なく、食べやすいので日本人に好まれる蜂蜜です。<\/p><p>果糖の割合が多いため結晶化しにくく、なめらかな口当たりになります。<br\/>透明感があり、見た目も美しいアカシアの蜂蜜は、上品な香りとさっぱりとした甘みが特徴です。淡白な味でどんな食材とも相性が良いといわれ、多種類の栄養素が含まれる食材です。<\/p><p>八恵堂で使っているアカシヤの蜂蜜は、北アルプスから流れる雪解け水で育まれた豊富な大自然の恵みを蜜蜂が無心に集めた貴重な産物です。アカシヤの花が咲き誇るわずか2.3週間の間だけに集められた純度の高いアカシヤの蜂蜜をいただいて使用しています。<\/p>",
+            "content_color": "#434343",
+            "content_align": "left",
+            "content_size": "h5"
+          }
+        }
+      },
+      "block_order": [
+        "36d31006-8ac0-4f89-9c8d-12546fc8b4c9",
+        "f5ae1c04-afc0-4267-868a-4cf10fc9a6a5",
+        "6c98bf5a-c5da-47a3-810e-595cde467b5a",
+        "hr_HV46wz",
+        "content_fpnyyk",
+        "hr_djRxpV",
+        "content_QUNLer",
+        "hr_ALGH9w",
+        "content_ea84UM",
+        "hr_AJiVXn",
+        "content_EMpF3U",
+        "hr_7Ghaz3",
+        "content_aYiac6",
+        "hr_LirQr7",
+        "content_kHnMwg"
+      ],
+      "settings": {
+        "backgorund_image_repeat": true,
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "multicolumn_custom_hr6KYL": {
+      "type": "multicolumn_custom",
+      "blocks": {
+        "column_79eaGP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/14_1.png",
+            "background_color": "rgba(0,0,0,0)",
+            "title": "Column",
+            "title_size": "h3",
+            "link": "shopify:\/\/pages\/kodawari-materials"
+          }
+        },
+        "column_dHrVP3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/16_1.png",
+            "background_color": "rgba(0,0,0,0)",
+            "title": "Column",
+            "title_size": "h3",
+            "link": "shopify:\/\/pages\/kodawari-preservation"
+          }
+        },
+        "column_xehigL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/15_1.png",
+            "background_color": "rgba(0,0,0,0)",
+            "title": "Column",
+            "title_size": "h3",
+            "link": "shopify:\/\/pages\/kodawari-manufacturing"
+          }
+        }
+      },
+      "block_order": [
+        "column_79eaGP",
+        "column_dHrVP3",
+        "column_xehigL"
+      ],
+      "settings": {
+        "backgorund_image_repeat": false,
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "3",
+        "swipe_on_mobile": false,
+        "padding_top": 40,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_custom2_TUV9KH": {
+      "type": "multicolumn_custom2",
+      "blocks": {
+        "column_eHGQdi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/17_1.png",
+            "background_color": "rgba(0,0,0,0)",
+            "title": "酵素キムチ",
+            "title_size": "h3",
+            "link": "shopify:\/\/collections\/all",
+            "outer_link": false
+          }
+        },
+        "column_d83mLN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/18_1.png",
+            "background_color": "rgba(0,0,0,0)",
+            "title": "キャンペーン情報",
+            "title_size": "h3",
+            "link": "shopify:\/\/blogs\/news",
+            "outer_link": false
+          }
+        },
+        "column_dXWfX3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/19_1.png",
+            "background_color": "rgba(0,0,0,0)",
+            "title": "八恵レシピ",
+            "title_size": "h3",
+            "link": "https:\/\/style.hakkeido.com\/",
+            "outer_link": true
+          }
+        }
+      },
+      "block_order": [
+        "column_eHGQdi",
+        "column_d83mLN",
+        "column_dXWfX3"
+      ],
+      "settings": {
+        "backgorund_image_repeat": false,
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "3",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_image_tWMhcH": {
+      "type": "image-banner_image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_10253_1.png",
+        "image_mp": "shopify:\/\/shop_images\/Group_10255.png",
+        "background_image": "shopify:\/\/shop_images\/105e3befc58b5157b701af11d203c267_e52e9a7a-2bb2-487e-a253-0565cc4588c2.png",
+        "backgorund_image_repeat": true,
+        "banner_link": "shopify:\/\/products\/beginners-set"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_title_QhnHgc",
+    "10ff8137-e392-4119-b2f0-befd72bea959",
+    "rich_text_custom2_zLMjH7",
+    "b69ce229-2af0-4316-b914-766184761b63",
+    "multicolumn_custom_hr6KYL",
+    "multicolumn_custom2_TUV9KH",
+    "image_banner_image_tWMhcH"
+  ]
+}
